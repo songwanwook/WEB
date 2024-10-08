@@ -1,0 +1,335 @@
+body{
+    margin:0;
+}
+.flex{
+    display:flex;
+}
+.column{
+    flex-direction:column;
+}
+ul, li{
+    list-style:none;
+}
+.headth{
+    width:10%;
+}
+.header{
+    width:100%;
+    justify-content:space-between;
+}
+.header2{
+    width:100%;
+    justify-content:space-between;
+    margin:auto;
+}
+.header > .flex{
+    padding:20px;
+}
+.header > .flex > a{
+    margin:5px;
+}
+.flex > a{
+    margin:5px;
+}
+.width90{
+    width:90%;
+    margin:auto;
+}
+.headermenu{
+    background-color: blue;
+}
+.headermenu > .flex > a{
+    color:white;
+}
+.bordernonetable{
+    border:unset;
+}
+th{
+    text-align:start;
+}
+tr > th > input{
+    padding:5px;
+    margin:5px;
+}
+.idcheck{
+    background-color: gray;
+    color:white;
+    border:1px solid black;
+}
+.require{
+    color:red;
+}
+.submitdiv, .submitdiv1{
+    justify-content:center;
+    display:flex;
+}
+.submitdiv > input, .submitdiv1 > input{
+    width:100px;
+    margin:10px;
+    height:30px;
+}
+.idcheck:hover, .submitdiv > input:hover{
+    cursor:pointer;
+}
+.joinphp{
+    width:80%;
+    margin:auto;
+}
+.joinphp > table, .submitdiv{
+    width:100%;
+}
+.guestcomment{
+    width:94%;
+    height:95px;
+}
+.guestcomment > textarea{
+    width:88%;
+    height:100%;
+}
+.guestcomment > input{
+    height:100%;
+    width:100px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+}
+.margin10{
+    margin:10px;
+}
+.memos{
+    margin-top:30px;
+}
+.memohr{
+    top:30px;
+    color:lightgray;
+}
+.memodothr{
+    border:1px dotted lightgray;
+}
+.getcomment{
+    margin-top:30px;
+    border-bottom:1px solid black;
+    margin-left:50px;
+}
+.comments{
+    background-color:rgb(238,238,238);
+    width:90%;
+    margin-left:50px;
+    margin:auto;
+}
+.reply{
+    width:90%;
+    margin:10px;
+}
+.submit{
+    height:40px;
+    margin:15px;
+}
+.yourcomment{
+    margin:10px;
+}
+.yourcomment > div{
+    padding:10px;
+}
+.paging{
+    margin:auto;
+    width:50%;
+    text-align:center;
+    justify-content: space-between;
+}
+.board{
+    width:90%;
+    margin:auto;
+}
+.title{
+    background-color: rgb(238,238,238);
+    width:90%;
+    text-align:center;
+    justify-content: space-between;
+    margin:auto;
+    padding:20px 0px;
+    border-top:3px solid lightgray;
+}
+.writehead{
+    width:15%;
+    text-align:center;
+    padding:3px 0px;
+    background-color: rgb(238,238,238);
+}
+.writeinput{
+    width:90%;
+}
+.writetable{
+    margin-top:20px;
+    width:100%;
+}
+.writecontent{
+    width:90%;
+    height:200px;
+    padding:5px;
+    font-size:16px;
+}
+.writecontent, .fileupload{
+    margin:5px;
+}
+.writecontent, .fileupload, .searchmenu, .search{
+    border: 1px solid lightgray;
+}
+.fileupload{
+    padding:0;
+    width:40%;
+}
+.bordertop > th{
+    border-top:1px solid lightgray;
+}
+.bottom > th{
+    border-bottom:1px solid lightgray;
+}
+.submitdiv1 > input, .boardlist, .boardwrite, .gosearch, .boardbutton > button{
+    color:white;
+    border:unset;
+    border-radius: 3px;
+}
+.write, .boardlist, .gosearch, .writebutton{
+    background:linear-gradient(rgb(100,100,100), black);
+}
+.list, .boardwrite, .boardbutton > button{
+    background-color:darkgray;
+}
+.boardtable{
+    border-collapse:collapse;
+    width:100%;
+    margin:auto;
+}
+.boardtable > thead{
+    background-color:lightgray;
+}
+.ttitle{
+    text-align:left;
+}
+.tnum, .tdate, .tview, .tname{
+    text-align:center;
+}
+.tnum{
+    width:7%;
+}
+.tdate{
+    width:60%;
+}
+.tdate, .tview, .tname{
+    width:11%;
+}
+button:hover, .submit:hover, a:hover, .write:hover, .list:hover, .searchmenu:hover, .gosearch:hover, .gallery:hover, .prev:hover, .next:hover{
+    cursor:pointer;
+}
+.boardlist, .boardwrite{
+    margin:5px;
+    width:70px;
+    padding:5px 0px;
+}
+.search, .searchmenu, .gosearch{
+    margin:0px 3px;
+    padding:3px;
+}
+.gosearch{
+    width:60px;
+}
+.boardcontents{
+    min-height:300px;
+    width:90%;
+    margin:auto;
+    border-bottom:1px solid lightgray;
+}
+.boardcontents > img{
+    width:500px;
+    height:500px;
+}
+.boardbutton{
+    width:96%;
+    height:auto;
+    justify-items: right;
+}
+.boardbutton > button{
+    float:right;
+    margin:10px 5px;
+    border:unset;
+    padding:5px 10px;
+}
+.boardcontents > img{
+    max-width:100%;
+}
+.gallery{
+    width:200px;
+    height:200px;
+}
+.gallerydiv{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(8, 220px);
+    margin:auto;
+    width:92%;
+}
+.gallerydiv > div{
+    margin:10px;
+}
+.paging{
+    padding:30px 0px;
+    justify-content: space-evenly;
+    width:500px;
+}
+.paging > a, .paging > .flex > a, .galleryhref{
+    text-decoration: none;
+}
+.firstlast{
+    color:red;
+}
+.prevnext, .galleryhref{
+    color:black;
+}
+.prev, .next{
+    position:absolute;
+    margin-top:40%;
+    background-color: yellow;
+    color:red;
+    font-size:27px;
+}
+.close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background-color:red;
+}
+.prev{
+    left:20px;
+}
+.next{
+    right:20px;
+}
+.gallerymodal{
+    display:none;
+    background-color: white;
+    width:700px;
+    height:70%;
+    left:25%;
+    top:15%;
+    position:absolute;
+    border: 3px solid black;
+}
+.galleryModal{
+    display:none;
+    position:relative;
+}
+#ModalImg{
+    position:absolute;
+    margin-top:8%;
+    margin-left:100px;
+    width:500px;
+    height:500px;
+}
+.modalhref{
+    position:absolute;
+    top:580px;
+    width:100%;
+    text-align:center;
+    text-decoration: none;
+    color:black;
+}

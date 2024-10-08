@@ -1,0 +1,94 @@
+ <?php
+                    if(!isset($_GET['pg'])){
+                        $nowPage = 1;
+                    }
+                    else{
+                        $nowPage = $_GET['pg'];
+                    }
+                    $sql = "select count(*) from memo";
+                    $result = mysqli_query($connect, $sql);
+                    $row = mysqli_fetch_array($result);           
+                    $lastPage = 0;
+                    $prev;
+                    $next;
+                    if($row['count(*)']/3 == 0){
+                        $lastPage = floor($row['count(*)']/3);
+                    }
+                    else{
+                        $lastPage = floor($row['count(*)']/3) + 1;
+                    }
+                    if($nowPage > 1){
+                        $prev = $nowPage - 1;
+                    }
+                    else{
+                        $prev = 1;
+                    }
+                    if($nowPage < $lastPage){
+                        $next = (int)$nowPage + (int)1;
+                    }
+                    else{
+                        $next = $lastPage;
+                    }
+
+                    echo "<div class='guest_pager'>";
+                    $start = ($nowPage-1) * 3;
+                    $sql = "select * from memo Limit $start, 3";
+                    $result = mysqli_query($connect, $sql);
+                    $append = "";
+                    while($row1 = mysqli_fetch_array($result)){
+                        $parent = $row1['no'];
+                        $x = "";
+                        $x .= "<div class='list_guest'><div class='info_guest'>";
+                        $x .= "<span class='no_guest'>" . $row1['no'] . "</span>";
+                        $x .= "<span class='name_guest'>" . $row1['name'] . "</span>";
+                        $x .= "<span class='date_guest'>" . $row1['regdate'] . "</span>";
+                        if(isset($_SESSION['user_name'])){
+                            if($_SESSION['user_name'] == $row1['name']){
+                                $x .= "<span date='" . $row1['regdate'] . "' class='delete_guest' parent='" . $parent . "'>삭제</span></div>";
+                            }
+                            else{
+                                $x .= "</div>";
+                            }
+                        }
+                        else{
+                            $x .= "</div>";
+                        }
+                        $x .= "<div class='memo_guest'>" . $row1['content'] . "</div></div>";
+                        echo $x;
+    
+                        echo "<div class = 'reply'><p>덧글</p>";
+                        $sql = "select * from memo_reply where parent = '$parent'";
+                        $result2 = mysqli_query($connect, $sql);
+                        echo "<div class='list_reply'>";
+                        while($row2 = mysqli_fetch_array($result2)){
+                            $y = "";
+                            $y .= "<div class='info_reply'>";
+                            $y .= "<span class='name_reply'>" . $row2['name'] . "</span>";
+                            $y .= "<span class='date_reply'>" . $row2['regdate'] . "</span>";
+                            if(isset($_SESSION['user_name'])){
+                                if($_SESSION['user_name'] == $row2['name']){
+                                    $y .= "<span date='" . $row2['regdate'] . "'class='delete_reply'>삭제</span></div>";
+                                }
+                                else{
+                                    $y .= "</div>";
+                                }
+                            }
+                            else{
+                                $y .= "</div>";
+                            }
+                            $y .= "<div class='memo_reply'>" . $row2['content'] . "</div><hr>";
+                            echo $y;
+                        }
+                        echo "<textarea parent='$parent' class='text_reply'></textarea><button parent='$parent' type='button' class='insert_reply'>덧글입력</button></div><div class='clear'></div></div>";
+                    }
+                    echo "</div>";
+
+                    echo "<div id='pageselect'>";
+                    echo "<a href='guest.php?pg=1' id='first'>[First]</a>";
+                    echo "<a href='guest.php?pg=$prev' id='prev'><</a>";
+                    for($i=1; $i<=$lastPage; $i++){
+                        echo "<a href='guest.php?pg=$i' class='page'>$i</a>";
+                    }
+                    echo "<a href='guest.php?pg=$next' id='prev'>></a>";
+                    echo "<a href='guest.php?pg=" . $lastPage . "' id='last'>[Last]</a></div>";
+                ?>
