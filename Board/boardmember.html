@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-1.10.2.js"></script>
+    <style>
+        *{
+            margin:auto;
+        }
+        form{
+            width:800px;
+        }
+        table{
+            width:100%;
+            margin:auto;
+        }
+        h1{
+            text-align:center;
+        }
+        .signin, .re, .login, .home{
+            width:130px;
+            background-color:white;
+            font-size:20px;
+        }
+        .signin{
+            border:3px solid blue;
+            color:blue;
+        }
+        .re{
+            border:3px solid red;
+            color:red;
+        }
+        .signin:hover{
+            background-color:blue;
+            color:white;
+            transition:0.3s;
+            cursor:pointer;
+        }
+        .re:hover{
+            background-color:red;
+            color:white;
+            transition:0.3s;
+            cursor:pointer;
+        }
+        legend{
+            text-align:center;
+        }
+        .form1{
+            font-size:18px;
+        }
+        .login, .home{
+            text-decoration:none;
+            display:block;
+            text-align:center;
+        }
+        .login{
+            border:3px solid green;
+            color:green;
+        }
+        .home{
+            border:3px solid violet;
+            color:violet;
+        }
+        a:hover{
+            color:white;
+            transition:0.3s;
+            cursor:pointer; 
+        }
+        .login:hover{
+            background-color:green;
+        }
+        .home:hover{
+            background-color:violet;
+        }
+        #userid, #userpw,#userpwok, #username, #address, #email, #email2{
+            font-size:18px;
+            border:2px solid orangered;
+            background-color:lightblue;
+        }
+        #userid, #userpw,#userpwok, #username{
+            width:40%;
+        }
+        #email{
+            width:30%;
+        }
+        #email2{
+            width:20%;
+        }
+        #address{
+            width:100%;
+        }
+        #men{
+            color:blue;
+        }
+        #women{
+            color:red;
+        }
+        @media screen and (max-width:800px){
+            form{
+                width:100%;
+            }
+            #check, #userid, #userpw,#userpwok, #username{
+                width:100%;
+            }
+            #email2{
+                width:134px;
+            }
+            .title{
+                width:82px;
+            }
+        }
+        @media screen and (max-width:656px){
+            #email{
+                width:60%;
+            }
+            
+        }
+        .title{
+            background-color:white;
+
+        }
+        .other{
+            display:flex;
+            justify-content:space-between;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#userid').on("keyup",function(){
+                var userid = $(this).val();
+                $.ajax({
+                    method:"post",url:"ajax_id_check.php",data:{userid:userid},success:function(data){
+                        $('#check').html(data);
+                        $('#check').css('color','red');
+                    },error:function(data,status,error){
+                        alert("error");
+                    }
+                });
+            });
+            $('#userpwok').on("keyup",function(){
+                /*var userpwok = $(this).val();
+                var userpw = $('#userpw').val();
+                $.ajax({
+                    method:"post",url:"ajax_pw_check.php",data:{userpw:userpw},data:{userpwok:userpwok},success:function(data){
+                        $('#pwcheck').html(data);
+                        $('#pwcheck').css('color','red');
+                    },error:function(data,status,error){
+                        alert("error");
+                    }
+                });*/
+            });
+        });
+    </script>
+</head>
+<body>
+    <form name = "form1" class = "form1" action = "boardmember.php" method = "post">
+        <h1>회원가입 폼</h1>
+        <fieldset>
+            <legend>회원가입</legend>
+            <table>
+                <tr>
+                    <td class = "title">아이디</td>
+                    <td class = "check"><input type = "text" id = "userid" name = "userid" placeholder="아이디를 입력해주세요." required>
+                    <span id = "check">아이디가 실시간으로 중복확인 됩니다.</span></td>
+                </tr>
+                <tr>
+                    <td class = "title">비밀번호</td>
+                    <td><input type = "password" id = "userpw" name = "userpw" placeholder="비밀번호를 입력해주세요." required></td>
+                </tr>
+                <tr>
+                    <td class = "title">비밀번호 확인</td>
+                    <td><input type = "password" id = "userpwok" name = "userpwok" placeholder="비밀번호 확인" required>
+                    <span id = "pwcheck"></span></td>
+                </tr>
+                <tr>
+                    <td class = "title">이름</td>
+                    <td><input type = "text" id = "username" name = "username" placeholder="이름을 입력해주세요." required></td>
+                </tr>
+                <tr>
+                    <td class = "title">주소</td>
+                    <td><input type = "text" id = "address" name = "address" placeholder="주소를 입력해주세요." required></td>
+                </tr>
+                <tr>
+                    <td class = "title">성별</td>
+                    <td>
+                        <span id = "men">남<input type = "radio" name = "sex" value = "men"></span>
+                        <span id = "women">여<input type = "radio" name = "sex" value = "women"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = "title">이메일</td>
+                    <td>
+                        <input type = "text" id = "email" name = "email" required>
+                        @
+                        <select name = "emailaddress" id = "email2">
+                            <option value = "naver.com">naver.com</option>
+                            <option value = "google.com">google.com</option>
+                            <option value = "daum.net">daum.net</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class = "other">
+                    <input type = "submit" value = "가입" class = "signin">
+                    <input type = "reset" value = "다시쓰기" class = "re">
+                    <a class = "login" href = "boardlogin.html">로그인</a>
+                    <a class = "home" href = "ajaxboard.php">홈으로</a>
+                    </td>
+                </tr>
+                
+            </table>
+            
+        </fieldset>
+    </form>
+    
+</body>

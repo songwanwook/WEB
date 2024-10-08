@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    *{
+        margin:auto;
+    }
+    .wrapper{
+        padding-top: 200px;
+        width:400px;
+    }
+    h1{
+        text-align: center;
+        padding:100px 0px;
+    }
+    form{
+        width:400px;
+        display:flex;
+        flex-direction: column;
+    }
+    label{
+        text-align:left;
+        width:100%;
+    }
+    .login{
+        margin-top:20px;
+        background-color: white;
+        border: 1px solid olivedrab;
+        color:olivedrab;
+        width:400px;
+        padding:10px;
+    }
+    input{
+        width:94%;
+        font-size:22px;
+    }
+    .padding{
+        padding:10px;
+        overflow-x: hidden;
+        background-color: beige;
+        color:gray;
+        border:1px solid gray;
+    }
+    a{
+        color:olivedrab;
+    }
+    .join{
+        margin-top:100px;
+        width:100%;
+        padding:20px;
+        text-align: center;
+        background-color: beige;
+        vertical-align: middle;
+    }
+    .login:hover{
+        cursor:pointer;
+    }
+    .gohome{
+        text-decoration: none;
+        color:black;
+        cursor:pointer;
+        text-align:center;
+        width:100%;
+        display:block;
+    }
+    </style>
+</head>
+<body>
+    <div class = "wrapper">
+        <h1>로그인</h1>
+        <form method = "POST" action = "boardlogin.php">
+            <label for = "id">아이디</label>
+            <input type = "text" id = "id" name = "id" placeholder = "아이디를 입력하세요" class = "padding"><br>
+            <label for = "pw">비밀번호</label>
+            <input type = "password" id = "pw" name = "pw" placeholder = "비밀번호를 입력하세요" class = "padding">
+            <input type = "submit" value = "Login" class = "login">
+        </form>
+    </div>
+    <div class = "join">최신 정보들과 필요한 서비스를 더 편하게 받으실 수 있습니다. <a href = "boardmember.html">회원가입</a></div>
+    <a href = "ajaxboard.php" class = "gohome">홈으로</a>
+</body>
+</html>
