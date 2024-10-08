@@ -1,0 +1,447 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+body{
+    overflow-x: hidden;
+}
+.wrapper{
+    margin:auto;
+    align-items: center;
+    text-align: center;
+    height:auto;
+}
+button:hover{
+    cursor:pointer;
+}
+.header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    flex-direction: row;
+    position:fixed;
+    top:0;
+    z-index: 2;
+}
+ul{
+    list-style:none;
+    display:flex;
+}
+.header > ul > li{
+    padding:15px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:antiquewhite;
+}
+.header > ul > li > a{
+    color:antiquewhite;
+    font-weight: bold;
+}
+@media screen and (min-width:991px){
+    .header > h3 > a:hover, .header > ul > li > a:hover{
+        color:white;
+        opacity:1;
+    }
+}
+.second{
+    background-image: linear-gradient(rgba(235, 195, 195, 0.5),rgba(235, 195, 195, 0.5)), url('img/bg-masthead.jpg');
+    padding-top:300px;
+    width:100%;
+    height:100%;
+    /*background-color: rgba(235, 195, 195, 0.5);*/
+    opacity:1;
+    vertical-align: middle;
+    color:white;
+    width:100%;
+    padding-bottom:20%;
+}
+.second > h1,.hr, .secondhr{
+    font-size:4.4em;
+}
+.hr{
+    color:orangered
+}
+.second > button{
+    margin-top:60px;
+    width:180px;
+    color:white;
+    background-color:orangered;
+}
+.second > button:hover{
+    opacity: 0.7;
+}
+.third{
+    color:white;
+    background-color:orangered;
+}
+.third, .AtYourService, .download, .getintouch{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+.third > button{
+    margin-top:60px;
+    width:180px;
+    border-style: none;
+    color:black;
+    background-color:white;
+}
+.AtYourService{
+    margin:auto;
+    width:100%;
+    padding-top:100px;
+    background-color: white;
+    color:black;
+    display:flex;
+    flex-direction: column;
+}
+.secondhr{
+    font-size:70px;
+}
+.service{
+    align-items: center;
+    display:flex;
+}
+.servicediv{
+    margin:20px;
+    width:270px; 
+}
+.icon{
+    font-size:50px;
+    color:orangered;
+}
+.hoverdiv{
+    padding-top:7%;
+    opacity:0;
+    position:absolute;
+    background-color: orangered;
+    width:33.3333%;
+    height:50%;
+    text-align: center;
+    color:white;
+    overflow-y: hidden;
+}
+.imgdiv{
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+}
+.image{
+    width:33.333%;
+    height:50%;
+}
+.click{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.hoverdiv:hover{
+    opacity:1;
+    transition: 0.5s;
+    cursor:pointer;
+}
+.hoverdiv > h5{
+    color:antiquewhite;
+}
+.download{
+    background-color: black;
+    color:white;
+}
+.download > button{
+    color:black;
+    background-color: white;
+    margin-top:15px;
+    width:180px;
+}
+.inputdiv{
+    padding-top:15px;
+    display:flex;
+    flex-direction: column;
+}
+.inputdiv > input, .Message{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.2px;
+    font-size: 27px;
+    padding-left: 5px;
+    text-align: left;
+}
+.inputdiv > input, .inputdiv > button, .Message{
+    margin-top:10px;
+    width:600px;
+}
+.info, .inputdiv > button{
+    height:60px;
+}
+.inputdiv > button{
+    background-color: orangered;
+    color:white;
+}
+.Message{
+    height:200px;
+    vertical-align: top;
+    padding-top:10px;
+}
+.getintouch{
+    margin:auto;
+    width:100%;
+    background-color: white;
+}
+button{
+    font-weight: bold;
+    font-size:15px;
+    height:60px;
+    border-radius: 50px;
+    border-style: none;
+}
+.getintouch > h1{
+    padding-top:40px;
+}
+.footer{
+    padding-top:40px;
+    padding-bottom:40px;
+    color:gray;
+    background-color:rgb(240,240,240);
+}
+.hiddenbutton, .hiddendiv{
+    display:none;
+}
+@media screen and (min-width:991px){
+    .imgdiv{
+        width:100%;
+        height:50%;
+    }
+    .hoverdiv{
+        padding-top:7%;
+        width:33.333%;
+        height:50%;
+    }
+    .image{
+        width:33.333%;
+        height:50%;
+    }
+    .click{
+        width:100%;
+        height:100%;
+    }
+    .hiddendiv, .hiddendiv > ul, .hiddendiv > ul > li, .hiddenbutton{
+        background-color: none;
+        display: none;
+    }
+    .hiddendiv > ul{
+        padding-top: 0;
+        z-index: 0;
+        position: relative;
+    }
+    .header{
+        background-color: unset;
+    }
+    .header, .header > ul > li{
+        color:antiquewhite;
+    }
+}
+@media screen and (max-width:990px){
+    .header{
+        background-color:white;
+        color:black;
+        transition: 0.3s;
+        width:100%;
+    }
+    .hiddenbutton{
+        display:block;
+        margin:10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        background-color:white;
+        border: 3px solid gray;
+        color:gray;
+        border-radius: 10px;
+        font-size: 40px;
+    }
+    .header > ul{
+        display:none;
+    }
+    .header > h3 > a, .header > ul > li > a{
+        color:black;
+    }
+    .hiddendiv > ul > li{
+        width:100%;
+        padding:20px;
+        text-align: left;
+    }
+    .image{
+        width:50%;
+        height:33.3333%;
+    }
+    .hoverdiv{
+        width:50%;
+        height:33.333%;
+        padding-top:10%;
+    }
+    .service{
+        place-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media screen and (max-width:1230px) {
+    .service{
+        width: 100%;
+    }
+}
+@media screen and (max-width:570px){
+    .image{
+        width:100%;
+        height:16.666%;
+    }
+    .hoverdiv{
+        width:100%;
+        height:16.666%;
+        padding-top:20%;
+    }
+}
+@media screen and (max-width:707px) {
+    .modal-content{
+        width: 92%;
+    }
+}
+@media screen and (max-width:770px) {
+    .second > h1{
+        font-size: 2em;
+    }
+    .service{
+        display: flex;
+        flex-direction: column;
+    }
+    .servicediv{
+        width: 100%;
+    }
+    .inputdiv > input, .inputdiv > button, .Message{
+        width: 70%;
+    }
+}
+@media screen and (max-width:450px) {
+    .second{
+        padding-top: 150px;
+        padding-bottom:70px;
+    }
+    .second > button, .third > button{
+        margin-top: 30px;
+    }
+    .third, .AtYourService, .download{
+        padding-top: 70px;
+        padding-bottom:70px;
+    }
+    .getintouch{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .getintouch > h1{
+        padding-top:0px;
+    }
+    .hr, .secondhr{
+        font-size: 2.5em;
+    }
+    .inputdiv > input, .inputdiv > button, .Message{
+        font-size: 18px;
+    }
+    .inputdiv > input, .inputdiv > button{
+        height: 40px;
+    }
+    .Message{
+        height: 130px;
+    }
+}
+.hiddendiv > ul{
+    width: 100%;
+    margin-top: 80px;
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    position:fixed;
+    padding-left: 10%;
+    font-size:20px;
+    z-index: 1;
+}
+.hiddendiv > ul > li > a{
+    color: gray;
+    font-weight: bold;
+}
+.hiddendiv > ul > li > a:hover{
+    color: orangered;
+}
+.show {display: block;}
+.modal{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 300px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    position: relative;
+    background-color: none;
+    color:antiquewhite;
+    margin: auto;
+    padding: 0;
+    max-width: 650px;
+}
+.mySlides > p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.close{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    cursor: pointer;
+    color: #999;
+    text-decoration: none;
+}
+.mySlides {
+    display: none;
+}
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.prev{
+    left:0;
+    border-radius: 3px 0 0 3px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

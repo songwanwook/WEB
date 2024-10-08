@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative - Start Bootstrap</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class = "wrapper">
+        <div class = "header">
+            <h3><a href = "#">Start Bootstarp</a></h3>
+            <ul>
+                <li><a href = #>About</a></li>
+                <li><a href = #>Service</a></li>
+                <li><a href = #>Portfolio</a></li>
+                <li><a href = #>Contact</a></li>
+            </ul>
+            <button onclick = "onclicked()" class = "hiddenbutton">≡</button>
+        </div>
+        <div id = "hiddenlist" class = "hiddendiv">
+            <ul>
+                <li><a href = #>About</a></li>
+                <li><a href = #>Service</a></li>
+                <li><a href = #>Portfolio</a></li>
+                <li><a href = #>Contact</a></li>
+            </ul>
+        </div>
+        <div class = "second">
+            <h1>Your Favorite Place for Free<br>Bootstrap Themes</h1>
+            <h1 class = "hr">―</h1>
+            <p>Start Bootstrap can help you build better websites using the Bootstrap framework! Just<br>download a theme and start customizing, no strings attached!</p>
+            <button>FIND OUT MORE</button>  
+        </div>
+        <div class = "third">
+            <h1>We've got what you need!</h1>
+            <h1 class = "secondhr">―</h1>
+            <p>
+                Start Bootstrap has everything you need to get your new website up and running in no time! Choose<br>
+                one of our open source, free to download, and easy to use themes! No strings attached!
+            </p>
+            <button>GET STARTED!</button>
+        </div>
+        <div class = "AtYourService">
+            <h1>At Your Service</h1>
+            <h1 class = "hr">―</h1>
+            <div class = "service">
+                <div class = "servicediv">
+                    <p class = "icon">◇</p>
+                    <h2>Sturdy Themes</h2>
+                    <p class = "s">Our themes are updated regularly to keep them bug free!</p>
+                </div>
+                <div class = "servicediv">
+                    <p class = "icon">▤</p>
+                    <h2>Up to Date</h2>
+                    <p class = "s">All dependencies are kept current to keep things fresh.</p>
+                </div>
+                <div class = "servicediv">
+                    <p class = "icon">◎</p>
+                    <h2>Ready to Publish</h2>
+                    <p class = "s">You can use this design as is, or you can make changes!</p>
+                </div>
+                <div class = "servicediv">
+                    <p class = "icon">♡</p>
+                    <h2>Made with Love</h2>
+                    <p class = "s">Is it really open source if it's not made with love?</p>
+                </div>
+            </div>
+        </div>
+        <div class = "imgdiv">
+            <div class = "image"><div class = "hoverdiv" onclick="openModal();currentSlide(1)"><h5>Category</h5><p>project name</p></div>
+            <img class = "click" src = "img/portfolio/thumbnails/1.jpg"></div>
+            <div class = "image"><div class = "hoverdiv" onclick="openModal();currentSlide(2)"><h5>Category</h5><p>project name</p></div>
+            <img class = "click" src = "img/portfolio/thumbnails/2.jpg"></div>
+            <div class = "image"><div class = "hoverdiv" onclick="openModal();currentSlide(3)"><h5>Category</h5><p>project name</p></div>
+            <img class = "click" src = "img/portfolio/thumbnails/3.jpg"></div>
+            <div class = "image"><div class = "hoverdiv" onclick="openModal();currentSlide(4)"><h5>Category</h5><p>project name</p></div>
+            <img class = "click" src = "img/portfolio/thumbnails/4.jpg"></div>
+            <div class = "image"><div class = "hoverdiv" onclick="openModal();currentSlide(5)"><h5>Category</h5><p>project name</p></div>
+            <img class = "click" src = "img/portfolio/thumbnails/5.jpg"></div>
+            <div class = "image"><div class = "hoverdiv" onclick="openModal();currentSlide(6)"><h5>Category</h5><p>project name</p></div>
+            <img class = "click" src = "img/portfolio/thumbnails/6.jpg"></div>
+        </div>
+        <div class = "download">
+            <h1>Free Download at Start Bootstrap!</h1>
+            <button>DOWNLOAD NOW!</button>
+        </div>
+        <div class = "getintouch">
+            <h1>Let's get in touch</h1>
+            <h1 class = "hr">―</h1>
+            <p>Ready to start your next project with us? Send us a messages and we will<br> get back to you as soon as possible!</p>
+            <div class = "inputdiv">
+                <input placeholder="Full name" class = "info">
+                <input placeholder="Email address" class = "info">
+                <input placeholder="Phone number" class = "info">
+                <textarea placeholder="Message" class = "Message"></textarea>
+                <button>SUBMIT</button>
+            </div>
+            <h1>☏</h1>
+            <p>+082(052)256-0993</p>
+        </div>
+        <div class = "footer">
+            Copyright © 2024 - Seojin Computer
+        </div>
+    </div>
+    <div id = "myModal" class = "modal">
+        <div class = "modal-content">
+            <span class = "close" onclick = "closeModal()">&times;</span>
+            <div class = "mySlides">
+                <img src = "img/portfolio/fullsize/1.jpg" style = "width:100%">
+                <p>project Name</p>
+            </div>
+            <div class = "mySlides">
+                <img src = "img/portfolio/fullsize/2.jpg" style = "width:100%">
+                <p>project Name</p>
+            </div>
+            <div class = "mySlides">
+                <img src = "img/portfolio/fullsize/3.jpg" style = "width:100%">
+                <p>project Name</p>
+            </div>
+            <div class = "mySlides">
+                <img src = "img/portfolio/fullsize/4.jpg" style = "width:100%">
+                <p>project Name</p>
+            </div>
+            <div class = "mySlides">
+                <img src = "img/portfolio/fullsize/5.jpg" style = "width:100%">
+                <p>project Name</p>
+            </div>
+            <div class = "mySlides">
+                <img src = "img/portfolio/fullsize/6.jpg" style = "width:100%">
+                <p>project Name</p>
+            </div>
+        </div>
+        <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick = "plusSlides(1)">&#10095;</a>
+    </div>
+    <script>
+        function onclicked(){
+            document.getElementById("hiddenlist").classList.toggle("show");
+        }
+        window.onclick = function(event){
+            if(!event.target.matches('.hiddenbutton')){
+                var dropdowns = document.getElementsByClassName("hiddendiv");
+                var i;
+                for(i = 0; i < dropdowns.length; i++){
+                    var open = dropdowns[i];
+                    if(open.classList.contains('show')){
+                        open.classList.remove('show');
+                    }
+                }
+            }
+        }
+        function openModal() {
+            console.log("0");
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n){
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for(i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+        
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var top = $(window).scrollTop();
+                if(top > 80 || (top <= 80 && matchMedia("screen and (max-width: 990px)").matches)){
+                    $('.header').css({'background-color':'white','transition':'0.3s'});
+                    $('.header > ul > li > a').css({'color':'black'});
+                    $('.header > h3 > a').css({'color':'black'});
+                }
+                else if(top <= 80 && matchMedia("screen and (min-width: 991px)").matches){
+                    $('.header').css({'background-color':'unset','transition':'0.3s'});
+                    $('.header > ul > li > a').css({'color':'antiquewhite'});
+                    $('.header > h3 > a').css({'color':'antiquewhite'});
+                }
+            })
+        })
+        
+    </script>
+</body>
+</html>
