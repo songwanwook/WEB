@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+} 
+li{
+    color: white;
+}
+a{
+    color: white; 
+}
+.wrapper{
+    width:1500px;
+    margin:auto;
+    
+}
+body{
+    background-color: #eeeeee;
+}
+.headericon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    width: 1500px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: lightgray;
+    font-size: 20px;
+    align-items: center;
+}
+.menu > li > a{
+    text-decoration: none;
+}
+.menu > li > a:hover{
+    color:blue;
+}
+/* header */
+.contentbody{
+    padding-top: 20px;
+    align-items: center;
+    width:100%;
+    background-color:white;
+    padding-bottom: 20px;
+    margin:auto;
+}
+.content{
+    padding-top:100px;
+    vertical-align: middle;
+    margin-top: 20px;
+    width: 1500px;
+    height: 340px;
+    font-weight: bold;
+    font-size: 27px;
+    align-items: center;
+    background-color:aqua;
+    color:white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+button{
+    text-align: center;
+    font-weight: bold;
+    border-style: none;
+    background-color: blue;
+    cursor: pointer;
+    color:white;
+    font-size:20px;
+    width:150px;
+    height:35px;
+}
+button:hover{
+    background-color: red;
+    
+}
+/* content */
+.extraContainer{
+    
+    margin:auto;
+}
+.extraContent{
+    margin-top: 20px;
+    display: flex;
+}
+.extraContent > div{
+    height: 200px;
+    width:740px;
+}
+.extraContent > div figure{
+    float: left;
+    width:100px;
+}
+.extraContent > div p, .extraContent > div h4{
+    float: right;
+    width: 600px;
+}
+.extraContent > div h2{
+    padding-bottom: 20px;
+}
+.aboutus, .Testimonial{
+    padding:20px;
+    background-color: white;
+    border-radius: 10px;
+} 
+.aboutus{
+    margin-right: 10px;
+}
+.Testimonial{
+    margin-left: 10px;
+}
+figure{
+    position:fixed;
+}
+/* extra */
+.footer{
+    width:100%;
+    justify-content: space-between;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    bottom:0;
+}
+.footerspan{
+    display: flex;
+    justify-content: space-around;
+}
+.footermenu, .footerspan{
+    height:50px;
+}
+.footer > .footermenu > li > a:hover{
+    color:red
+}
+.footermenu{
+    align-items: center;
+}
+/* footer */

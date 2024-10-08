@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Template</title>
+    <link rel="stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div class = "wrapper">
+        <div class = "header">
+            <ul>
+                <li><a href = "#">HOME</a></li>
+                <li class = "hiddenli"><a href = "#">BAND</a></li>
+                <li class = "hiddenli"><a href = "#">TOUR</a></li>
+                <li class = "hiddenli"><a href = "#">CONTACT</a></li>
+                <li class = "dropped" class = "hiddenli" id="dropmenu" onclick="clicked"><a href = "#">MORE▼</a></li>
+                
+            </ul>
+            <span>◎</span>
+            <button onclick = "onclicked()" class = "hiddenbutton">≡</button>   
+        </div>
+        <div class = dropdown id = drop>
+            <ul>
+                <li>Merchandise</li>
+                <li>Extras</li>
+                <li>Media</li>
+            </ul>
+        </div>
+        <div id = "hiddenlist" class = "hiddendiv">
+            <ul>
+                <li><a href = "#">BAND</a></li>
+                <li><a href = "#">TOUR</a></li>
+                <li><a href = "#">CONTACT</a></li>
+                <li><a href = "#">MARCH</a></li>
+            </ul>
+        </div>
+        <div class = "imgscreen">
+            <img src = "img/la.jpg" width = 100%>
+        </div>
+        <div class = "imgscreen">
+            <img src = "img/ny.jpg" width = 100%>
+        </div>
+        <div class = "imgscreen">
+            <img src = "img/chicago.jpg" width = 100%>
+        </div>
+        <div class = "theband">
+            <h1>THE BAND</h1>
+            <br>
+            <p class = "italic">We love music</p>
+            <br>
+            <p class = "textpage">
+                "We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            </p>
+            
+            <div class = "nameimage">
+                <div>
+                    <p>Name</p>
+                    <br>
+                    <img src = "img/bandmember.jpg">
+                </div>
+                <div>
+                    <p>Name</p>
+                    <br>
+                    <img src = "img/bandmember.jpg">
+                </div>
+                <div>
+                    <p>Name</p>
+                    <br>
+                    <img src = "img/bandmember.jpg">
+                </div>
+            </div>
+        </div>
+        <div class = "tourdates">
+            <div class = "tourdatesdiv">
+                <h1>TOUR DATES</h1>
+                <br>
+                <p class = "italic">Remember to book your tickets!</p>
+                <br>
+                <div class = "tourform">
+                    <div class = "tourtext">
+                        <ul>
+                            <li>September   <span class = "soldout">Sold out</span></li><hr>
+                            <li>October   <span class = "soldout">Sold out</span></li><hr>
+                            <li class = "flexli">November<span>3</span></li>
+                        </ul>
+                    </div>
+                    <div class = "tourbuy">
+                        <div class = "tourbuyimg">
+                            <img src = "img/newyork.jpg">
+                            <div class = "textpage2">
+                                <h4>New York</h4>
+                                <br>
+                                <p class = "italic">Fri 27 Nov 2016</p>
+                                <br>
+                                <p class = "tourbuygtextpage">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button>Buy tickets</button>
+                            </div>
+                        </div>
+                        <div class = "tourbuyimg">
+                            <img src = "img/paris.jpg">
+                            <div class = "textpage2">
+                                <h4>Paris</h4>
+                                <br>
+                                <p class = "italic">Sat 28 Nov 2016</p>
+                                <br>
+                                <p class = "tourbuygtextpage">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button>Buy tickets</button>
+                            </div>
+                        </div>
+                        <div class = "tourbuyimg">
+                            <img src = "img/sanfran.jpg">
+                            <div class = "textpage2">
+                                <h4>San Francisco</h4>
+                                <br>
+                                <p class = "italic">Sun 29 Nov 2016</p>
+                                <br>
+                                <p class = "tourbuygtextpage">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button>Buy tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "contact">
+            <div class = "contactwrapper">
+                <h1>CONTACT</h1>
+                <br>
+                <p class = "italic">Fan? Drop a note!</p>
+                <br>
+                <div class = "contactmessage">
+                    <div class = hp>
+                        <p>▼ Chicago Us</p>
+                        <p>☎ Phone: +00 151515</p>
+                        <p>☏ Email: mail@mail.com</p>
+                    </div>
+                    <div class = contactinput>
+                        <div class = "inputnorth"><input class = "left" placeholder="name"><input class = "right" placeholder="email"></div>
+                        <input placeholder="message">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "imgdiv">
+        <img src = "img/map.jpg" width = 100%>
+        </div>
+        <div class = "footer">
+            <div class = "footerwrapper">
+                <ul>
+                    <li><a href = "#">FACEBOOK</a></li>
+                    <li><a href = "#">INSTAGRAM</a></li>
+                    <li><a href = "#">SNAPCHAT</a></li>
+                    <li><a href = "#">PINTEREST</a></li>
+                    <li><a href = "#">TWITTER</a></li>
+                    <li><a href = "#">LINKEDIN</a></li>
+                </ul>
+                <p>Powered by <a href = "#">w3.css</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function onclicked(){
+            document.getElementById("hiddenlist").classList.toggle("show");
+        }
+        window.onclick = function(event){
+            if(!event.target.matches('.hiddenbutton')){
+                var dropdowns = document.getElementsByClassName("hiddendiv");
+                var i;
+                for(i = 0; i < dropdowns.length; i++){
+                    var open = dropdowns[i];
+                    if(open.classList.contains('show')){
+                        open.classList.remove('show');
+                    }
+                }
+            }
+            
+        }
+        var imgIndex = 0;
+        carousel();
+
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("imgscreen");
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none"
+            }
+            imgIndex++;
+            if(imgIndex > x.length){imgIndex=1}
+            x[imgIndex-1].style.display="block";
+            setTimeout(carousel,4000);
+        }
+        function clicked(){
+            document.getElementById("drop").classList.toggle("show");
+        }
+        var count = 0;
+        window.onclick = function(event){
+            
+            if(!event.target.matches('dropped')){
+                
+                console.log("a");
+                var dropdowns = document.getElementsByClassName("dropdown")[0];
+                console.log(dropdowns);
+                count++;
+                if(count % 2 == 1){
+                    dropdowns.style.display="block";
+                }
+                else{
+                    dropdowns.style.display="none";
+                }
+                for(var i = 0; i < dropdowns.length; i++){
+                    var open = dropdowns[i];
+                    if(open.classList.contains('show')){
+                        open.classList.remove('show');
+                    }
+                }
+            }
+            else{
+                dropdowns.style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+.wrapper{
+    margin:auto;
+    align-items: center;
+    text-align: center;
+    height:auto;
+}
+ul{
+    list-style: none;
+}
+.header{
+    width:100%;
+    height:67px;
+    position:fixed;
+    top:0;
+    display:flex;
+    justify-content: space-between;
+}
+.header > span{
+    width:60px;
+    height:67px;
+    padding-top: 22px;
+    text-align: center;
+}
+.header > span:hover{
+    cursor: pointer;
+    background-color: crimson;
+}
+.header > ul{
+    display: flex;
+    vertical-align: middle;
+}
+.header > ul > li{
+    padding:20px;
+    font-size: 20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.header > ul > li:hover,.header > ul > li > a:hover, button:hover, .hiddendiv > ul > li:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    color:black;
+}
+.header, .tourdates, button{
+    background-color: black;
+    color:white;
+}
+.theband, .contact, .footer{
+    background-color: white;
+}
+.italic{
+    font-style: italic;
+    opacity: 0.8;
+}
+.textpage{
+    margin:auto;
+    width:768px;
+    text-align: justify !important;
+}
+.nameimage{
+    justify-content: center;
+    display:flex;
+    padding: 50px 0px;
+}
+.text{
+    margin: auto;
+    position:absolute;
+    color:white;
+}
+.nameimage > div{
+    flex-direction: column;
+}
+.nameimage > div > img{
+    width:70%;
+}
+.tourdates, .contact, .footer{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    vertical-align: middle;
+    
+}
+.theband{
+    padding-top:64px;
+}
+.tourdatesdiv, .contactwrapper, .footerwrapper{
+    padding-top:64px;
+    padding-bottom:64px;
+    width:800px;
+}
+.tourform{
+    padding:10px;
+    width:100%;
+}
+.tourtext > ul{
+    background-color: white;
+    color:black;
+}
+.tourtext > ul > li{
+    text-align: start;
+    padding:15px;
+}
+.flexli{
+    display: flex;
+    justify-content: space-between;
+}
+.flexli > span{
+    background-color: black;
+    color:white;
+    width:21px;
+    height:21px;
+    border-radius: 50%;
+}
+.tourbuy{
+    display: flex;
+    padding-top:30px;
+    justify-content: space-between;
+}
+.textpage2{
+    color:black;
+    align-items: start;
+    text-align:left;
+    padding:16px;
+}
+.textpage2 > h4, .textpage2 > p, .hp > p{
+    text-align:left;
+}
+.tourbuytextpage{
+    width:213px;
+    text-align: justify !important;
+}
+.tourbuyimg{
+    background-color: white;
+    width:31%;
+}
+.tourbuyimg > img:hover{
+    filter: brightness(80%);
+}
+.tourbuy > div > img{
+    width:100%;
+}
+.soldout{
+    padding:5px;
+    background-color: crimson;
+    color:white;
+}
+button{
+    margin-top:16px;
+    width:50%;
+    height:37px;
+    font-size:20px;
+    border-style: none;
+}
+.hp{
+    width:50%;
+    height:auto;
+    vertical-align: top;
+    font-size: 20px;
+}
+.contactmessage{
+    display: flex;
+    vertical-align: top;
+}
+.contactinput > input, .inputnorth > input{
+    text-align: start;
+    padding:10px;
+    font-size: 20px;
+    height:37px;
+}
+.contactinput{
+    width:50%;
+    padding:10px;
+}
+.contactinput > input {
+    margin-bottom:15px;
+    width:98%;
+}
+.contactinput > button{
+    margin-right:5px;
+    width:100px;
+    height:37px;
+    margin-top:0;
+    float:right;
+}
+.inputnorth{
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+}
+.inputnorth > input{
+    width: 47.9%;
+}
+.left{
+    margin-right: 4px;
+}
+.right{
+    margin-left:4px;
+}
+@media screen and (max-width:800px) {
+    .textpage{
+        width:96%;
+    }
+    .tourdatesdiv{
+        width:100%;
+    }
+}
+@media screen and (max-width:700px) {
+    .footerwrapper > ul{
+        flex-direction: column;
+        width:100%;
+        padding:10px;
+    }
+}
+.hiddenbutton, .hiddendiv, .dropdown{
+    display:none;
+}
+.hiddendiv > ul{
+    margin-top:67px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    background-color: black;
+    color:white;
+    width:100%;
+    font-size: 20px;
+    align-items: first baseline;
+}
+@media screen and (max-width:600px) {
+    .dropdown{
+        display:none;
+    }
+    .nameimage, .tourbuy, .contactmessage, .inputnorth{
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+    }
+    .inputnorth > input, .contactinput > input{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    .nameimage > div, .tourbuyimg, .hp, .contactinput{
+        width:100%;
+        margin-bottom: 16px;
+    }
+    .contactinput > button{
+        margin-top:16px;
+        margin:0;
+    }
+    .hp{
+        padding:10px;
+    }
+    .hiddenli, .header > span{
+        display:none;
+    }
+    .hiddenbutton{
+        display:block;
+        width:60px;
+        height:67px;
+        margin:0
+    }
+    .header{
+        padding:0;
+    }
+
+    .hiddendiv > ul > li{
+        width:100%;
+        padding:20px;
+        text-align: left;
+    }
+}
+@media screen and (max-width:815px){
+    .contactwrapper{
+        width:100%;
+    }
+}
+.footerwrapper > p{
+    opacity: 0.8;
+}
+.footerwrapper > p > a{
+    text-decoration: underline;
+    color:black;
+}
+.footerwrapper > ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding:20px;
+    font-size: 15px;
+}
+.footerwrapper > ul > li > a{
+    color:black;
+    opacity: 0.8;
+}
+body {
+    overflow-x: hidden;
+}
+.show {display: block;}
+.showdrop{display:block;}
+.dropdown{
+    height:120px;
+    width:120px;
+    margin-top:67px;
+    position:absolute;
+    padding-left:473px;
+}
+.dropdown > ul{
+    display:flex;
+    flex-direction: column;
+}
+.dropdown > ul > li{
+    width:120px;
+    height:40px;
+    padding:10px;
+    background-color: white;
+    color:black;
+}
+.dropdown > ul > li:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.header > span:hover, .dropped:hover #drop{
+    display:block;
+}

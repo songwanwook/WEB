@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <wrapper>
+        <div class = "header">
+            <h2><a href = "#">Start Bootstrap</a></h2>
+            <ul>
+                <li><a href = "#">PORTPOLIO</a></li>
+                <li><a href = "#">ABOUT</a></li>
+                <li><a href = "#">CONTACT</a></li>
+            </ul>
+            <button onclick = "onclicked()" class = "mobliebutton">MENU</button></div>
+        </div>
+        <div id = "mobile" class = "mobileheader">
+            <ul>
+                <li><a href = "#">PORTPOLIO</a></li>
+                <li><a href = "#">ABOUT</a></li>
+                <li><a href = "#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class = "second">
+            <img src = "img/profile.png">
+            <br>
+            <h1>START BOOTSTRAP</h1>
+            <h1>ㅡ★ㅡ</h1>
+            Web Developer-Graphic Artist-User Experience Designer
+        </div>
+        <div class = "third">
+            <h1>PORTPOLIO</h1>
+            <h1>ㅡ★ㅡ</h1>
+            <div class = "imgdiv">
+                <div class = "hover"><div class = "plus">+</div><img src = "img/portfolio/cabin.png" alt = "+"></div>
+                <div class = "hover"><div class = "plus">+</div><img src = "img/portfolio/cake.png" alt = "+"></div>
+                <div class = "hover"><div class = "plus">+</div><img src = "img/portfolio/circus.png" alt = "+"></div>
+                <div class = "hover"><div class = "plus">+</div><img src = "img/portfolio/game.png" alt = "+"></div>
+                <div class = "hover"><div class = "plus">+</div><img src = "img/portfolio/safe.png" alt = "+"></div>
+                <div class = "hover"><div class = "plus">+</div><img src = "img/portfolio/submarine.png" alt = "+"></div>
+            </div>
+        </div>
+        <div class = "fourth">
+            <h1>CONTACT ME</h1>
+            <h1>ㅡ★ㅡ</h1>
+            <div class = "textbox">
+                <div class = "text1">
+                    Freelancer is a free bootstrap theme
+                    created by Start Bootstrap. The
+                    download includes the complete source
+                    files including HTML, CSS, and JavaScript
+                    as well as optional LESS stylesheets for
+                    easy customization.
+                </div>
+                <div class = "text2">
+                    You can create your own custom avatar for the masthead,
+                    change the icon in the dividers, and add your email 
+                    address to the contact form to make it fully functional!
+                </div>
+            </div>
+        </div>
+        <div class = "fifth">
+            <h1>CONTACT ME</h1>
+            <h1>ㅡ★ㅡ</h1>
+            <div class = "inputdiv">
+                <input placeholder="Name"><br>
+                <input placeholder="Email Address"><br>
+                <input placeholder="Phone Number"><br>
+                <input class = "Message" placeholder="Message"><br>
+                <div class = "buttondiv"><button>Send</button><div></div></div>
+            </div>
+        </div>
+        <div class = "footer">
+
+        </div>
+    </wrapper>
+    <script>
+        function onclicked(){
+            document.getElementById("mobile").classList.toggle("show");
+        }
+        window.onclick = function(event){
+            if(!event.target.matches('.mobliebutton')){
+                var dropdowns = document.getElementsByClassName("mobileheader");
+                var i;
+                for(i = 0; i < dropdowns.length; i++){
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
