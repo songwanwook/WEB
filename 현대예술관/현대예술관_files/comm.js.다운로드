@@ -1,0 +1,198 @@
+$(function() {
+    //안드로이드 주소창 없애기
+    window.addEventListener('load', function(){
+        document.body.style.height = (document.documentElement.clientHeight + 5) + 'px';
+        window.scrollTo(0, 1);
+    }, false);
+
+
+    // GNB
+/*
+    $("#gnb").sMenu({
+        is_responsive: true,
+        mobile_width: 1300
+    });
+*/
+    // LNB
+/*
+    $("#lnb").sMenu({
+    //hover_class : "hover",
+      is_snb: true
+    });
+*/
+    // 마스크 클릭
+    $("#header .mask").on("click", function() {
+        toggleAllMenu();
+    });
+
+    // 상단 이동
+    $("#btnGoTop").on("click", function(e) {
+        $("html, body").animate({
+            scrollTop : 0
+        }, 400);
+        $("#btnGoHome").focus();
+        e.preventDefault();
+    });
+
+
+    // 통합검색
+    $(".btn_sch").click(function(){
+        $(".search_Box").addClass("on");
+    });
+    $(".sch_close").click(function(){
+        $(".search_Box").removeClass("on");
+    });
+
+    // 마이페이지
+    $(".mypage_area").hover(function(){
+        $(".mypage_area").addClass("on");
+    }, function() {
+    $(".mypage_area").removeClass( "on" );
+    });
+
+    //$(".mypage_list li .btn button.ticket").parent().parent().addClass("spacing");
+    //$(".mypage_list.coupon li .btn button.gift").parent().parent().addClass("spacing");
+    $(".mypage_list li .btn button.ticket").prev().addClass("half");
+    $(".mypage_list li .btn button.ticket").next().addClass("half");
+    $(".mypage_list li .btn button.cancel").prev().addClass("half");
+    $(".mypage_list li .btn button.cancel").next().addClass("half");
+    $(".mypage_list li .btn button.gift").next().addClass("half");
+    $(".mypage_list li .btn button.gift").prev().addClass("half");
+
+    // 상단배너
+    $(".t_banner .bt_close").click(function(){
+         $(this).parent().addClass("close");
+    });
+
+
+    // 하단 사이트링크
+    $('.site_link .tit,.site_link .tit span').click(function(event){
+        var $target=$(event.target);
+        if($target.is('.on,.on span')){
+            $(this).parents('.site_link').find('button').removeClass('on').next('.cont').slideUp('fast');
+        }else{
+
+            $('.site_link .cont').hide();
+            $('.site_link .tit').removeClass('on');
+
+            if($target.is('button')){
+                    $(this).addClass('on').next('.cont').stop().slideDown('fast');
+            }else{
+                    $(this).parents('button').addClass('on').next('.cont').stop().slideDown('fast');
+            }
+        };
+        return false;
+    });
+    $('.site_link .cont a').click(function(){
+        $('.site_link').find('button').removeClass('on')
+        $('.site_link .cont').slideUp('fast');
+    });
+    $('.foot_menu .site_link .btn_close').click(function(){
+        $('.site_link').find('button').removeClass('on')
+        $('.site_link .cont').slideUp('fast');
+    });
+
+    // quick_menu
+    $(".btn_quick").click(function(){
+        $(".quick_menu").toggleClass("on");
+    });
+
+    //상세페이지 탭타이틀
+    $('.t1').show();
+    $('#tabs li button').on('click',function(){
+        index = $(this).parent().index() + 1;
+        $('#tabs li button').parent('li').removeClass('on')
+        $('#tabs .tab_cont').hide();
+        $('#tabs .t'+ index).toggle();
+        $(this).parent('li').addClass('on');
+    });
+
+    //상세페이지 탭타이틀
+    $('.t1').show();
+    $('.ul_tab.col3 li button').on('click',function(){
+        index = $(this).parent().index() + 1;
+        $('.ul_tab.col3 li button').parent('li').removeClass('on')
+        $('.cook_area').hide();
+        $('.cook_area.t'+ index).toggle();
+        $(this).parent('li').addClass('on');
+    });
+
+    //마이페이지 더보기 (모바일)
+    $(".mypage_list li .bt_more").click(function(){
+        $(this).parent().parent().toggleClass("on");
+    });
+
+    //리스트 예매하기 버튼 있을때
+    $(".item_list .bt_normal.point").parent().parent().addClass("pb60");
+
+});
+//강좌소개
+$(function() {
+    $('.lec_list ul').slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+
+        responsive: [{
+            breakpoint: 1180,
+            settings: {
+                dots: false,
+                centerMode: false,
+                slidesToShow: 3
+            }
+         }, {
+            breakpoint: 1025,
+            settings: {
+                slide: false,
+            }
+        }]
+    });
+});
+//상단 팝업
+$(function() {
+    //pc
+    $('.top_popup').slick({
+        fade: true,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+    //mobile
+    $('.m_top_popup').slick({
+        fade: true,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+  //공지팝업
+    $('.popup_cont').slick({
+        fade: true,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+});
+
+//전체 메뉴 토글
+function toggleAllMenu() {
+    $("#header").toggleClass("open");
+}
+
+
+// 모바일 터치 active
+$(document).on("touchstart", function(){ });
+
+

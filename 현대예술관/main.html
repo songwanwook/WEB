@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대예술관</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class = "wrapper">
+        <div class = "header">
+            <span class = "HiddenButton" onclick = "hiddenside()"></span>
+            <img src = "img/logo.png">
+            <ul class = "headerul">
+                <div class = "first"></div>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">공연</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">공연 예매</a></li>
+                        <li><a href = "#">공연장 소개</a></li>
+                        <li><a href = "#">예매 가이드</a></li>
+                        <li><a href = "#">관람예절</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">전시</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">전시 예매</a></li>
+                        <li><a href = "#">미술관 소개</a></li>
+                        <li><a href = "#">관람 예절</a></li>
+                        <li><a href = "#">소장품 자료실</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">영화</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">영화 예매</a></li>
+                        <li><a href = "#">예매 가이드</a></li>
+                        <li><a href = "#">영화관 소개</a></li>
+                        <li><a href = "#">영화 관람료</a></li>
+                        <li><a href = "#">영화 쿠폰북</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">강좌</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">강좌 시간표</a></li>
+                        <li><a href = "#">강좌 소개</a></li>
+                        <li><a href = "#">수강 신청</a></li>
+                        <li><a href = "#">수강신청가이드</a></li>
+                        <li><a href = "#">강사경력증명서</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">대관 안내</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">대관 안내</a></li>
+                        <li><a href = "#">공연장 대관</a></li>
+                        <li><a href = "#">기타시설 대관</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">문예 회원</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">문예회원 안내</a></li>
+                        <li><a href = "#">문예회원 가입</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">고객센터</a>
+                    <ul class = "hoverlist">
+                        <li><a href = "#">공지사항</a></li>
+                        <li><a href = "#">채용안내</a></li>
+                        <li><a href = "#">고객소리함</a></li>
+                        <li><a href = "#">자주하는 질문</a></li>
+                        <li><a href = "#">이벤트</a></li>
+                        <li><a href = "#">설문조사</a></li>
+                    </ul>
+                </li>
+                <li class = "headerhover"><a class = "hoverhref" href = "#">회관소개</a>
+                    <ul class = "hoverlist last">
+                        <li><a href = "#">현대예술관 소개</a></li>
+                        <li><a href = "#">상주예술 단체</a></li>
+                        <li><a href = "#">샤브안</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class = "mypage">
+                <li><a href = "#">로그인</li><span class = "borderrightli"></span>
+                <li><a href = "#">회원가입</li><span class = "borderrightli2"></span>
+                <li class = "dropmypage"><a href = "#">마이페이지</a>
+                <div class = "mypagedetail">
+                    <ul>
+                        <li class = "borderbottomli onhidden">예매현황</li>
+                        <li class = "borderbottomli onhidden">강좌등록현황</li>
+                        <li class = "onhidden">영화예매권</li>
+                    </ul>
+                </div>
+            </li>
+            </ul>
+            <span class = "HiddenHome"></span>
+        </div>
+        <div class = "concert">
+            <div class = "imgclass">
+                <img src = "img/유키구라모토 - 데크현수막-02.jpg">
+            </div>
+            <a class = "prev" onclick = "plusSlides(2)">&#10094;</a>
+            <a class = "next" onclick = "plusSlides(1)">&#10095;</a>
+            <div class = "concertbottom">
+                <span class = "concertspan">공연</span> 유키 구마모토 콘서트
+                <p>2024.05.30(목) - 05.30(목) 현대예술관 대공연장</p>
+            </div>
+        </div>
+        <div class = "concert">
+            <div class = "imgclass">
+                <img src = "img/아르세니문 --02-01.jpg">
+            </div>
+            <a class = "prev" onclick = "plusSlides(0)">&#10094;</a>
+            <a class = "next" onclick = "plusSlides(2)">&#10095;</a>
+            <div class = "concertbottom">
+                <span class = "concertspan">공연</span> 아르세니 문 피아노 리사이틀
+                <p>2024.06.01(토) - 06.01(토) 현대예술관 대공연장</p>
+            </div>
+        </div>
+        <div class = "concert">
+            <div class = "imgclass">
+                <img src = "img/web 매그넘 인 파리-02.jpg">
+            </div>
+            <a class = "prev" onclick = "plusSlides(1)">&#10094;</a>
+            <a class = "next" onclick = "plusSlides(0)">&#10095;</a>
+            <div class = "concertbottom">
+                <span class = "exhibitspan">전시</span> 매그넘 인 파리 사진 展
+                <p>2024.05.21(화) - 09.22(일) 현대예술관</p>
+            </div>
+        </div>
+        <div class = "program">
+            <div class = "programinfo">
+                <p>Program</p>
+                <h3>공연·전시</h3>
+                <div class = "prevnext">
+                    <a class = "prne" onclick = "Program()">&#10094;</a>
+                    <a class = "prne" onclick = "Program()">&#10095;</a>
+                </div>
+                <div class = "infobutton">
+                <button>공연 전체보기  +</button>
+                <button>전시 전체보기  +</button>
+                </div>
+            </div>
+                <div class = "programs">
+                    <div class = "programlist">
+                        <span class = "package">패키지 상품</span>
+                        <span class = "performance">공연</span>
+                        <img src = "img/아르세니문 포스터 (out)-01 - s.JPG"></img>
+                        <strong>아르세니 문 피아노 리사이틀</strong>
+                        <p>2024.06.01 ~ 2024.06.01</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>아르세니 문 피아노 리사이틀</h3>
+                            <p>초등학생 이상 입장가능</p>
+                            <p class = "price">R석 50,000원 / A석 30,000원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "package">패키지 상품</span>
+                        <span class = "performance">공연</span>
+                        <img src = "img/[포스터] 뮌헨 체임버 오케스트라 s.JPG">
+                        <strong>뮌헨 체임버 오케스트라</strong>
+                        <p>2024.06.20 ~ 2024.06.20</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>뮌헨 체임버 오케스트라</h3>
+                            <p>초등학생 이상 입장가능</p>
+                            <p class = "price">R석 110,000원 / A석 85,000원 / B석 60,000원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "performance">공연</span>
+                        <img src = "img/유키구마모토.JPG">
+                        <strong>유키 구라모토 콘서트</strong>
+                        <p>2024.05.30 ~ 2024.05.30</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>유키 구라모토 콘서트</h3>
+                            <p>초등학생 이상 입장가능</p>
+                            <p class = "price">R석 85,000원 / A석 65,000원 / B석 45,000원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "exhibit">전시</span>
+                        <img src = "img/mag_poster_01.jpg">
+                        <strong>매그넘 인 파리 사진 展</strong>
+                        <p>2024.05.21 ~ 2024.09.22</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>매그넘 인 파리 사진 展</h3>
+                            <p>전체 관람가</p>
+                            <p class = "price">일반 9,000원/중 ·고등 이하 7,000원/단체 2,000원 할인(20인 이상/사전 전화 문의)</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "performance">공연</span>
+                        <img src = "img/빨래 포스터 -s.JPG">
+                        <strong>뮤지컬 &lt;빨래&gt;</strong>
+                        <p>2024.07.11 ~ 2024.07.12</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>뮤지컬 &lt;빨래&gt;</h3>
+                            <p>초등학생 이상 입장가능</p>
+                            <p class = "price">1층 66,000원 / 2층 44,000원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "performance">공연</span>
+                        <img src = "img/포스터_호기심 딱지 -s.JPG"></img>
+                        <strong>뮤지컬 호기심 딱지</strong>
+                        <p>2024.05.16 ~ 2024.05.18</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>뮤지컬 호기심 딱지</h3>
+                            <p>36개월 이상 입장가능</p>
+                            <p class = "price">1층 45,000원 / 2층 25,000원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "performance">공연</span>
+                        <img src = "img/포스터_택시안에서_s.JPG">
+                        <strong>연극 택시 안에서</strong>
+                        <p>2024.05.10 ~ 2024.05.24</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>연극 택시 안에서</h3>
+                            <p>초등학생 이상 관람가</p>
+                            <p class = "price">전석 25,000원 / 문예회원 4인 30% 할인</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "performance">공연</span>
+                        <img src = "img/캡처4.JPG">
+                        <strong>어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;</strong>
+                        <p>2024.11.21 ~ 2024.11.23</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;</h3>
+                            <p>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</p>
+                            <p class = "price">전석 12,000원 [패키지가] 공연 4건*2매=62,400원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "exhibit">전시</span>
+                        <img src = "img/캡처3.JPG">
+                        <strong>어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;</strong>
+                        <p>2024.09.26 ~ 2024.09.28</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;</h3>
+                            <p>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</p>
+                            <p class = "price">전석 12,000원 [패키지가] 공연 4건*2매=62,400원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                    <div class = "programlist">
+                        <span class = "performance">공연</span>
+                        <img src = "img/캡처2.JPG">
+                        <strong>어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;</strong>
+                        <p>2024.07.18 ~ 2024.07.20</p>
+                        <button class = "reserveunder1025">예매하기</button>
+                        <div class = "hoverdiv">
+                            <h3>어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;</h3>
+                            <p>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</p>
+                            <p class = "price">전석 12,000원 [패키지가] 공연 4건*2매=62,400원</p>
+                            <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "movie">
+            <div class = "movieinfo">
+                <p>Best Movie</p>
+                <h3>영화</h3>
+                <div class = "prevnext">
+                    <a class = "prne" onclick = Movie()>&#10094;</a>
+                    <a class = "prne" onclick = Movie()>&#10095;</a>
+                </div>
+                <button>영화 전체보기  +</button>
+            </div>
+            <div class = "movies">
+                <div class = "movielist">
+                    <span class = "only12">12</span>
+                    <img src = "img/청춘.jpg">
+                    <strong>청춘 18x2 너에게로 이어지는 길</strong>
+                    <p>2024.05.22 ~ 2024.05.28</p>
+                    <div class = "hoverdiv">
+                        <h3>청춘 18x2 너에게로 이어지는 길</h3>
+                        <p>12세 이상 관람가</p>
+                        <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                    </div>
+                </div>
+                <div class = "movielist">
+                    <span class = "only15">15</span>
+                    <img src = "img/퓨리오사.jpg">
+                    <strong>퓨리오사: 매드맥스 사가</strong>
+                    <p>2024.05.22 ~ 2024.05.28</p>
+                    <div class = "hoverdiv">
+                        <h3>퓨리오사: 매드맥스 사가</h3>
+                        <p>15세 이상 관람가</p>
+                        <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                    </div>
+                </div>
+                <div class = "movielist">
+                    <span class = "all">전체</span>
+                    <img src = "img/0515G0-101.jpg">
+                    <strong>(더빙) 가필드 더 무비</strong>
+                    <p>2024.05.15 ~ 2024.05.26</p>
+                    <div class = "hoverdiv">
+                        <h3>(더빙) 가필드 더 무비</h3>
+                        <p>전체 관람가</p>
+                        <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                    </div>
+                </div>
+                <div class = "movielist">
+                    <span class = "only15">15</span>
+                    <img src = "img/0515S15-103.jpg">
+                    <strong>그녀가 죽었다</strong>
+                    <p>2024.05.15 ~ 2024.05.28</p>
+                    <div class = "hoverdiv">
+                        <h3>그녀가 죽었다</h3>
+                        <p>15세 이상 관람가</p>
+                        <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                    </div>
+                </div>
+                <div class = "movielist">
+                    <span class = "only12">12</span>
+                    <img src = "img/0508H12-145.jpg">
+                    <strong>혹성탈출: 새로운 시대</strong>
+                    <p>2024.05.08 ~ 2024.05.28</p>
+                    <div class = "hoverdiv">
+                        <h3>혹성탈출: 새로운 시대</h3>
+                        <p>12세 이상 관람가</p>
+                        <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                    </div>
+                </div>
+                <div class = "movielist">
+                    <span class = "only15">15</span>
+                    <img src = "img/0424R15-110.jpg">
+                    <strong>범죄도시4</strong>
+                    <p>2024.04.24 ~ 2024.05.24</p>
+                    <div class = "hoverdiv">
+                        <h3>범죄도시4</h3>
+                        <p>15세 이상 관람가</p>
+                        <div class = "buttondiv"><button class = "reserve">예매하기</button><button class = "detail">상세보기</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "lecture">
+            <div class = "lectureinfo">
+                <p>Best Lecture</p>
+                <h3>강좌</h3>
+                <div class = "prevnext">
+                    <a class = "prne" onclick = "Lecture()">&#10094;</a>
+                    <a class = "prne" onclick = "Lecture()">&#10095;</a>
+                </div>
+                <button>강좌 전체보기  +</button>
+            </div>
+            <div class = "lectures">
+                <div class = "lecturelist">
+                    <strong>6/2(일)셀프 심리타로 리딩2</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 문경림</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">일 13:00 ~ 17:00</li>
+                        <li class = "left">수강료 : 1개월/50,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>수리영재 주산&amp;암산</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 이현주</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">토 13:00 ~ 14:00</li>
+                        <li class = "left">수강료 : 2개월/60,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>6/14(금) 신나는 필라테스</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 이예원</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">금 18:00 ~ 19:00</li>
+                        <li class = "left">수강료 : 1개월/5,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>6/21(금) 다이어트 요가</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 김성희</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">금 18:00 ~ 19:00</li>
+                        <li class = "left">수강료 : 1개월/5,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>돈 되는 경매 물건찾기</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 박동일</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">일 19:00 ~ 20:30</li>
+                        <li class = "left">수강료 : 3개월/180,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>클라이밍(오전)</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 한정미</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">월, 화, 목 11:00 ~ 12:30</li>
+                        <li class = "left">수강료 : 1개월/55,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>신나는 유산소와 근력강화 필라테스</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 이예원</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">월, 수 11:10 ~ 12:10</li>
+                        <li class = "left">수강료 : 2개월/90,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>라켓볼 저녁1(월,수)</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 마산출</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">금 18:00 ~ 18:50</li>
+                        <li class = "left">수강료 : 1개월/60,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>6/28(금) 짐볼 필라테스</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 박미진</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">금 18:00 ~ 19:00</li>
+                        <li class = "left">수강료 : 1개월/5,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <div class = "lecturelist">
+                    <strong>몸치·박치탈출! 신나는 건강 라인댄스</strong>
+                    <ol>
+                        <li class = "instructor">강사 : 용예진</li><br>
+                        <li>장소 : 현대예술관</li>
+                        <li class = "time">일 14:00 ~ 15:00</li>
+                        <li class = "left">수강료 : 2개월/60,000원</li>
+                    </ol>
+                    <button>자세히보기</button>
+                </div>
+                <button class = "viewallbutton">강좌 전체보기</button>
+            </div>
+            
+        </div>
+        <div class = "comment">
+            <div class = "commentlist comment1">
+                <strong class = "commenttitle">자주 하는 질문</strong>
+                <hr class = "commenthr">
+                <p>서비스 이용 중 궁금한 사항은 자주하는 질문에서 확인하세요.</p>
+                <img src = "img/comm_icon1.gif">
+            </div>
+            <div class = "commentlist leftborder comment1">
+                <strong class = "commenttitle">고객소리함</strong>
+                <hr class = "commenthr">
+                <p>궁금한 사항을 남겨주시면 신속히 해결해드리겠습니다.</p>
+                <img src = "img/comm_icon2.gif">
+            </div>
+            <div class = "commentlist leftborder comment2">
+                <strong class = "commenttitle">샤브안</strong>
+                <hr class = "commenthr">
+                <p>자가제면, 자가도정으로 이름난 송정집의 정성. 샤브안에 고스란히 이어져 옳은 재료와 차림에 가득 담겼습니다. 052-912-2023</p>
+                <img src = "img/comm_icon3.gif">
+            </div>
+        </div>
+        <div class = "notice">
+            <div class = "noticediv">
+            <h1>공지사항</h1>
+            <span class = "viewallunder1025"><a href = "#" class = "viewallhref">전체보기</a> <span class = "plus">+</span></span>
+            </div>
+            <div class = "notices">
+                <div class = "noticelist">
+                    <span class = "noticeperformance">공연</span>
+                    <p>2024.03.<span class = "days">27</span></p>
+                    <strong class = "noticestrong">인문학 플랫폼 &lt;도슨트 클래스 : 두개의 조선을 걷는 시간&gt;</strong>
+                    <p class = "more">MORE</p>
+                </div>
+                <div class = "noticelist">
+                    <span class = "noticemovie">영화</span>
+                    <p>2024.02.<span class = "days">01</span></p>
+                    <strong class = "noticestrong">[영화]  2024 설날맞이 영화쿠폰북 특별할인 (2/1~2/8)</strong>
+                    <p class = "more">MORE</p>
+                </div>
+                <div class = "noticelist">
+                    <span class = "noticeexhibit">전시</span>
+                    <p>2024.01.<span class = "days">26</span></p>
+                    <strong class = "noticestrong">&lt;제 2회 HD현대중공업가족 초대작품展&gt; 작품 공모 신청</strong>
+                    <p class = "more">MORE</p>
+                </div>
+                <div class = "noticelist">
+                    <span class = "noticemain">메인</span>
+                    <p>2023.12.<span class = "days">20</span></p>
+                    <strong class = "noticestrong">2024 현대예술관 로비음악회 참가자 모집</strong>
+                    <p class = "more">MORE</p>
+                </div>
+                <div class = "noticelist">
+                    <span class = "viewall"><a href = "#" class = "viewallhref">전체보기</a> <span class = "plus">+</span></span>
+                    <span class = "noticemain">메인</span>
+                    <p>2023.11.<span class = "days">19</span></p>
+                    <strong class = "noticestrong">수험생 할인 이벤트</strong>
+                    <span class = "more">MORE</span>
+                </div>
+            </div>
+        </div>
+        <div class = "footer">
+            <div class = "footerul">
+                <ul>
+                    <li class = "important"><a href = "#">개인정보처리방침</a></li><span class = "borderrightli"></span>
+                    <li class = "important"><a href = "#">영상정보처리기기 운영방침</a></li><span class = "borderrightli"></span>
+                    <li class = "borderbottom disable4"><a href = "#">회원·이용약관</a></li><span class = "borderrightli"></span>
+                    <li class = "borderbottom disable3"><a href = "#">사이트맵</a></li><span class = "borderrightli"></span>
+                    <li class = "borderbottom disable2 "><a href = "#">제휴 및 광고 문의</a></li><span class = "borderrightli"></span>
+                    <li class = "borderbottom disable1"><a href = "#">Arts-buy</a></li>
+                </ul>
+                <ul class = "link">
+                    <li class = "instagram"></li>
+                    <li class = "twitter"></li>
+                    <li class = "facebook"></li>
+                    <li class = "top"><p>TOP</p></li>
+                </ul> 
+            </div>
+            <div class = "footerinfo">
+                <img src = "img/f_logo.png">
+                <div class = "footerinfotext">
+                    울산광역시 동구 방어진순환도로 1000(전하동) 대표자 : 이상균 사업자번호 : 252-87-01412 통신판매업신고 : 울산 동구 제 2004-00016호<br>
+                    대표전화번호 : 1522-3331(ARS)
+                    <p class = "Copyright">Copyright(C) 2018 HD HHI culture & arts center. All rights reserved.</p>
+                </div>
+                <div class = "dropdownbutton">
+                <ul class = "dropdown" onclick = "dropdownReverse()">
+                    <li>울산문화예술회관</li>
+                    <li>북구문화예술회관</li>
+                    <li>울산중구문화의전당</li>
+                    <li>울주문화예술회관</li>
+                </ul>
+                <button class = "site" onclick = "dropdownReverse()">문화예술관련 사이트 △</button>
+                </div>
+            </div>
+            <ul class = "linkunder1025">
+                <li class = "instagram"></li>
+                <li class = "twitter"></li>
+                <li class = "facebook"></li>
+            </ul>
+            <button class = "plusbutton">+</button>
+        </div>
+        <div class = "mask">
+            <div class = "hiddensidebar">
+                <div class = "hiddenlogin">
+                    <p><span class = "loginspan">로그인</span>하세요.</p> <p><a href = "#">비회원로그인 </a>></p>
+                </div>
+                <ul class = "hiddenhome">
+                    <li><img src = "img/ico_login4.png"><br>홈으로</li>
+                    <li><img src = "img/ico_login2.png"><br>로그인</li>
+                    <li><img src = "img/ico_login1.png"><br>회원가입</li>
+                </ul>
+                <ul class = "hiddensidemenu">
+                    <li><div onclick = "visibleclick(0)"><a href = "#">공연</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li onclick = "visibleclick2()"><div><a href = "#">공연 예매</a><span class = "moremenu2">+</span></div></li>
+                                <ul class = "clicklist2">
+                                    <li>- 공연예매</li>
+                                    <li>- 연간공연</li>
+                                </ul>
+                            <li><a href = "#">공연장 소개</a></li>
+                            <li><a href = "#">예매 가이드</a></li>
+                            <li><a href = "#">관람예절</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(1)"><a href = "#">전시</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li onclick = "visibleclick2()"><div><a href = "#">전시 예매</a><span class = "moremenu2">+</span></div></li>
+                                <ul class = "clicklist2">
+                                    <li>- 전시예매</li>
+                                    <li>- 연간전시</li>
+                                </ul>
+                            <li><a href = "#">미술관 소개</a></li>
+                            <li><a href = "#">관람 예절</a></li>
+                            <li><a href = "#">소장품 자료실</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(2)"><a href = "#">영화</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li><a href = "#">영화 예매</a></li>
+                            <li><a href = "#">예매 가이드</a></li>
+                            <li><a href = "#">영화관 소개</a></li>
+                            <li><a href = "#">영화 관람료</a></li>
+                            <li><a href = "#">영화 쿠폰북</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(3)"><a href = "#">강좌</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li><a href = "#">강좌 시간표</a></li>
+                            <li><a href = "#">강좌 소개</a></li>
+                            <li><a href = "#">수강 신청</a></li>
+                            <li><a href = "#">수강신청가이드</a></li>
+                            <li><a href = "#">강사경력증명서</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(4)"><a href = "#">대관 안내</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li><a href = "#">대관 안내</a></li>
+                            <li onclick = "visibleclick2()"><div><a href = "#">공연장 대관</a><span class = "moremenu2">+</span></div></li>
+                            <ul class = "clicklist2">
+                                <li>- 대관절차</li>
+                                <li>- 대관시설</li>
+                                <li>- 대관 사용료</li>
+                                <li>- 대관 규약</li>
+                            </ul>
+                            <li><a href = "#">기타시설 대관</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(5)"><a href = "#">문예회원</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li><a href = "#">문예회원 안내</a></li>
+                            <li><a href = "#">문예회원 가입</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(6)"><a href = "#">고객센터</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li><a href = "#">공지사항</a></li>
+                            <li><a href = "#">채용안내</a></li>
+                            <li><a href = "#">고객소리함</a></li>
+                            <li><a href = "#">자주하는 질문</a></li>
+                            <li><a href = "#">이벤트</a></li>
+                            <li><a href = "#">설문조사</a></li>
+                        </ul>
+                    </li>
+                    <li><div onclick = "visibleclick(7)"><a href = "#">회관소개</a><span class = "moremenu">+</span></div>
+                        <ul class = "clicklist">
+                            <li><a href = "#">현대예술관 소개</a></li>
+                            <li><a href = "#">상주예술 단체</a></li>
+                            <li><a href = "#">샤브안</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id = "bg" onclick = "sidehidden()"></div>
+    </div>
+    <script>
+        var concertIndex = 0;
+        var x = document.getElementsByClassName("concert");
+        function carousel(){
+            var i;
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none";
+            }
+            concertIndex++;
+            if(concertIndex > x.length){concertIndex=1}
+            x[concertIndex-1].style.display="block";
+        }
+        autocarousel();
+        function autocarousel(){
+            var i;
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none";
+            }
+            concertIndex++;
+            if(concertIndex > x.length){concertIndex=1}
+            x[concertIndex-1].style.display="block";
+            setTimeout(autocarousel,4000);
+        }
+        function plusSlides(n){
+            carousel(concertIndex=n);
+        }
+        var program = document.getElementsByClassName("programlist");
+        var n = 0;
+        function Program(){
+            n++;
+            if(n%2==0){
+                for(var i=0;i<program.length;i++){
+                    if(i<5){
+                        program[i].style.display="flex";
+                    }
+                    else{
+                        program[i].style.display="none";
+                    }
+                } 
+            }
+            else{
+                for(var i=0;i<program.length;i++){
+                    if(i>=5){
+                        program[i].style.display="flex";
+                    }
+                    else{
+                        program[i].style.display="none";
+                    }
+                }
+            }
+        }
+        var movie = document.getElementsByClassName("movielist");
+        function Movie(){
+            n++;
+            if(n%2==1){
+                movie[0].style.display="none";
+                movie[5].style.display="flex";
+            }
+            else{
+                movie[5].style.display="none";
+                movie[0].style.display="flex";
+            }
+        }
+        var lecture = document.getElementsByClassName("lecturelist");
+        function Lecture(){
+            n++;
+            if(n%2==0){
+                for(var i=0;i<lecture.length;i++){
+                    if(i<5){
+                        lecture[i].style.display="flex";
+                    }
+                    else{
+                        lecture[i].style.display="none";
+                    }
+                } 
+            }
+            else{
+                for(var i=0;i<lecture.length;i++){
+                    if(i>=5){
+                        lecture[i].style.display="flex";
+                    }
+                    else{
+                        lecture[i].style.display="none";
+                    }
+                }
+            }
+        }
+        const mediaQueryString = '(min-width: 1025px)';
+        const mediaQueryList = window.matchMedia(mediaQueryString);
+        const mediaQueryMaskBG = '(min-width: 1200px)';
+        var bg = document.getElementById("bg");
+        var mask = document.getElementsByClassName("mask");
+        function handleMediaChange(mediaQueryList){
+            if(mediaQueryList.matches){//1025px이상일때 반응형
+                for(var i = 5; i <= 9; i++){
+                    program[i].style.display="none";
+                    lecture[i].style.display="none";
+                }
+                movie[5].style.display="none";
+            }
+            else{
+                for(var i = 5; i <= 9; i++){//1025px미만일때 반응형
+                program[i].style.display="flex";
+                lecture[i].style.display="flex";
+                }
+                movie[5].style.display="flex";
+            }
+            if(mediaQueryMaskBG){
+                bg.style.display="none";
+                for(var i = 0; i < mask.length; i++){
+                    mask[i].style.display="none";
+                }
+            }
+        }
+        mediaQueryList.addListener(handleMediaChange); // 초기 실행
+        handleMediaChange(mediaQueryList);// resize 이벤트에 대한 이벤트 리스너 추가
+        window.addEventListener('resize', function() { // 뷰포트 크기가 변경될 때 실행되는 코드
+            handleMediaChange(mediaQueryList); // 변경 감지 함수 호출 
+        });
+        /*var mypagedetail = document.getElementsByClassName("mypagedetail");
+        var count = 0;
+        function displaynone(){
+            for(var x = 0; x < mypagedetail.length; x++){
+                mypagedetail[x].style.display="none";
+            }
+        }//마이페이지 클릭할 시 다시 삭제*/
+        var dropdown = document.getElementsByClassName("dropdown");
+        var clickcount = 0;
+        function dropdownReverse(){
+            clickcount++;
+            if(clickcount % 2 == 1){
+                for(var x = 0; x < dropdown.length; x++){
+                    dropdown[x].style.display="block";
+                }
+            }
+            else{
+                for(var x = 0; x < dropdown.length; x++){
+                    dropdown[x].style.display="none";
+                }
+            }
+        }
+        var bg = document.getElementById("bg");
+        var sidebar = document.getElementsByClassName("mask");
+        function hiddenside(){
+            for(var i = 0; i < sidebar.length; i++){
+                sidebar[i].style.display="block";
+            }
+            bg.style.display="block";
+        }
+        function sidehidden(){
+            console.log("hidden");
+            for(var i = 0; i < sidebar.length; i++){
+                sidebar[i].style.display="none";
+            }
+            bg.style.display="none";
+        }
+        var clicks = document.getElementsByClassName("clicklist");
+        var click2 = document.getElementsByClassName("clicklist2");
+        
+        function clicklist(){
+            for(var i = 0; i < clicks.length; i++){
+                clicks[i].style.display="none";
+            }
+            for(var i = 0; i < click2.length; i++){
+                click2[i].style.display="none";
+            }
+        }
+        clicklist();
+        var n = 1;
+        var clickcount = 0;
+        var first, second;
+        function visibleclick(n){
+            clickcount++;
+            if(clickcount == 1){
+                first = n;
+                clicks[n].style.display="flex"; 
+            }
+            if(clickcount >= 2){
+                second = n;
+                clicklist();
+                if(first != second){
+                    first = n;
+                    clickcount = 1;
+                    clicks[n].style.display="flex";
+                }
+                else{
+                    clickcount = 0;
+                    clicks[n].style.display="none";
+                }
+            }
+            clickcount2 = 0;
+        }
+        var clickcount2 = 0;
+        function visibleclick2(){
+            clickcount2++;
+            if(clickcount2==1){
+                for(var i = 0; i < click2.length; i++){
+                    click2[i].style.display="flex";
+                }
+            }
+            else{
+                for(var i = 0; i < click2.length; i++){
+                    click2[i].style.display="none";
+                }
+                clickcount2 = 0;
+            }
+        }
+    </script>
+</body>
+</html>

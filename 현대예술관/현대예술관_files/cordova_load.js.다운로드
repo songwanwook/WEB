@@ -1,0 +1,45 @@
+window.__cordova_init = false;
+window.__cordova_platform = '';
+window.__iscordova = false;
+
+var __cordova_path = '';
+
+function _includeJs(jsFilePath) {
+  if (jsFilePath != '') {
+      var js = document.createElement('script');
+      js.type = "text/javascript";
+      js.src = jsFilePath;
+      document.head.appendChild(js);
+  }
+}
+function __onDeviceReady() {
+  console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+  
+  window.__cordova_init = true;
+  
+  try{
+      window.open = cordova.InAppBrowser.open;
+      //_c.alert(window.open);
+  }catch (err){
+     // _c.alert(err);
+  }
+  
+}
+
+if (navigator.userAgent.indexOf('androidCordova') > 0) {
+  __cordova_path = '/js/cordova/android/'+ 'cordova.js';
+  window.__cordova_platform = 'android';
+  window.__iscordova = true;
+} else if (navigator.userAgent.indexOf('iosCordova') > 0) {
+  //__cordova_path = '/js/cordova/ios/'+ 'cordova.js';
+  window.__cordova_platform = 'ios';
+  window.__iscordova = true;
+} else {
+  //__cordova_path = '/js/cordova/browser/'+ 'cordova.js';
+  window.__cordova_platform = 'browser';
+}
+_includeJs(__cordova_path  );
+
+
+document.addEventListener('deviceready', __onDeviceReady, false);
+

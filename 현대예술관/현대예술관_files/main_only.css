@@ -1,0 +1,10 @@
+/* 메인메만 적용됨 */
+
+#footer {margin-top:0;}
+
+@media all and (max-width:1024px) {
+
+    #header .header_wrap h1 {display:block;}
+    #header .header_wrap h1 img {height:30px;}
+    .hidePc.nav_my {display:none;}
+}

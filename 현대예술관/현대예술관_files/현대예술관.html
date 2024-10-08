@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://www.hhiarts.co.kr/main/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 중공업 엔터프라이즈 모드 처리-->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, user-scalable=yes">
+  <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src * &#39;self&#39; data:; script-src * &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;">
+  <meta property="og:image" content="/images/common/hhiarts.png">
+  <meta property="og:title" content="현대예술관">
+  <meta property="og:description" content="현대예술관 공연, 전시, 영화 예매 및 강좌 접수를 할 수 있습니다">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.hhiarts.co.kr/images/main/ios_icon_180.png?v=0.0.2">
+  <link rel="icon" type="image/png" href="https://www.hhiarts.co.kr/images/main/ios_icon_192.png?v=0.0.2" sizes="192x192">
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.hhiarts.co.kr/favicon.ico?v=0.0.2">
+
+
+
+
+
+  <!-- <link rel="shortcut icon" sizes="192x192" href="/images/main/ios_icon_192.png?v=0.0.1"> -->
+
+
+
+  <!--  <meta name="viewport" content="width=device-width"> -->
+  <title>현대예술관</title>
+    <script>
+       //전체 전역
+       "use strict";
+       var __isMobile = true;
+       //ssl 통신으로 이동
+       var httpURL= window.location.hostname + window.location.pathname + window.location.search;
+       var httpsURL= "";
+       if (window.location.hostname.indexOf('hhi.co.kr') > 0 ) {
+        if (window.location.protocol != 'https:'){
+                httpsURL= "https://" + httpURL;
+                window.location = httpsURL;
+        }
+       } else if (window.location.hostname.indexOf('co.kr') >= 0 && (window.location.protocol != 'https:'  || httpURL.indexOf ("www") < 0  ) ){
+           //var httpURL= window.location.hostname + window.location.pathname + window.location.search;
+           if (httpURL.indexOf ("www") < 0  ){
+            httpURL = "www." + httpURL;
+           }
+           httpsURL= "https://" + httpURL;
+
+           window.location = httpsURL;
+       }
+
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./현대예술관_files/import.css">
+
+
+    <!-- jquery Setting -->
+    <script src="./현대예술관_files/jquery-3.1.0.min.js.다운로드"></script>
+
+
+    <!-- json Setting -->
+    <script src="./현대예술관_files/json2.js.다운로드"></script>
+
+<!-- 추가 항목 -->
+
+    <script type="text/javascript" src="./현대예술관_files/jquery.smenu-0.2.2.min.js.다운로드"></script>
+    <script type="text/javascript" src="./현대예술관_files/jquery.bxslider.min.js.다운로드"></script>
+    <script type="text/javascript" src="./현대예술관_files/slick.min.js.다운로드"></script>
+    <script type="text/javascript" src="./현대예술관_files/comm.js.다운로드"></script>
+    <script type="text/javascript" src="./현대예술관_files/ua-parser.min.js.다운로드"></script>
+    <script src="./현대예술관_files/hhiarts.js.다운로드"></script>
+
+    <script src="./현대예술관_files/kakao.min.js.다운로드"></script>
+
+    <script type="text/javascript" src="./현대예술관_files/cordova_load.js.다운로드"></script>
+
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <script>
+      
+         _c.autoLogin();
+      
+    </script>
+</head>
+<body>
+<!-- //추가 항목 -->
+
+
+<script type="text/javascript">
+"use strict";
+var _sSeelctMid = '';
+//mid는 배열 순번입니다. 2자리씩 사용.하위메뉴는 submenu[]에 오브젝트로 넣으시면 됩니다.
+//메뉴 관리 변수
+var _Menu = [
+                {    "mid" : "00" ,"title" : "공연" ,"url" : "/performance/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : "now=Y"
+                    ,"submenu" :[
+                                    { "mid"     : "0000" ,"title"   : "공연 예매" ,"url"     : "/performance/list.do"  ,"svc_id"  : "list"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : "now=Y"
+                                    ,"submenu"   :[
+                                                    { "mid"     : "000000","title"   : "공연예매" ,"url"     : "/performance/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : "now=Y"
+                                                    ,"submenu"   :[]
+                                                    }
+                                                ,{ "mid"     : "000001" ,"title"   : "연간공연" ,"url"     : "/performance/yearlist.do" ,"svc_id"  : "yearlist" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : "unicodeseqitemtype=0000000607"
+                                                    ,"submenu"   :[]
+                                                    }
+
+                                                ]
+                                    }
+                                    ,{ "mid"     : "0001" ,"title"   : "공연장 소개" ,"url"     : "/performance/hallinfo.do" ,"svc_id"  : "hallinfo" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                    }
+                                    ,{ "mid"     : "0002" ,"title"   : "예매가이드" ,"url"     : "/performance/guide.do" ,"svc_id"  : "guide" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+//                                    ,{ "mid"     : "0003" ,"title"   : "관람후기" ,"url"     : "/board/list.do" ,"svc_id"  : "reviewlist" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+//                                        ,"submenu"   :[]
+//                                        }
+                                    ,{ "mid"     : "0004" ,"title"   : "관람예절" ,"url"     : "/performance/manners.do" ,"svc_id"  : "manners" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                               ]
+
+
+                }
+                ,{    "mid" : "01" ,"title" : "전시" ,"url" : "/exhibition/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : "now=Y"
+                     ,"submenu"   :[
+                                        { "mid"     : "0100" ,"title"   : "전시 예매" ,"url"     : "/exhibition/list.do"  ,"svc_id"  : "list"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : "now=Y"
+                                        ,"submenu"   :[
+                                                        { "mid"     : "010000","title"   : "전시예매" ,"url"     : "/exhibition/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : "now=Y"
+                                                        ,"submenu"   :[]
+                                                        }
+                                                    ,{ "mid"     : "010001" ,"title"   : "연간전시" ,"url"     : "/exhibition/yearlist.do" ,"svc_id"  : "yearlist" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : "unicodeSeqItemType=0000000609"
+                                                        ,"submenu"   :[]
+                                                        }
+                                                    ]
+                                        }
+                                    ,{ "mid"     : "0101" ,"title"   : "미술관 소개" ,"url"     : "/exhibition/info.do" ,"svc_id"  : "info" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                                    ,{ "mid"     : "0102" ,"title"   : "관람 예절" ,"url"     : "/exhibition/manners.do" ,"svc_id"  : "manners" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                                    ,{ "mid"     : "0103" ,"title"   : "소장품 자료실" ,"url"     : "/exhibition/gallery_list.do" ,"svc_id"  : "gallery_list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                               ]
+
+                }
+                ,{    "mid" : "02" ,"title" : "영화" ,"url" : "/movie/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : ""
+                    ,"submenu"   :[
+                                    { "mid"     : "0200" ,"title"   : "영화 예매" ,"url"     : "/movie/list.do"  ,"svc_id"  : "list"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[
+                                                ]
+                                    }
+                                    ,{ "mid"     : "0201" ,"title"   : "예매 가이드" ,"url"     : "/movie/guide.do" ,"svc_id"  : "guide" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                    }
+                                    ,{ "mid"     : "0202" ,"title"   : "영화관 소개" ,"url"     : "/movie/info.do" ,"svc_id"  : "info" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                    }
+                                    ,{ "mid"     : "0203" ,"title"   : "영화관람료" ,"url"     : "/movie/info.do" ,"svc_id"  : "fee" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                    }
+                                    ,{ "mid"     : "0204" ,"title"   : "영화쿠폰북" ,"url"     : "/movie/coupon.do" ,"svc_id"  : "couponList" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                                    
+                              ]
+
+               }
+                ,{    "mid" : "03" ,"title" : "강좌" ,"url" : "/lecture/info.do" ,"svc_id"  : "info" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : ""
+                    ,"submenu"   :[
+                                    { "mid"     : "0300" ,"title"   : "강좌소개" ,"url"     : "/lecture/info.do"  ,"svc_id"  : "info"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[
+                                                ]
+                                    }
+                                    ,{ "mid"     : "0301" ,"title"   : "수강신청" ,"url"     : "/lecture/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                    }
+                                    ,{ "mid"     : "0302" ,"title"   : "수강신청가이드" ,"url"     : "/lecture/guide.do" ,"svc_id"  : "guide" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                                    ,{ "mid"     : "0303" ,"title"   : "강사경력증명서" ,"url"     : "/lecture/guide.do" ,"svc_id"  : "career" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                        }
+                              ]
+               }
+                ,{    "mid" : "04" ,"title" : "대관 안내" ,"url" : "/facilities/guide_list.do" ,"svc_id"  : "guide_list" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : ""
+                    ,"submenu"   :[
+                                    { "mid"     : "0400" ,"title"   : "대관 안내" ,"url"     : "/facilities/guide_list.do" ,"svc_id"  : "guide_list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                            ,"submenu"   :[]
+                                    }
+                                    ,{ "mid"     : "0401" ,"title"   : "공연장 대관" ,"url"     : "/facilities/info_process.do"  ,"svc_id"  : "info_process"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[
+                                                    { "mid"     : "040100","title"   : "대관절차" ,"url"     : "/facilities/info_process.do" ,"svc_id"  : "info_process" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                                        ,"submenu"   :[]
+                                                    }
+                                                    ,{ "mid"     : "040101" ,"title"   : "대관시설" ,"url"     : "/facilities/info_facilites.do" ,"svc_id"  : "info_facilites" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                                        ,"submenu"   :[]
+                                                    }
+                                                    ,{ "mid"     : "040102" ,"title"   : "대관 사용료" ,"url"     : "/facilities/info_fee.do" ,"svc_id"  : "info_fee" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                                    ,"submenu"   :[]
+                                                    }
+                                                    ,{ "mid"     : "040103" ,"title"   : "대관 규약" ,"url"     : "/facilities/info_rule.do" ,"svc_id"  : "info_rule" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                                        ,"submenu"   :[]
+                                                    }
+                                                ]
+                                    }
+                                    ,{ "mid"     : "0402" ,"title"   : "기타시설 대관" ,"url"     : "/facilities/list_other.do" ,"svc_id"  : "list_other" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                        ,"submenu"   :[]
+                                    }
+                              ]
+
+               }
+                ,{    "mid" : "05" ,"title" : "문예회원" ,"url" : "/literary/info.jsp" ,"svc_id"  : "" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : ""
+                    ,"submenu"   :[
+                               { "mid"     : "0500" ,"title"   : "문예회원 안내" ,"url"     : "/literary/info.jsp"  ,"svc_id"  : ""  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[
+                                           ]
+                               }
+                              ,{ "mid"     : "0501" ,"title"   : "문예회원 가입" ,"url"     : "/literary.do" ,"svc_id"  : "literaryInfo" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                ,"submenu"   :[]
+                               }
+                              ]
+               }
+                ,{    "mid" : "06" ,"title" : "고객센터" ,"url" : "/board/list.do" ,"svc_id"  : "consult" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : ""
+                    ,"submenu"   :[
+                               { "mid"     : "0600" ,"title"   : "공지사항" ,"url"     : "/board/list.do"  ,"svc_id"  : "list"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : "boardSeq=0000000241"
+                                  ,"submenu"   :[
+                                           ]
+                               }
+                              ,{ "mid"     : "0601" ,"title"   : "채용안내" ,"url"     : "/incruit/list.do"  ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                ,"submenu"   :[]
+                               }
+                              ,{ "mid"     : "0602" ,"title"   : "고객소리함" ,"url"     : "/board/list.do" ,"svc_id"  : "consult" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 }
+                              ,{ "mid"     : "0603" ,"title"   : "자주하는 질문" ,"url"     : "/board/faq_list.do" ,"svc_id"  : "faq_list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 }
+                              ,{ "mid"     : "0604" ,"title"   : "이벤트" ,"url"     : "/event/list.do" ,"svc_id"  : "list" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 }
+                            /*   ,{ "mid"     : "0605" ,"title"   : "이벤트 당첨자" ,"url"     : "#" ,"svc_id"  : "" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 } */
+                              ,{ "mid"     : "0605" ,"title"   : "설문조사" ,"url"     : "/board/list.do" ,"svc_id"  : "survey" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 }
+                              ]
+               }
+                ,{    "mid" : "07" ,"title" : "회관소개" ,"url" : "/introduction/intro_1.do" ,"svc_id"  : "intro_1" ,"session" : false ,"secure"  : false ,"type" :"forward" ,"param"   : ""
+                    ,"submenu"   :[
+                               { "mid"     : "0700" ,"title"   : "현대예술관 소개" ,"url"     : "/introduction/intro_1.do"  ,"svc_id"  : "intro_1"  ,"session" : false ,"secure"  : false,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[
+                                           ]
+                               }
+                              ,{ "mid"     : "0701" ,"title"   : "상주예술단체" ,"url"     : "/introduction/artgroup.do" ,"svc_id"  : "artgroup" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 }
+                              ,{ "mid"     : "0702" ,"title"   : "샤브안" ,"url"     : "/introduction/restaurant.do" ,"svc_id"  : "shabu" ,"session" : false ,"secure"  : false ,"type"    :"forward" ,"param"   : ""
+                                  ,"submenu"   :[]
+                                 }
+                              ]
+               }
+
+            ];
+
+$(document).ready(function(){
+    _c.makeTopMenu();
+    _c.makeSubMenu();
+    });
+
+
+function _goMenu(sMid) {
+    var sMid1 = sMid.substr(0,2)
+    var sMid2 = sMid.substr(2,2)
+    var sMid3 = sMid.substr(4,2)
+    var oSelectMenuObject = null;
+    var sLocation = "";
+
+    if (sMid == "0501") { // 문예회원 가입
+        var user_type = "";
+        if (user_type == "9999999997") {
+            alert("비회원 로그인은 이용하실 수 없습니다.");
+            return;
+        }
+    }
+
+    if(sMid3 != "") {
+        oSelectMenuObject = _Menu[parseInt(sMid1)].submenu[parseInt(sMid2)].submenu[parseInt(sMid3)];
+    } else if (sMid2 != "") {
+        oSelectMenuObject = _Menu[parseInt(sMid1)].submenu[parseInt(sMid2)];
+    } else if (sMid1 != "") {
+        oSelectMenuObject = _Menu[parseInt(sMid1)];
+    }
+
+    sLocation =  oSelectMenuObject.url + "?mid=" +sMid;
+
+    if (oSelectMenuObject.svc_id != null && typeof oSelectMenuObject.svc_id != "undefined" &&  oSelectMenuObject.svc_id != "") {
+        sLocation +=  "&SVC_ID=" + oSelectMenuObject.svc_id;
+    }
+    if (oSelectMenuObject.param != null && typeof oSelectMenuObject.param != "undefined" &&  oSelectMenuObject.param != "") {
+        sLocation += "&"+ oSelectMenuObject.param;
+    }
+
+
+
+    if (oSelectMenuObject.session == true) {
+
+        
+            sLocation = "&" + __returnurlParamName + "="+encodeURIComponent(sLocation) ;
+            if (location.hostname.indexOf(".co.kr") >= 0) {
+                location.href = "https://" + location.host + __login_page + sLocation ;
+            } else {
+                location.href = location.protocol + "//" + location.host + __login_page + sLocation ;
+            }
+            return;
+       
+    }
+
+    if (location.hostname.indexOf(".co.kr") >= 0 && oSelectMenuObject.secure == true) {
+        sLocation = "https://" + location.hostname + sLocation ;
+    }
+
+
+
+    // 사용자 Agent 정보 저장 처리
+
+      _c.saveAgent(oSelectMenuObject.mid, oSelectMenuObject.title);
+    //사용자 Agent 정보 저장 처리
+
+    location.href = sLocation;
+
+
+}
+
+</script>
+
+<script type="text/javascript">
+function goLogout(sUrl) {
+    _c.alert("로그아웃 하셨습니다.");
+    
+    if(typeof sUrl  == "undefined") {
+        document.location.href = "/member/logout.jsp";    
+    } else {
+        document.location.href = "/member/logout.jsp?rurl=" + encodeURIComponent(sUrl);
+    }
+    
+}
+
+
+$(document).ready(function(){
+    
+    var oTest = new Map();
+    if (typeof oTest.size != "function"){
+        _c.alert("설치.<a href='https://play.google.com/store/apps/details?id=kr.co.hhiarts'>현대예술관 앱 설치</a>");    
+    }
+    
+});
+
+</script>
+<!-- 공지팝업 -->
+
+<!-- PC용 상단 팝업 -->
+<div id="popup1" class="close">
+    <div class="top_popup slick-initialized slick-slider" id="divmbpc">
+    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 0px;"></div></div></div>
+    <div class="util">
+        <form name="notice_form" class="notice_form">
+            <span class="today_chk sri">
+                <input type="checkbox" id="mbchkbox" name="mbchkbox" value="checkbox" class="inp_check" onclick="closeWin(&#39;popup1&#39;,this);">
+                <label for="mbchkbox" class="ico_check">오늘 하루 열지 않기</label>
+            </span>
+        </form>
+        <button type="button" onclick="closeWin(&#39;popup1&#39;,this); javascript:$(&#39;#popup1&#39;).addClass(&#39;close&#39;);" class="bt_close">닫기</button>
+    </div>
+</div>
+<!-- //PC용 상단 팝업 -->
+<!-- 모바일용 상단 팝업 -->
+<div id="m_popup1" class="close">
+    <div class="m_top_popup slick-initialized slick-slider" id="divmbmobile">
+    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 0px;"></div></div></div>
+    <div class="util">
+        <form name="notice_form" class="notice_form">
+            <span class="today_chk sri">
+                <input type="checkbox" id="mbchkbox2" name="mbchkbox2" value="checkbox" class="inp_check" onclick="closeWin(&#39;m_popup1&#39;,this);">
+                <label for="mbchkbox2" class="ico_check">오늘 하루 열지 않기</label>
+            </span>
+        </form>
+        <button type="button" onclick="closeWin(&#39;m_popup1&#39;,this); javascript:$(&#39;#m_popup1&#39;).addClass(&#39;close&#39;);" class="bt_close">닫기</button>
+    </div>
+    <!-- <div class="util">
+        <a href="#" class="bt_close">닫기</a>
+    </div> -->
+</div>
+<!-- //모바일용 상단 팝업-->
+
+
+<script>
+    var _maincookieData = document.cookie;
+    if (_maincookieData.indexOf("popup1=done") < 0 || _maincookieData.indexOf("m_popup1=done") < 0 ) {
+        //팝업내용 가져 오기
+        getMainBanner ();
+    } else {
+        $('#popup1').addClass('close');
+        $('#m_popup1').addClass('close');
+    }
+
+
+    function setCookie(name, value, expirehours) {
+        var todayDate = new Date();
+        todayDate.setHours(todayDate.getHours() + expirehours);
+        document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+    function closeWin(id, checkbox) {
+        if (checkbox.checked) {
+            setCookie(id, "done", 1);
+        }
+        //document.getElementById(id).style.display = "none";
+    }
+    function getMainBanner () {
+        _c.submit("mainBanner" ,"/mainview.do", "","",function(svcid, ecode,emsg,data){
+            var nLoop= -1;
+            var oData ;
+            var sPcHTML = "";
+            var sMoHTML = "";
+
+            if (data.mainbanner && data.mainbanner.length > 0) {
+
+                oData = data.mainbanner;
+                for (nLoop = 0 ; nLoop < oData.length ; nLoop ++ ){
+                    sPcHTML += '<div><img src="/common/popup/download.jsp?save_dir=ticketing&file_name='+oData[nLoop].pc_file_name+'&file_mask='+oData[nLoop].pc_file_mask+'" alt="'+oData[nLoop].pc_file_mask+'"></div>';
+                    sMoHTML += '<div><img src="/common/popup/download.jsp?save_dir=ticketing&file_name='+oData[nLoop].mobile_file_name+'&file_mask='+oData[nLoop].mobile_file_mask+'" alt="'+oData[nLoop].mobile_file_mask+'"></div>';
+                }
+
+                $("#divmbpc").html(sPcHTML);
+                $("#divmbmobile").html(sMoHTML);
+
+                $('#popup1').removeClass('close');
+                $('#m_popup1').removeClass('close');
+            }
+        },false);
+
+    }
+</script>
+<!-- // -->
+
+<div id="wrap" class="">
+    <!-- skipToContent -->
+    <ul id="skipToContent">
+        <li><a href="https://www.hhiarts.co.kr/main/#contents">본문 바로가기</a></li>
+        <li><a href="https://www.hhiarts.co.kr/main/#gnb">주메뉴 바로가기</a></li>
+        <li><a href="https://www.hhiarts.co.kr/main/#footer">페이지하단 바로가기</a></li>
+    </ul>
+    <!-- //skipToContent -->
+
+    <!-- header -->
+    <div id="header">
+        <div class="header_wrap">
+            <h1><a href="https://www.hhiarts.co.kr/index.jsp"><img src="./현대예술관_files/logo.png" alt="현대예술관"></a></h1>
+
+            <ul class="head_util">
+                <li class="info">
+                    
+                    <div class="off">
+                        <strong>로그인</strong>하세요.
+                        <a href="https://www.hhiarts.co.kr/member.do?SVC_ID=goGuestLogin">비회원로그인</a>
+                    </div>
+                    
+                </li>
+
+                <li class="home"><a href="https://www.hhiarts.co.kr/">홈으로</a></li>
+
+                
+                <li class="login"><a href="https://www.hhiarts.co.kr/member.do?SVC_ID=goLogin">로그인</a></li>
+                <li class="join"><a href="https://www.hhiarts.co.kr/member.do?SVC_ID=membership">회원가입</a></li>
+                <li class="mypage_area">
+                    <button type="button" class="btn_mypage">마이페이지</button>
+                    <div class="mypage_detail">
+                        <a href="https://www.hhiarts.co.kr/mypage/member/modify.do?SVC_ID=member_modify" class="tit">마이페이지</a>
+                        <ul>
+                            <li><a href="https://www.hhiarts.co.kr/mypage/reserveresult.do?SVC_ID=reserveresult&amp;itemGroup=0000000608">예매현황</a></li>
+                            <li><a href="https://www.hhiarts.co.kr/mypage.do?SVC_ID=my_lecture">강좌등록현황</a></li>
+                            <li><a href="https://www.hhiarts.co.kr/mypage.do?SVC_ID=couponbuylist">영화예매권</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+
+            </ul>
+            <div class="nav_my hidePc"><a href="https://www.hhiarts.co.kr/">홈으로</a></div>
+            <div class="nav_all hidePc"><button type="button" onclick="toggleAllMenu()" class="nav_btn">전체메뉴 열기</button></div>
+            <div class="nav_close hidePc"><button type="button" onclick="toggleAllMenu()" class="nav_btn">전체메뉴 닫기</button></div>
+        </div>
+        <div class="mask"></div>
+        <div id="gnb" class="">
+            <ul class="top1menu" id="ulTopMenu"><li class="depth-1"><a href="javascript:_goMenu(&#39;00&#39;)">공연</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0000&#39;)" class="be">공연 예매</a> 
+<ul class="depth3">
+<li class="depth-3"><a href="javascript:_goMenu(&#39;000000&#39;)">공연예매</a></li>
+<li class="depth-3"><a href="javascript:_goMenu(&#39;000001&#39;)">연간공연</a></li></ul></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0001&#39;)">공연장 소개</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0002&#39;)">예매가이드</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0004&#39;)">관람예절</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;01&#39;)">전시</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0100&#39;)" class="be">전시 예매</a> 
+<ul class="depth3">
+<li class="depth-3"><a href="javascript:_goMenu(&#39;010000&#39;)">전시예매</a></li>
+<li class="depth-3"><a href="javascript:_goMenu(&#39;010001&#39;)">연간전시</a></li></ul></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0101&#39;)">미술관 소개</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0102&#39;)">관람 예절</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0103&#39;)">소장품 자료실</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;02&#39;)">영화</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0200&#39;)">영화 예매</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0201&#39;)">예매 가이드</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0202&#39;)">영화관 소개</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0203&#39;)">영화관람료</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0204&#39;)">영화쿠폰북</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;03&#39;)">강좌</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0300&#39;)">강좌소개</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0301&#39;)">수강신청</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0302&#39;)">수강신청가이드</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0303&#39;)">강사경력증명서</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;04&#39;)">대관 안내</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0400&#39;)">대관 안내</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0401&#39;)" class="be">공연장 대관</a> 
+<ul class="depth3">
+<li class="depth-3"><a href="javascript:_goMenu(&#39;040100&#39;)">대관절차</a></li>
+<li class="depth-3"><a href="javascript:_goMenu(&#39;040101&#39;)">대관시설</a></li>
+<li class="depth-3"><a href="javascript:_goMenu(&#39;040102&#39;)">대관 사용료</a></li>
+<li class="depth-3"><a href="javascript:_goMenu(&#39;040103&#39;)">대관 규약</a></li></ul></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0402&#39;)">기타시설 대관</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;05&#39;)">문예회원</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0500&#39;)">문예회원 안내</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0501&#39;)">문예회원 가입</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;06&#39;)">고객센터</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0600&#39;)">공지사항</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0601&#39;)">채용안내</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0602&#39;)">고객소리함</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0603&#39;)">자주하는 질문</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0604&#39;)">이벤트</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0605&#39;)">설문조사</a></li></ul></li><li class="depth-1"><a href="javascript:_goMenu(&#39;07&#39;)">회관소개</a>
+<ul>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0700&#39;)">현대예술관 소개</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0701&#39;)">상주예술단체</a></li>
+<li class="depth-2"><a href="javascript:_goMenu(&#39;0702&#39;)">샤브안</a></li></ul></li></ul>
+            <span class="bg"> </span>
+        </div>
+    </div>
+
+
+
+    <!-- 확인 레이어 -->
+    <div id="__confirm" class="layer_overlay close"><!-- 클래스 close 없어지면 레이어 열림 -->
+        <div class="v_align">
+            <div class="basic_layer confirm ">
+                <h4 class="b_tit" id="__confirm_title">타이틀 들어갑니다.</h4>
+                <div class="b_con">
+                    <!-- 레이어 콘텐츠 -->
+                    <p class="tx" id="__confirm_msg">서비스를 종료하시겠습니까?</p>
+                    <div class="btn_step">
+                        <button type="button" onclick="javascript:_c.confirmCancel();" class="bt_cancel_s">취소</button>
+                        <button type="button" onclick="javascript:_c.confirmOk();" class="bt_ok_s">확인</button>
+                    </div>
+                    <!-- 레이어 콘텐츠 -->
+                </div>
+                <button type="button" class="bt_close" onclick="javascript:$(&#39;#__confirm&#39;).addClass(&#39;close&#39;)">닫기</button>
+            </div>
+            <!-- //레이어 콘텐츠 -->
+        </div>
+    </div>
+    <!-- // -->
+
+    <!-- 처리중 레이어 -->
+    <div id="__progressMain" class="layer_overlay_white close"><!-- 메인에서 사용 -->
+        <div class="v_align">
+            <div class="basic_layer loading">
+                <div class="b_con">
+                    <!-- 레이어 콘텐츠 -->
+                    <span class="loader"></span>
+                    <strong>처리 중입니다.</strong>
+                    <p>잠시만 기다려 주시기 바랍니다.</p>
+                    <!-- //레이어 콘텐츠 -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 처리중 레이어 -->
+    <div id="__progress" class="layer_overlay close"><!-- 클래스 close 없어지면 레이어 열림 -->
+        <div class="v_align">
+            <div class="basic_layer loading">
+                <div class="b_con">
+                    <!-- 레이어 콘텐츠 -->
+                    <span class="loader"></span>
+                    <strong>처리 중입니다.</strong>
+                    <p>잠시만 기다려 주시기 바랍니다.</p>
+                    <!-- //레이어 콘텐츠 -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- // -->
+
+    <!-- 얼럿형 레이어 -->
+    <div id="__alert" class="layer_overlay_alert close"><!-- 클래스 close 없어지면 레이어 열림 -->
+        <div class="v_align">
+            <div class="basic_layer alert">
+                <div class="b_con">
+                    <!-- 레이어 콘텐츠 -->
+                    <p class="tx" id="__alert_msg">서비스를 종료하시겠습니까?</p>
+                    <div class="btn_step">
+                        <button type="button" onclick="javascript:$(&#39;#__alert&#39;).addClass(&#39;close&#39;);" class="bt_ok_s">확인</button>
+                    </div>
+                    <!-- 레이어 콘텐츠 -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- // -->
+
+
+    <!-- //header -->
+<script type="text/javascript" src="./현대예술관_files/main.js.다운로드"></script>
+
+
+<!-- <link rel="stylesheet" type="text/css" href="/js/homescreen/addtohomescreen.css?v=0.0.1"> -->
+<!-- <script src="/js/homescreen/addtohomescreen.min.js?v=0.0.3"></script> -->
+<script>
+  $("#__progressMain").removeClass("close"); //프로그래스바
+
+//  var parser = new UAParser();
+//  var result = parser.getResult();
+
+//  if (result.device.type == "mobile" && result.os.name == "iOS"  ){
+//    addToHomescreen();
+//  }
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="./현대예술관_files/main_only.css">
+<!-- 레이어 알림 팝업 -->
+<div class="idx_popup close" id="mainpopup"> <!-- 클래스 close 들어가면 닫힘  -->
+    <div class="popup_cont slick-initialized slick-slider" id="divmainpopcontents">
+
+    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 0px;"></div></div></div>
+    <div class="popup_footer">
+        <span class="today_chk sri">
+            <input type="checkbox" id="chkMainPopupToday" name="chkMainPopupToday" class="inp_check" onclick="closeWin(&#39;mainpopup&#39;,this);">
+            <label for="chkMainPopupToday" class="ico_check">오늘 하루 열지 않기</label>
+        </span>
+        <a href="javascript:void(0);" onclick="javascript:closeWin(&#39;mainpopup&#39;,this);$(&#39;#mainpopup&#39;).addClass(&#39;close&#39;);" id="btnMainPopupClose" class="btn_close"><span>닫기</span></a>
+    </div>
+</div>
+
+<script>
+
+if (_maincookieData.indexOf("mainpopup=done") < 0  ) {
+    //팝업내용 가져 오기
+    getMainPopup();
+
+}
+
+function getMainPopup () {
+    _c.submit("mainPopup" ,"/mainview.do", "","",function(svcid, ecode,emsg,data){
+        var nLoop= -1;
+        var oData ;
+        var sHTML = "";
+
+        if (data.mainbanner && data.mainbanner.length > 0) {
+
+            oData = data.mainbanner;
+            for (nLoop = 0 ; nLoop < oData.length ; nLoop ++ ){
+                if (typeof oData[nLoop].popup_target_url != "undefined" && oData[nLoop].popup_target_url.length > 0) {
+                    sHTML += '<div><a href="javascript:goPopupTarget(\''+oData[nLoop].popup_target_url.trim()+'\')">'+oData[nLoop].popup_content+'</a></div>';
+                } else {
+                    sHTML += '<div>'+oData[nLoop].popup_content+'</div>';
+                }
+            }
+
+            $("#divmainpopcontents").html(sHTML);
+            $('#mainpopup').removeClass('close');
+            
+        }
+    },false);
+}
+function goPopupTarget(sUrl) {
+    window.open(sUrl,"mainPop");
+}
+</script>
+
+
+<!-- container -->
+<div id="container">
+    <div id="contents" class="main">
+        <div class="bannerWrap">
+            <div class="bn_ctrl" id="slider-btn"><a class="bx-next" href="https://www.hhiarts.co.kr/main/">Next</a><a class="bx-prev" href="https://www.hhiarts.co.kr/main/">Prev</a></div>
+            <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 580px;"><ul class="img_area" id="mainTitleZone" style="width: auto; position: relative;"><li style="background: url(&quot;/common/popup/download.jsp?save_dir=ticketing&amp;file_name=item/2024/3/1710476510692.jpg&amp;file_mask=아르세니문 --02-01.jpg&quot;) center 0px no-repeat; float: none; list-style: none; position: absolute; width: 1887px; z-index: 0; display: none;"> <div class="txt"><a href="javascript:goTicketDetail(&#39;0000003356&#39;, &#39;performance&#39;, &#39;0000&#39;)" title="아르세니 문 피아노 리사이틀 상세화면"><span class="performance">공연</span>아르세니 문 피아노 리사이틀</a><p>2024.06.01(토) - 06.01(토) 현대예술관 대공연장</p></div></li><li style="background: url(&quot;/common/popup/download.jsp?save_dir=ticketing&amp;file_name=item/2024/2/1708991777163.jpg&amp;file_mask=유키구라모토 - 데크현수막-02.jpg&quot;) center 0px no-repeat; float: none; list-style: none; position: absolute; width: 1887px; z-index: 0; display: none;"> <div class="txt"><a href="javascript:goTicketDetail(&#39;0000003357&#39;, &#39;performance&#39;, &#39;0000&#39;)" title="유키 구라모토 콘서트 상세화면"><span class="performance">공연</span>유키 구라모토 콘서트</a><p>2024.05.30(목) - 05.30(목) 현대예술관 대공연장</p></div></li><li style="background: url(&quot;/common/popup/download.jsp?save_dir=ticketing&amp;file_name=item/2024/4/1714376324208.jpg&amp;file_mask=web 매그넘 인 파리-02.jpg&quot;) center 0px no-repeat; float: none; list-style: none; position: absolute; width: 1887px; z-index: 50;"> <div class="txt"><a href="javascript:goTicketDetail(&#39;0000003419&#39;, &#39;exhibition&#39;, &#39;0100&#39;)" title="매그넘 인 파리 사진 展 상세화면"><span class="exhibition">전시</span>매그넘 인 파리 사진 展</a><p>2024.05.21(화) - 09.22(일) 현대예술관 </p></div></li></ul></div><div class="bx-controls bx-has-controls-auto"><div class="bx-controls-auto"><div class="bx-controls-auto-item"><a class="bx-start" href="https://www.hhiarts.co.kr/main/">Start</a></div><div class="bx-controls-auto-item"><a class="bx-stop active" href="https://www.hhiarts.co.kr/main/">Stop</a></div></div></div></div>
+            <div class="ctrl_area" id="slideIndex"><a data-slide-index="0" class="bnbtn"></a><a data-slide-index="1" class="bnbtn"></a><a data-slide-index="2" class="bnbtn active"></a><p id="mainTitleNumber"><span>3</span> / <em>3</em></p></div>
+        </div>
+
+        <div class="performWrap m_con">
+            <div class="inner">
+                <div class="ctrlForm st">
+                    <span>Program</span>
+                    <strong>공연·전시</strong>
+                    <div class="more">
+                        <a href="https://www.hhiarts.co.kr/performance/list.do?mid=0000&amp;SVC_ID=list&amp;now=Y" title="공연 전체보기" style="margin-top:25px;">공연 전체보기</a>
+                        <a href="https://www.hhiarts.co.kr/exhibition/list.do?mid=01&amp;SVC_ID=list&amp;now=Y" title="전시 전체보기">전시 전체보기</a>
+                    </div>
+                </div>
+                <!-- 공연 5개 이상일때 -->
+                <div class="posterList" id="artList" role="toolbar"><ul class="slick-initialized slick-slider slick-dotted"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button><div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 5200px; transform: translate3d(-1300px, 0px, 0px);"><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide35" data-slick-index="-5" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003390&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/포스터_호기심 딱지 -s.JPG" alt="어린이뮤지컬 &lt;최고다 호기심딱지 : 딱지원정대&gt;"></a><div class="mouseOver"><div><strong>어린이뮤지컬 &lt;최고다 호기심딱지 : 딱지원정대&gt;</strong><span>36개월이상(미취학아동 부모 동반 관람/티켓 각각 소지)</span><em>1층 45,000 / 2층 25,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003390&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003390&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이뮤지컬 &lt;최고다 호기심딱지 : 딱지원정대&gt;</strong><span>2024.05.16 ~ 2024.05.18</span><a href="javascript:reservationTicket(&#39;0000003390&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide36" data-slick-index="-4" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003389&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/포스터_택시안에서_s.JPG" alt="연극 &lt;택시안에서&gt;"></a><div class="mouseOver"><div><strong>연극 &lt;택시안에서&gt;</strong><span>초등학생이상 입장가능</span><em>전석 25,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003389&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003389&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>연극 &lt;택시안에서&gt;</strong><span>2024.05.10 ~ 2024.05.28</span><a href="javascript:reservationTicket(&#39;0000003389&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide37" data-slick-index="-3" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003382&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/캡처4.JPG" alt="어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;"></a><div class="mouseOver"><div><strong>어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;</strong><span>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</span><em>전석 12,000원 [패키지가] 공연 4건*2매=62,400원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003382&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003382&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;</strong><span>2024.11.21 ~ 2024.11.23</span><a href="javascript:reservationTicket(&#39;0000003382&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide38" data-slick-index="-2" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003381&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/캡처3.JPG" alt="어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;"></a><div class="mouseOver"><div><strong>어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;</strong><span>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</span><em>전석 12,000원 [패키지가] 공연 4건*2매=62,400원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003381&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003381&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;</strong><span>2024.09.26 ~ 2024.09.28</span><a href="javascript:reservationTicket(&#39;0000003381&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide39" data-slick-index="-1" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003380&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/캡처2.JPG" alt="어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;"></a><div class="mouseOver"><div><strong>어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;</strong><span>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</span><em>전석 12,000원 [패키지가] 공연 4건*2매=62,400원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003380&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003380&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;</strong><span>2024.07.18 ~ 2024.07.20</span><a href="javascript:reservationTicket(&#39;0000003380&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide slick-current slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide30" data-slick-index="0" aria-hidden="false"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003356&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/아르세니문 포스터 (out)-01 - s.JPG" alt="아르세니 문 피아노 리사이틀"></a><div class="mouseOver"><div><strong>아르세니 문 피아노 리사이틀</strong><span>초등학생이상 입장가능</span><em>R석 50,000원 / A석 30,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003356&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003356&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>아르세니 문 피아노 리사이틀</strong><span>2024.06.01 ~ 2024.06.01</span><a href="javascript:reservationTicket(&#39;0000003356&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a><div class="label_area"> <span class="poster_label pack">패키지 <br>상품</span></div></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide31" data-slick-index="1" aria-hidden="false"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003371&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/[포스터] 뮌헨 체임버 오케스트라 s.JPG" alt="뮌헨 체임버 오케스트라"></a><div class="mouseOver"><div><strong>뮌헨 체임버 오케스트라</strong><span>초등학생이상 입장가능</span><em>R석 110,000원 / A석 85,000원 / B석 60,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003371&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003371&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>뮌헨 체임버 오케스트라</strong><span>2024.06.20 ~ 2024.06.20</span><a href="javascript:reservationTicket(&#39;0000003371&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a><div class="label_area"> <span class="poster_label pack">패키지 <br>상품</span></div></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide32" data-slick-index="2" aria-hidden="false"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003357&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/캡처.JPG" alt="유키 구라모토 콘서트"></a><div class="mouseOver"><div><strong>유키 구라모토 콘서트</strong><span>초등학생이상 입장가능</span><em>R석 85,000 / A석 65,000원 / B석 45,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003357&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003357&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>유키 구라모토 콘서트</strong><span>2024.05.30 ~ 2024.05.30</span><a href="javascript:reservationTicket(&#39;0000003357&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide33" data-slick-index="3" aria-hidden="false"><div class="img"><span class="exhibition">전시</span><a href="javascript:goTicketDetail(&#39;0000003419&#39;, &#39;exhibition&#39;, &#39;0100&#39;)" tabindex="0"><img src="./현대예술관_files/mag_poster_01.jpg" alt="매그넘 인 파리 사진 展"></a><div class="mouseOver"><div><strong>매그넘 인 파리 사진 展</strong><span>전체 관람가</span><em>일반 9,000원/중 ·고등 이하 7,000원/단체 2,000원 할인(20인 이상/사전 전화 문의)</em><ol><li><a href="javascript:reservationExhibition(&#39;0000003419&#39;,  &#39;0100&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003419&#39;, &#39;exhibition&#39;, &#39;0100&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>매그넘 인 파리 사진 展</strong><span>2024.05.21 ~ 2024.09.22</span><a href="javascript:reservationExhibition(&#39;0000003419&#39;,  &#39;0100&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide34" data-slick-index="4" aria-hidden="false"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003391&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/빨래 포스터 -s.JPG" alt="뮤지컬 &lt;빨래&gt;"></a><div class="mouseOver"><div><strong>뮤지컬 &lt;빨래&gt;</strong><span>초등학생이상 입장가능</span><em>1층 66,000원 / 2층 44,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003391&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003391&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>뮤지컬 &lt;빨래&gt;</strong><span>2024.07.11 ~ 2024.07.12</span><a href="javascript:reservationTicket(&#39;0000003391&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide35" data-slick-index="5" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003390&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/포스터_호기심 딱지 -s.JPG" alt="어린이뮤지컬 &lt;최고다 호기심딱지 : 딱지원정대&gt;"></a><div class="mouseOver"><div><strong>어린이뮤지컬 &lt;최고다 호기심딱지 : 딱지원정대&gt;</strong><span>36개월이상(미취학아동 부모 동반 관람/티켓 각각 소지)</span><em>1층 45,000 / 2층 25,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003390&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003390&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이뮤지컬 &lt;최고다 호기심딱지 : 딱지원정대&gt;</strong><span>2024.05.16 ~ 2024.05.18</span><a href="javascript:reservationTicket(&#39;0000003390&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide36" data-slick-index="6" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003389&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/포스터_택시안에서_s.JPG" alt="연극 &lt;택시안에서&gt;"></a><div class="mouseOver"><div><strong>연극 &lt;택시안에서&gt;</strong><span>초등학생이상 입장가능</span><em>전석 25,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003389&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003389&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>연극 &lt;택시안에서&gt;</strong><span>2024.05.10 ~ 2024.05.28</span><a href="javascript:reservationTicket(&#39;0000003389&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide37" data-slick-index="7" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003382&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/캡처4.JPG" alt="어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;"></a><div class="mouseOver"><div><strong>어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;</strong><span>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</span><em>전석 12,000원 [패키지가] 공연 4건*2매=62,400원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003382&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003382&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이 공연 &lt;익스트림매직&amp;메가버블쇼&gt;</strong><span>2024.11.21 ~ 2024.11.23</span><a href="javascript:reservationTicket(&#39;0000003382&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide38" data-slick-index="8" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003381&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/캡처3.JPG" alt="어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;"></a><div class="mouseOver"><div><strong>어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;</strong><span>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</span><em>전석 12,000원 [패키지가] 공연 4건*2매=62,400원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003381&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003381&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이 공연 &lt;아기 도깨비와 노래 주머니&gt;</strong><span>2024.09.26 ~ 2024.09.28</span><a href="javascript:reservationTicket(&#39;0000003381&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide39" data-slick-index="9" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003380&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/캡처2.JPG" alt="어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;"></a><div class="mouseOver"><div><strong>어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;</strong><span>24개월이상(미취학아동 부모 동반/티켓 각각 소지)</span><em>전석 12,000원 [패키지가] 공연 4건*2매=62,400원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003380&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003380&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>어린이 공연 &lt;루팡의 매직벌룬콘서트&gt;</strong><span>2024.07.18 ~ 2024.07.20</span><a href="javascript:reservationTicket(&#39;0000003380&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide30" data-slick-index="10" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003356&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/아르세니문 포스터 (out)-01 - s.JPG" alt="아르세니 문 피아노 리사이틀"></a><div class="mouseOver"><div><strong>아르세니 문 피아노 리사이틀</strong><span>초등학생이상 입장가능</span><em>R석 50,000원 / A석 30,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003356&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003356&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>아르세니 문 피아노 리사이틀</strong><span>2024.06.01 ~ 2024.06.01</span><a href="javascript:reservationTicket(&#39;0000003356&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a><div class="label_area"> <span class="poster_label pack">패키지 <br>상품</span></div></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide31" data-slick-index="11" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003371&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/[포스터] 뮌헨 체임버 오케스트라 s.JPG" alt="뮌헨 체임버 오케스트라"></a><div class="mouseOver"><div><strong>뮌헨 체임버 오케스트라</strong><span>초등학생이상 입장가능</span><em>R석 110,000원 / A석 85,000원 / B석 60,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003371&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003371&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>뮌헨 체임버 오케스트라</strong><span>2024.06.20 ~ 2024.06.20</span><a href="javascript:reservationTicket(&#39;0000003371&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a><div class="label_area"> <span class="poster_label pack">패키지 <br>상품</span></div></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide32" data-slick-index="12" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003357&#39;,&#39;performance&#39;, &#39;0000&#39;)" tabindex="0"><img src="./현대예술관_files/캡처.JPG" alt="유키 구라모토 콘서트"></a><div class="mouseOver"><div><strong>유키 구라모토 콘서트</strong><span>초등학생이상 입장가능</span><em>R석 85,000 / A석 65,000원 / B석 45,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003357&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003357&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>유키 구라모토 콘서트</strong><span>2024.05.30 ~ 2024.05.30</span><a href="javascript:reservationTicket(&#39;0000003357&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide33" data-slick-index="13" aria-hidden="true"><div class="img"><span class="exhibition">전시</span><a href="javascript:goTicketDetail(&#39;0000003419&#39;, &#39;exhibition&#39;, &#39;0100&#39;)" tabindex="0"><img src="./현대예술관_files/mag_poster_01.jpg" alt="매그넘 인 파리 사진 展"></a><div class="mouseOver"><div><strong>매그넘 인 파리 사진 展</strong><span>전체 관람가</span><em>일반 9,000원/중 ·고등 이하 7,000원/단체 2,000원 할인(20인 이상/사전 전화 문의)</em><ol><li><a href="javascript:reservationExhibition(&#39;0000003419&#39;,  &#39;0100&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003419&#39;, &#39;exhibition&#39;, &#39;0100&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>매그넘 인 파리 사진 展</strong><span>2024.05.21 ~ 2024.09.22</span><a href="javascript:reservationExhibition(&#39;0000003419&#39;,  &#39;0100&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide34" data-slick-index="14" aria-hidden="true"><div class="img"><span class="performance">공연</span><a href="javascript:goTicketDetail(&#39;0000003391&#39;,&#39;performance&#39;, &#39;0000&#39;)"><img src="./현대예술관_files/빨래 포스터 -s.JPG" alt="뮤지컬 &lt;빨래&gt;"></a><div class="mouseOver"><div><strong>뮤지컬 &lt;빨래&gt;</strong><span>초등학생이상 입장가능</span><em>1층 66,000원 / 2층 44,000원</em><ol><li><a href="javascript:reservationTicket(&#39;0000003391&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);" class="overbtn reserv">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003391&#39;,&#39;performance&#39;, &#39;0000&#39;)" class="overbtn">상세보기</a></li></ol></div></div></div><div class="txt"><strong>뮤지컬 &lt;빨래&gt;</strong><span>2024.07.11 ~ 2024.07.12</span><a href="javascript:reservationTicket(&#39;0000003391&#39;,  &#39;0000000607&#39;, &#39;0000&#39;);">예매하기</a></div></li></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button><ul class="slick-dots" role="tablist" style=""><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation30" id="slick-slide30"><span tabindex="0">1</span></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation31" id="slick-slide31"><span tabindex="0">2</span></li></ul></ul></div>
+                <!-- // -->
+
+            </div>
+        </div>
+
+        <div class="movieWrap m_con">
+            <div class="inner">
+                <div class="ctrlForm">
+                    <span>Best Movie</span>
+                    <strong>영화</strong>
+                    <div class="more">
+                        <a href="https://www.hhiarts.co.kr/movie/list.do?mid=0200&amp;SVC_ID=list" title="영화 전체보기" style="margin-top:25px;">영화 전체보기</a>
+                    </div>
+                </div>
+                <!-- 상영영화 5개 이상일때 -->
+                <div class="posterList" id="movieList"><ul class="slick-initialized slick-slider"><div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 1040px; transform: translate3d(0px, 0px, 0px);"><li class="slick-slide slick-current slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide40" data-slick-index="0" aria-hidden="false"><div class="img"><span class="all">전체</span><a href="javascript:goTicketDetail(&#39;0000003439&#39;, &#39;movie&#39;, &#39;0200&#39;)" tabindex="0"><img src="./현대예술관_files/0515G0-101.jpg" alt="(더빙) 가필드 더 무비"></a><div class="mouseOver"><div><strong>(더빙) 가필드 더 무비</strong><span>전체 관람가</span><em></em><ol><li><a href="javascript:reservationTicket(&#39;0000003439&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003439&#39;, &#39;movie&#39;, &#39;0200&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>(더빙) 가필드 더 무비</strong><span>2024.05.15 ~ 2024.05.21</span><a href="javascript:reservationTicket(&#39;0000003439&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide41" data-slick-index="1" aria-hidden="false"><div class="img"><span class="age15">15</span><a href="javascript:goTicketDetail(&#39;0000003438&#39;, &#39;movie&#39;, &#39;0200&#39;)" tabindex="0"><img src="./현대예술관_files/0515S15-103.jpg" alt="그녀가 죽었다"></a><div class="mouseOver"><div><strong>그녀가 죽었다</strong><span>15세 이상 관람가</span><em></em><ol><li><a href="javascript:reservationTicket(&#39;0000003438&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003438&#39;, &#39;movie&#39;, &#39;0200&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>그녀가 죽었다</strong><span>2024.05.15 ~ 2024.05.21</span><a href="javascript:reservationTicket(&#39;0000003438&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide42" data-slick-index="2" aria-hidden="false"><div class="img"><span class="age12">12</span><a href="javascript:goTicketDetail(&#39;0000003428&#39;, &#39;movie&#39;, &#39;0200&#39;)" tabindex="0"><img src="./현대예술관_files/0508H12-145.jpg" alt="혹성탈출: 새로운 시대"></a><div class="mouseOver"><div><strong>혹성탈출: 새로운 시대</strong><span>12세 이상 관람가</span><em></em><ol><li><a href="javascript:reservationTicket(&#39;0000003428&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003428&#39;, &#39;movie&#39;, &#39;0200&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>혹성탈출: 새로운 시대</strong><span>2024.05.08 ~ 2024.05.21</span><a href="javascript:reservationTicket(&#39;0000003428&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" tabindex="0">예매하기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide43" data-slick-index="3" aria-hidden="false"><div class="img"><span class="age15">15</span><a href="javascript:goTicketDetail(&#39;0000003417&#39;, &#39;movie&#39;, &#39;0200&#39;)" tabindex="0"><img src="./현대예술관_files/0424R15-110.jpg" alt="범죄도시4 (시네마관)"></a><div class="mouseOver"><div><strong>범죄도시4 (시네마관)</strong><span>15세 이상 관람가</span><em></em><ol><li><a href="javascript:reservationTicket(&#39;0000003417&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" class="overbtn reserv" tabindex="0">예매하기</a></li><li><a href="javascript:goTicketDetail(&#39;0000003417&#39;, &#39;movie&#39;, &#39;0200&#39;)" class="overbtn" tabindex="0">상세보기</a></li></ol></div></div></div><div class="txt"><strong>범죄도시4 (시네마관)</strong><span>2024.04.24 ~ 2024.05.21</span><a href="javascript:reservationTicket(&#39;0000003417&#39;,  &#39;0000000608&#39;, &#39;0200&#39;);" tabindex="0">예매하기</a></div></li></div></div></ul></div>
+                <!-- // -->
+
+            </div>
+        </div>
+
+        <div class="lectureWrap m_con">
+            <div class="inner">
+                <div class="ctrlForm">
+                    <span>Best Lecture</span>
+                    <strong>강좌</strong>
+
+                </div>
+                <div class="lectureList" id="lectureList" role="toolbar"><ul class="slick-initialized slick-slider slick-dotted"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button><div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 4940px; transform: translate3d(-1300px, 0px, 0px);"><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide54" data-slick-index="-5" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000564&#39;,&#39;0000000163&#39;);">돈 되는 경매 물건찾기</strong><ol><li>강사 : 박동일</li><li>장소 : 현대예술관</li><li class="time">목<span>19:00 ~ 20:30</span></li><li>수강료 : 3개월/180,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000564&#39;,&#39;0000000163&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide55" data-slick-index="-4" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001889&#39;);">6/14(금) 신나는 필라테스</strong><ol><li>강사 : 이예원</li><li>장소 : 현대예술관</li><li class="time">금<span>18:00 ~ 19:00</span></li><li>수강료 : 1개월/5,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001889&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide56" data-slick-index="-3" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001890&#39;);">6/21(금) 다이어트 요가</strong><ol><li>강사 : 김성희</li><li>장소 : 현대예술관</li><li class="time">금<span>18:00 ~ 19:00</span></li><li>수강료 : 1개월/5,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001890&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide57" data-slick-index="-2" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001891&#39;);">6/28(금) 짐볼 필라테스</strong><ol><li>강사 : 박미진</li><li>장소 : 현대예술관</li><li class="time">금<span>18:00 ~ 19:00</span></li><li>수강료 : 1개월/5,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001891&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide58" data-slick-index="-1" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000431&#39;,&#39;0000000757&#39;);">수리영재 주산&amp;암산</strong><ol><li>강사 : 이현주</li><li>장소 : 현대예술관</li><li class="time">토<span>13:00 ~ 14:00</span></li><li>수강료 : 2개월/60,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000431&#39;,&#39;0000000757&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide slick-current slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide50" data-slick-index="0" aria-hidden="false"><div><strong onclick="lecDetail(&#39;0000000708&#39;,&#39;0000000001&#39;);">몸치·박치탈출! 신나는 건강 라인댄스</strong><ol><li>강사 : 용예진</li><li>장소 : 현대예술관</li><li class="time">월,수<span>14:00 ~ 15:00</span></li><li>수강료 : 2개월/60,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000708&#39;,&#39;0000000001&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide51" data-slick-index="1" aria-hidden="false"><div><strong onclick="lecDetail(&#39;0000000064&#39;,&#39;0000003841&#39;);">라켓볼 저녁1(월,수)</strong><ol><li>강사 : 마산출</li><li>장소 : 현대예술관</li><li class="time">월,수<span>18:00 ~ 18:50</span></li><li>수강료 : 1개월/60,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000064&#39;,&#39;0000003841&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide52" data-slick-index="2" aria-hidden="false"><div><strong onclick="lecDetail(&#39;0000000441&#39;,&#39;0000002056&#39;);">신나는 유산소와 근력강화 필라테스</strong><ol><li>강사 : 이예원</li><li>장소 : 현대예술관</li><li class="time">월,수<span>11:10 ~ 12:10</span></li><li>수강료 : 2개월/90,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000441&#39;,&#39;0000002056&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide53" data-slick-index="3" aria-hidden="false"><div><strong onclick="lecDetail(&#39;0000000335&#39;,&#39;0000000972&#39;);">클라이밍(오전)</strong><ol><li>강사 : 한정미</li><li>장소 : 현대예술관</li><li class="time">월,화,목<span>11:00 ~ 12:30</span></li><li>수강료 : 1개월/55,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000335&#39;,&#39;0000000972&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-active" style="width: 260px;" role="option" aria-describedby="slick-slide54" data-slick-index="4" aria-hidden="false"><div><strong onclick="lecDetail(&#39;0000000564&#39;,&#39;0000000163&#39;);">돈 되는 경매 물건찾기</strong><ol><li>강사 : 박동일</li><li>장소 : 현대예술관</li><li class="time">목<span>19:00 ~ 20:30</span></li><li>수강료 : 3개월/180,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000564&#39;,&#39;0000000163&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide55" data-slick-index="5" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001889&#39;);">6/14(금) 신나는 필라테스</strong><ol><li>강사 : 이예원</li><li>장소 : 현대예술관</li><li class="time">금<span>18:00 ~ 19:00</span></li><li>수강료 : 1개월/5,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001889&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide56" data-slick-index="6" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001890&#39;);">6/21(금) 다이어트 요가</strong><ol><li>강사 : 김성희</li><li>장소 : 현대예술관</li><li class="time">금<span>18:00 ~ 19:00</span></li><li>수강료 : 1개월/5,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001890&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide57" data-slick-index="7" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001891&#39;);">6/28(금) 짐볼 필라테스</strong><ol><li>강사 : 박미진</li><li>장소 : 현대예술관</li><li class="time">금<span>18:00 ~ 19:00</span></li><li>수강료 : 1개월/5,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000409&#39;,&#39;0000001891&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide" style="width: 260px;" role="option" aria-describedby="slick-slide58" data-slick-index="8" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000431&#39;,&#39;0000000757&#39;);">수리영재 주산&amp;암산</strong><ol><li>강사 : 이현주</li><li>장소 : 현대예술관</li><li class="time">토<span>13:00 ~ 14:00</span></li><li>수강료 : 2개월/60,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000431&#39;,&#39;0000000757&#39;); return false;" class="lecbtn">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide50" data-slick-index="9" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000708&#39;,&#39;0000000001&#39;);">몸치·박치탈출! 신나는 건강 라인댄스</strong><ol><li>강사 : 용예진</li><li>장소 : 현대예술관</li><li class="time">월,수<span>14:00 ~ 15:00</span></li><li>수강료 : 2개월/60,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000708&#39;,&#39;0000000001&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide51" data-slick-index="10" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000064&#39;,&#39;0000003841&#39;);">라켓볼 저녁1(월,수)</strong><ol><li>강사 : 마산출</li><li>장소 : 현대예술관</li><li class="time">월,수<span>18:00 ~ 18:50</span></li><li>수강료 : 1개월/60,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000064&#39;,&#39;0000003841&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide52" data-slick-index="11" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000441&#39;,&#39;0000002056&#39;);">신나는 유산소와 근력강화 필라테스</strong><ol><li>강사 : 이예원</li><li>장소 : 현대예술관</li><li class="time">월,수<span>11:10 ~ 12:10</span></li><li>수강료 : 2개월/90,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000441&#39;,&#39;0000002056&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide53" data-slick-index="12" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000335&#39;,&#39;0000000972&#39;);">클라이밍(오전)</strong><ol><li>강사 : 한정미</li><li>장소 : 현대예술관</li><li class="time">월,화,목<span>11:00 ~ 12:30</span></li><li>수강료 : 1개월/55,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000335&#39;,&#39;0000000972&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li><li class="slick-slide slick-cloned" style="width: 260px;" role="option" aria-describedby="slick-slide54" data-slick-index="13" aria-hidden="true"><div><strong onclick="lecDetail(&#39;0000000564&#39;,&#39;0000000163&#39;);">돈 되는 경매 물건찾기</strong><ol><li>강사 : 박동일</li><li>장소 : 현대예술관</li><li class="time">목<span>19:00 ~ 20:30</span></li><li>수강료 : 3개월/180,000원</li></ol><a href="https://www.hhiarts.co.kr/main/#" onclick="lecDetail(&#39;0000000564&#39;,&#39;0000000163&#39;); return false;" class="lecbtn" tabindex="0">자세히보기</a></div></li></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button><ul class="slick-dots" role="tablist" style=""><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation50" id="slick-slide50"><span tabindex="0">1</span></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation51" id="slick-slide51"><span tabindex="0">2</span></li></ul></ul></div>
+                    <div class="more">  <a href="https://www.hhiarts.co.kr/lecture/list.do?mid=0301&amp;SVC_ID=list" title="강좌 전체보기">강좌 전체보기</a> </div>
+            </div>
+        </div>
+
+        <div class="commWrap">
+            <div class="inner2">
+                <ul class="link">
+                    <li>
+                        <a href="https://www.hhiarts.co.kr/board/faq_list.do?mid=0604&amp;SVC_ID=faq_list" title="자주하는 질문">
+                            <strong>자주하는 질문</strong>
+                            <span>서비스 이용 중 궁금한 사항은 자주하는 질문에서 확인하세요.</span>
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.hhiarts.co.kr/board/list.do?mid=0603&amp;SVC_ID=consult" title="고객소리함">
+                            <strong>고객소리함</strong>
+                            <span>궁금한 사항을 남겨주시면 신속히 해결해드리겠습니다.</span>
+                            <i class="bg1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.hhiarts.co.kr/introduction/restaurant.do?mid=0703&amp;SVC_ID=shabu" title="샤브안">
+                            <strong>샤브안</strong>
+                            <span>자가제면, 자가도정으로 이름난 송정집의 정성. 샤브안에 고스란히 이어져 옳은 재료와 차림에 가득 담겼습니다. 052-912-2023</span>
+                            <i class="bg2"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="popup_area">
+                    <div class="pop_ctrl">
+                        <button type="button" class="popbtn prev">이전</button>
+                        <button type="button" class="popbtn next">다음</button>
+                        <button type="button" class="popbtn stop">정지</button>
+                         <div class="num" id="divEventNum"><span id="evtpopnum">1</span> / <em>0</em></div>
+                    </div>
+                    <div class="popup" id="popupList"><ul></ul></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="noticeWrap">
+            <div class="inner2">
+                <p>공지사항</p>
+                <a href="https://www.hhiarts.co.kr/board/list.do?mid=0600&amp;SVC_ID=list&amp;boardSeq=0000000241" title="전체보기" class="allbtn">전체보기</a>
+                <div class="list" id="noticeList"><ul><li><div><span class="category c_per">공연</span><span class="date">2024.03.<strong>27</strong></span><a href="https://www.hhiarts.co.kr/board/detail.do?mid=0600&amp;SVC_ID=detail&amp;boardSeq=0000000241&amp;boardNo=0000026648" class="title"><strong>인문학 플랫폼 &lt;도슨트 클래스 : 두개의 조선을 걷는 시간&gt;</strong><em>MORE</em></a></div></li><li><div><span class="category c_mov">영화</span><span class="date">2024.02.<strong>01</strong></span><a href="https://www.hhiarts.co.kr/board/detail.do?mid=0600&amp;SVC_ID=detail&amp;boardSeq=0000000241&amp;boardNo=0000026645" class="title"><strong>[영화]  2024 설날맞이 영화쿠폰북 특별할인 (2/1~2/8)</strong><em>MORE</em></a></div></li><li><div><span class="category c_exh">전시</span><span class="date">2024.01.<strong>26</strong></span><a href="https://www.hhiarts.co.kr/board/detail.do?mid=0600&amp;SVC_ID=detail&amp;boardSeq=0000000241&amp;boardNo=0000026643" class="title"><strong>&lt;제 2회 HD현대중공업가족 초대작품展&gt; 작품 공모 신청</strong><em>MORE</em></a></div></li><li><div><span class="category c_main">메인</span><span class="date">2023.12.<strong>20</strong></span><a href="https://www.hhiarts.co.kr/board/detail.do?mid=0600&amp;SVC_ID=detail&amp;boardSeq=0000000241&amp;boardNo=0000026641" class="title"><strong>2024 현대예술관 로비음악회 참가자 모집</strong><em>MORE</em></a></div></li><li><div><span class="category c_main">메인</span><span class="date">2023.11.<strong>19</strong></span><a href="https://www.hhiarts.co.kr/board/detail.do?mid=0600&amp;SVC_ID=detail&amp;boardSeq=0000000241&amp;boardNo=0000026638" class="title"><strong>수험생 할인 이벤트</strong><em>MORE</em></a></div></li></ul></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<form name="searchForm" id="searchForm" action="https://www.hhiarts.co.kr/performance/detail.do" method="post">
+    <input type="hidden" name="ticketingitemseq" id="ticketingitemseq" value="0000003371">
+    <input type="hidden" name="unicodeseqitemtype" id="unicodeseqitemtype" value="">
+    <input type="hidden" name="lectureMasterSeq" id="lectureMasterSeq" value="">
+    <input type="hidden" name="lectureDetailSeq" id="lectureDetailSeq" value="">
+    <input type="hidden" name="mid" id="mid" value="">
+    <input type="hidden" name="now" id="mid" value="Y">
+    <input type="hidden" name="SVC_ID" id="SVC_ID" value="detail">
+</form>
+
+<!-- //container -->
+
+
+<!-- quick menu -->
+<div class="quick_menu">
+    <div class="mask"></div>
+    <div class="quick_con">
+        <button type="button" class="btn_quick" title="메뉴열림">메뉴</button>
+        <div class="list">
+            <a href="https://www.hhiarts.co.kr/mypage/reserveresult.do?SVC_ID=reserveresult" class="reserv">예매현황</a>
+            <a href="https://www.hhiarts.co.kr/lecture/list.do?mid=0301&amp;SVC_ID=list" class="edu">수강신청</a>
+            <a href="https://www.hhiarts.co.kr/movie/list.do?mid=0200&amp;SVC_ID=list" class="movie">영화예매</a>
+            <a href="https://www.hhiarts.co.kr/performance/list.do?mid=0000&amp;SVC_ID=list&amp;now=Y" class="perform">공연예매</a>
+        </div>
+    </div>
+</div>
+<!-- //quick menu -->
+
+<!-- footer -->
+<div id="footer">
+    <div class="f_menu">
+        <div class="inner">
+            <div class="l_con">
+                <a href="https://www.hhiarts.co.kr/etc/personal_policy.jsp">개인정보처리방침</a>
+                <a href="https://www.hhiarts.co.kr/etc/image_process_policy.jsp">영상정보처리기기 운영방침</a>
+                <a href="https://www.hhiarts.co.kr/etc/access_terms.jsp">회원·이용약관</a>
+                <a href="https://www.hhiarts.co.kr/etc/sitemap.jsp">사이트맵</a>
+                <a href="mailto:artscenter@hd.com" title="아웃룩 연결됨">제휴 및 광고 문의</a>
+                <a href="https://hhiarts.hhi.co.kr/buy/index.jsp" target="_blank" title="새창열림">Arts-Buy</a>                
+            </div>
+            <div class="r_con">
+               <a href="http://www.instagram.com/hhiarts" class="instar" target="_blank" title="새창열림">인스타그램</a>
+               <a href="https://twitter.com/hhiarts" class="twt" target="_blank" title="새창열림">트위터</a>
+               <a href="https://www.facebook.com/hhiarts" class="face" target="_blank" title="새창열림">페이스북</a>
+<!--                <a href="https://www.lahanhotels.com/ulsan/taste/view.do?seq=14" class="yone" target="_blank" title="새창열림">예원</a> -->
+<!--                <a href="http://www.hyundaihotel.com/ulsan/?p=213" class="amad" target="_blank" title="새창열림">Amadeus</a> -->
+               <button type="button" id="btnGoTop" title="상단으로">상단으로</button>
+            </div>
+        </div>
+    </div>
+    <div class="f_info">
+        <div class="inner">
+            <h2 class="blind">울산현대예술관 홈페이지 정보</h2>
+            <div class="info">
+                <strong>현대예술관 로고</strong>
+                <address><span>울산광역시 동구 방어진순환도로 1000(전하동)</span> <span>대표자 : 이상균</span> <span>사업자번호 : 252-87-01412</span> <span>통신판매업신고 : 울산 동구 제 2004-00016호</span><span>대표전화번호 : 1522-3331(ARS)</span></address>
+                <p>Copyright(C) 2018 HD HHI culture &amp; arts center. All rights reserved.</p>
+            </div>
+
+            <div class="site_link">
+                <button class="tit"><span>문화예술관련 사이트</span></button>
+                <div class="cont">
+                    <ul>
+                        <li><a href="https://ucac.ulsan.go.kr/" target="_blank" title="새창열림">울산문화예술회관</a></li>
+                        <li><a href="https://www.bukgu.ulsan.kr/art" target="_blank" title="새창열림">북구문화예술회관</a></li>
+                        <li><a href="https://artscenter.junggu.ulsan.kr/" target="_blank" title="새창열림">울산중구문화의전당</a></li>
+                        <li><a href="https://www.ucf.or.kr:478/" target="_blank" title="새창열림">울주문화예술회관</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- //footer -->
+</div>
+
+
+
+
+
+
+
+</body></html>

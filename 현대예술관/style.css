@@ -1,0 +1,1163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+button:hover, li:hover, .commentlist:hover, .noticelist:hover, a:hover, .linkunder1025:hover, .plusbutton:hover, .viewallbutton:hover{
+    cursor:pointer;
+}
+.mypage > li > a:hover{
+    border-bottom: 1px solid;
+}
+body{
+    overflow-x: hidden;
+}
+.wrapper{
+    margin:auto;
+    align-items: center;
+    text-align: center;
+    height:auto;
+}
+.HiddenButton, .HiddenHome, .nonehref, .reserveunder1025, .mypagedetail, .viewallunder1025, .hiddenlogin, .mask, #bg, .clicklist, .clicklist2, .viewallbutton{
+    display:none;
+}
+.HiddenButton{
+    background: url(img/ico_topsplit.png) 0 no-repeat;
+    background-position: -10px -273px;
+}
+.HiddenHome{
+    background-image: url(img/ico_home.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.HiddenButton, .HiddenHome{
+    width: 60px;
+    height: 60px;
+}
+.header{
+    width:100%;
+    left: 20px;
+    justify-content: space-between;
+}
+.mypage, .header > img{
+    padding:20px;
+}
+.hoverlist{
+    padding-top:15px;
+    display:flex;
+    text-align: start;
+    font-size: 13.5px;
+    border-left:1px solid lightgrey;
+}
+.last{
+    border-right:1px solid lightgrey;
+}
+.first, .hoverlist{
+    position: absolute;
+    background-color:ghostwhite;
+    width:100%;
+    height:238px;
+    top:80px;
+}
+.first{
+    left:0;
+}
+
+.headerhover{
+    width:120px;
+}
+.dropmypage{
+    width:90px;
+    position: relative;
+}
+.hoverlist{
+    width:120px;
+    height:238px;
+}
+.hoverlist > li{
+    width:100%;
+    padding:5px 1px;
+}
+.hoverhref{
+    width:100%;
+}
+.hoverlist > li:hover{
+    background-color:darkblue;
+    color:white;
+}
+.mypage > li, .mypagedetail > ul > li{
+    font-size: 10px;
+    padding:10px;
+}
+.mypagedetail > ul > li{
+    width:88px;
+    height:33px;
+    color:black;
+    background-color: white;
+}
+.mypagedetail > ul{
+    border: 1px solid black;
+}
+.mypagedetail{
+    top:33px;
+    width:100%;
+    position:absolute;
+    padding-right: 20px;
+}
+.dropmypage:hover{
+    border: 1px solid black;
+    .mypagedetail{
+        display:flex;
+        flex-direction: column;
+        z-index: 3;
+    }
+    .borderrightli2{
+        display: none;
+        visibility: hidden;
+    }
+}
+.headerul{
+    height:80px;
+}
+.headerhover{
+    width:120px;
+    height:100%;
+    font-size:19px;
+    font-weight:bold;
+    padding-top: 30px;
+}
+
+.headerul:hover, .hoverlist:hover{
+    .hoverlist{
+        z-index:2;
+    }
+    .first, .last{
+        z-index:1;
+    }
+}
+.headerhover:hover{
+    border-bottom: 1px solid darkblue;
+    transition: 0.2s;
+    .hoverhref{
+    color:indigo;
+    transition: 0.2s;
+    }
+}
+.borderrightli, .borderrightli2{
+    border-right: 1px solid lightgray;
+}
+.borderbottomli{
+    border-bottom: 1px solid lightgray;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:unset;
+}
+.concert{
+    position: relative;
+}
+.imgclass > img{
+    top:0;
+}
+.concertbottom{
+    position: absolute;
+    bottom:0;
+    height: 104px;
+    width:100%;
+    opacity: 0.8;
+    background-color: black;
+    color:white;
+    font-size: 26px;
+    vertical-align: middle;
+}
+.concertbottom > span{
+    font-size: 15px;
+    padding:5px 10px;
+    border-radius: 20px;
+    color:white;
+}
+.concertspan{
+    background-color: deeppink;
+}
+.exhibitspan{
+    background-color: goldenrod;
+}
+.concertbottom > p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.prev,.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-size: 100px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.prev{
+    left:0;
+    border-radius: 3px 0 0 3px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.program{
+    background-color:rgb(220,220,220);
+    
+}
+.program, .movie{
+    height:497px;
+    width:100%;
+    justify-content: center;
+}
+.program, .programs, .prevnext, .programinfo, .programlist, .movie, .movieinfo, .movies, .movielist, .lecture, .lectures, .lectureinfo, .lecturelist, .comment, .commentlist, .notices,
+.noticelist, .footerul, .headerul, .header, .mypage, .footerul, .footerul > ul, .footerinfo, .buttondiv, .infobutton, .dropdownbutton, .hoverlidiv, .hoverlist, .hiddensidebar,
+.hiddenlogin, .hiddenhome, .clicklist, .clicklist2{
+    display:flex;
+}
+.programinfo, .programlist, .movieinfo, .movielist, .lectureinfo, .lecturelist, .commentlist,.noticelist, .infobutton, .dropdownbutton, .hoverlist, .hiddensidebar, .clicklist
+,.clicklist2{
+    flex-direction: column;
+}
+.programinfo, .movieinfo, .lectureinfo, .notices{
+    padding:20px;
+}
+.prevnext{
+    font-size: 25px;
+}
+.programlist, .movielist, .lecturelist{
+    position:relative;
+    align-items: start;
+    padding:10px;
+}
+.hoverdiv{
+    padding-top: 15%;
+    width:252px;
+    height:343px;
+    opacity:0;
+    position:absolute;
+    background-color: rgba(29,29,29,0.85);
+}
+.hoverdiv > h3{
+    padding:20px;
+    font-size:20px;
+    color:gold;
+}
+.hoverdiv:hover{
+    opacity:1;
+    transition: 0.3s;
+}
+.hoverdiv > p, .price{
+    font-size:14px;
+    color:lightgray;
+}
+.price{
+    font-weight: bold;
+    padding: 0px 20px;
+}
+.buttondiv{
+    padding-top: 20px;
+    justify-content: space-evenly;
+}
+.buttondiv > button{
+    width:41%;
+    padding:15px 20px;
+    font-size:15px;
+    color:white;
+}
+.reserve{
+    background-color: crimson;
+    border: none;
+}
+.reserve:hover{
+    background-color: darkred;
+    transition: 0.3s;
+}
+.movielist > .hoverdiv{
+    padding-top: 25%;
+}
+.movielist > .hoverdiv > .buttondiv > .reserve{
+    background-color:mediumblue;
+}
+.movielist > .hoverdiv > .buttondiv > .reserve:hover{
+    background-color:darkblue;
+    transition: 0.3s;
+}
+.detail{
+    border: 1px solid white;
+    background-color: unset;
+}
+.detail:hover{
+    border: 1px solid gray;
+    background-color: gray;
+    transition: 0.3s;
+}
+.infobutton > button, .movieinfo > button, .lectureinfo > button{
+    width:147px;
+    padding:10px;
+    border-radius: 0;
+    background-color: unset;
+    margin-top:10px;
+}
+.infobutton > button, .movieinfo > button{
+    border: 1px solid gray;
+}
+.infobutton > button:hover, .movieinfo > button:hover, .lecturelist > button:hover{
+    background-color: gray;
+    color:white;
+    transition: 0.2s;
+}
+.lectureinfo > button{
+    border:1px solid white;
+}
+.lectureinfo > button:hover{
+    background-color: white;
+    color:gray;
+    transition: 0.2s;
+}
+.programlist > img, .movielist > img{
+    width:252px;
+    height:343px;
+}
+.programlist > strong, .programlist > p, .movielist > strong, .movielist > p{
+    margin-top: 10px;
+}
+.programlist > p, .movielist > p{
+    color:gray;
+    font-size:15px;
+}
+.programinfo > p, .movieinfo > p, .lectureinfo > p{
+    font-size:27px;
+}
+.programinfo > h3, .movieinfo > h3, .lectureinfo > h3{
+    font-weight: bold;
+    font-size: 33px;
+}
+.package{
+    position:absolute;
+    padding:10px;
+    color:white;
+    background-color: plum;
+}
+.performance{
+    background-color: deeppink;
+}
+.exhibit, .only15{
+    background-color: goldenrod;
+}
+.only12, .noticeexhibit{
+    background-color: dodgerblue;
+}
+.all, .noticemovie{
+    background-color: green;
+}
+.performance, .exhibit, .all, .only12, .only15, .noticeperformance, .noticemovie, .noticeexhibit, .noticemain{
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size: 15px;
+    border-radius: 50%;
+    color:white;
+}
+.performance, .exhibit, .all, .noticeperformance, .noticemovie, .noticeexhibit, .noticemain{
+    padding:10px 5px;
+}
+.only12, .only15{
+    padding:10px;
+}
+.lecture{
+    justify-content: center;
+    width:100%;
+    height:377px;
+    background-image: url('img/lecture_bg.jpg');
+}
+.lectures{
+    position:relative;
+}
+.lectureinfo > h3, .lectureinfo > button{
+    color:white;
+}
+.lectureinfo > p, .lectureinfo > .prevnext{
+    color:lightgray;
+}
+.lectureinfo > button{
+    border-color: white;
+}
+.lecturelist{
+    margin:10px;
+    background-color: white;
+    width:252px;
+    position:relative;
+    align-items: start;
+    text-align: left;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.lecturelist > strong{
+    font-size:21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 28px;
+    width:200px;
+}
+.lecturelist > ol{
+    padding-left:20px;
+    list-style-type: disc;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size:15px;
+    color:lightgray;
+    float:left;
+}
+.lecturelist > ol > li{
+    float:left;
+}
+.time{
+    color:blue;
+}
+.lecturelist > button{
+    padding:10px;
+    width:100%;
+    background-color:mediumblue;
+    color:white;
+    border: none;
+    font-size:15px;
+}
+.commenthr{
+    margin:15px 0px;
+    color:blue;
+    width:20px;
+    float:left;
+}
+.commenttitle{
+    font-size: 25px;
+}
+.commentlist > p{
+    width:178px;
+    font-size:14px;
+}
+.commentlist > p, .commentlist > strong{
+    text-align: left;
+    float: left;
+}
+.comment{
+    padding-left: 15%;
+    align-items: baseline;
+    width:100%;
+    height:425px;
+    position: relative;
+}
+.commentlist{
+    padding:40px;
+    align-items:start;
+    position: relative;
+}
+.commentlist:hover{
+    .commenthr{
+        width: 100%;
+        transition: 0.3s;
+    }
+}
+.comment1{
+    height:270px;
+}
+.comment2{
+    height:332px;
+}
+.commentlist > img{
+    position:absolute;
+    right:40px;
+    bottom:50px;
+}
+.leftborder{
+    border-left: 1px solid lightgray;
+}
+.commentlist, .comment2{
+    margin-top:52px;
+}
+.notice{
+    width: 100%;
+    background-color: lightsteelblue;
+    padding: 30px 0px;
+}
+.notices{
+    max-width: 1340px;
+    margin: 0 auto;
+}
+.viewall{
+    position:absolute;
+    top:-50px;
+    right:0px;
+    font-size:14px;
+    color:gray;
+}
+.plus{
+    font-size:18px;
+}
+.viewallhref:hover{
+    border-bottom: 1px solid gray;
+}
+.noticelist{
+    position: relative;
+    margin: 8px;
+    align-items: start;
+    padding:20px;
+    padding-top: 55px;
+    width: 235px;
+    background-color: white;
+    border-top: 3px solid gray;
+}
+.more{
+    color:darkblue;
+    border-bottom: 1px solid darkblue;
+    font-weight: bold;
+}
+.noticestrong{
+    margin-top: 8px;
+    text-align: left;
+    overflow: hidden;
+    height: 50px;
+    margin-bottom: 30px;
+    font-size:18px;
+}
+.noticelist:hover{
+    .noticestrong{
+        color:darkblue;
+    }
+    .more{
+        color:black;
+    }
+    
+}
+.days{
+    font-size:25px;
+    font-weight: bold;
+}
+.noticeperformance{
+    background-color: orangered;
+}
+.noticemain{
+    background-color: teal;
+}
+.footer{
+    background-color: rgb(50,50,50);
+    color:white;
+    position: relative;
+}
+.footerul{
+    font-size: 13.5px;
+    border-bottom: 0.1px solid black;
+}
+.footerinfo{
+    font-size:13px;
+}
+.footerul, .footerinfo{
+    justify-content: space-evenly;
+}
+.footerul > ul{
+    color:lightgrey;
+}
+.footerul > ul > li{
+    padding:10px;
+}
+.important{
+    color:cornflowerblue;
+    font-weight: bold;
+}
+.instagram,.twitter,.facebook{
+    background: url(img/ico_topsplit.png) 0 -71px no-repeat;
+    border-left: 1px solid #292929; 
+}
+.instagram{
+    background-position: -19px -71px
+}
+.twitter{
+    background-position: -62px -71px;
+}
+.facebook{
+    background-position: -104px -71px;
+}
+.top{
+    background-color: black;
+    color:white;
+    vertical-align: middle;
+}
+.top > p{
+    padding-top: 10px;
+}
+.link > li{
+    width:60px;
+    height:60px;
+    display: inline-block;
+}
+.footerinfo{
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+.footerinfotext, .Copyright{
+    text-align: left;
+}
+.Copyright{
+    color:lightgrey;
+}
+.site{
+    width: 100%;
+    background-color: black;
+    color:white;
+    font-size: 13.5px;
+    padding-left: 10px;
+    border-style: none;
+    text-align: start;
+}
+.borderbottom > a:hover{
+    border-bottom: 1px solid lightgrey;
+}
+.important > a:hover{
+    border-bottom: 1px solid cornflowerblue;
+}
+@media screen{
+    .concert, .imgclass > img{
+        width:100%;
+    }
+    .concert, .imgclass > img{
+        height:627px;
+    }
+    .noticelist{
+        width:20%;
+    }
+    .hoverlidiv{
+        padding-left:22.5%;
+    }
+}
+.programlist > strong, .movielist > strong{
+    max-width: 252px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media screen and (max-width:1540px) {
+    .performance, .exhibit, .all, .only12, .only15{
+        position:absolute;
+        top:30px;
+        right:30px;
+    }
+    .headerul > li, .headerul > li > a, .hoverlist{
+        width:105px;
+    }
+    .programs, .lectures, .movies, .programs{
+        overflow: hidden;
+        margin-right: 40px;
+    }
+    .programs, .movies, .programlist, .movielist{
+        position: relative;
+    }
+    .programlist, .movielist{
+        width: 25%;
+        padding:20px;
+    }
+    .programlist > img, .movielist > img, .hoverdiv, .programlist > strong, .movielist > strong{
+        width:240px;
+        text-align: left;
+    }
+    .lecturelist{
+        width:18%;
+    }
+    .lectures, .programs, .movies{
+        width:auto;
+    }
+    .lecturelist > ol, .lecturelist > strong{
+        width: 100%;
+    }
+    .lecturelist > strong, .lecturelist > ol{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width:1300px) {
+    .headerul > li, .headerul > li > a, .hoverlist{
+        width:102px;
+    }
+    .hoverlist{
+        font-size:13px;
+    }
+}
+@media screen and (max-width:1250px){
+    .programlist > img, .movielist > img, .hoverdiv{
+        width:210px;
+        text-align: left;
+    }
+}
+@media screen and (max-width:1240px){
+    .mypage{
+        padding:4px;
+    }
+}
+@media screen and (min-width:1201px) {
+    #bg, .mask{
+        display:none;
+    }
+}
+@media screen and (max-width:1200px) {
+    .header{
+        padding:10px;
+    }
+    .headerul, .mypage{
+        display: none;
+    }
+    .HiddenButton, .HiddenHome{
+        display:block;
+    }
+    .hoverlidiv{
+        display:none;
+    }
+}
+@media screen and (max-width:1099px) {
+    .programlist, .movielist{
+        width: 33.34%;
+        padding:20px;
+    }
+    .programlist > img, .movielist > img, .hoverdiv{
+        width:252px;
+    }
+}
+@media screen and (min-width:1025px) {
+    .dropdownbutton, .dropdown{
+        width:210px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .noticelist{
+        width:160px;
+        min-width:160px;
+        padding:10px;
+    }
+    .performance, .exhibit, .all, .only12, .only15, .noticelist > span{
+        top:10px;
+        right:10px;
+    }
+    .hoverdiv{
+        display:none;
+    }
+    .concert, .imgclass, .concertbottom, .prev, .next, .prne{
+        width:0px;
+        height:0px;
+        display:none;
+    }
+    .programlist, .programlist > img, .movielist, .movielist > img{
+        width:170px;
+    }
+    .programlist, .movielist{
+        padding:0;
+        margin:10px;
+        align-items: center;
+    }
+    .programlist{
+        background-color: white;
+    }
+    .programlist > img, .movielist > img{
+        height:240px;
+    }
+    .programlist > strong, .movielist > strong{
+        font-size: 15px;
+    }
+    .programlist > p, .movielist > p{
+        font-size:13px;
+    }
+    .programlist > strong, .programlist > p, .movielist > strong, .movielist > p{
+        margin:0;
+        width: 170px;
+        text-align: center;
+    }
+    .lecturelist{
+        width:200px;
+    }
+    .movies, .programs, .lectures{
+        width:95%;
+        overflow-x: scroll;
+        margin: 0;
+    }
+    .reserveunder1025{
+        margin-top:5px;
+        margin-bottom: 15px;
+        width:120px;
+        border-radius: 5px;
+        display:block;
+        padding:4px 15px;
+        font-size:14px;
+        background-color: unset;
+        color:darkblue;
+        border: 1px solid darkblue;
+    }
+    .package{
+        width:170px;
+        bottom:85px;
+    }
+    .program, .movie, .lecture{
+        flex-direction: column;
+    }
+    .programinfo, .movieinfo, .lectureinfo{
+        width:100%;
+        flex-direction: row;
+        text-align: left;
+        padding:0px 20px;
+    }
+    .programinfo > p, .programinfo > h3, .movieinfo > p, .movieinfo > h3, .lectureinfo > p, .lectureinfo > h3, .noticediv > h1{
+        font-size: 15px;
+        display:inline-block;
+        padding:2px;
+        font-weight: bolder;
+    }
+    .infobutton, .movieinfo > button, .lectureinfo > button{
+        position:absolute;
+        right:10px;
+        flex-direction: row;
+        padding:5px;
+    }
+    .infobutton > button, .movieinfo > button, .lectureinfo > button{
+        margin:3px;
+        width:auto;
+        font-size: 12px;
+        padding: 3px 5px;
+        font-weight: bolder;
+    }
+    .program, .movie{
+        padding: 20px 0px;
+        height: auto;
+    }
+    .comment{
+        height:auto;
+        margin:10px;
+        position: relative;
+    }
+    .commentlist{
+        margin-top: 0px;
+        width: 159px;
+        height: 161px;
+        padding: 15px;
+    }
+    .commentlist > strong{
+        font-size:19px;
+    }
+    .commentlist > p{
+        display:none;
+    }
+    .commentlist > img{
+        position: relative;
+        left: 50px;
+        bottom: 0px;
+    }
+    .commentlist, .comment1, .comment2, .leftborder{
+        height:auto;
+    }
+    .footerinfotext{
+        padding-bottom: 40px;
+    }
+    .footerinfo > img, .footerul > .link{
+        display: none;
+    }
+    .footerul{
+        align-items: start;
+    }
+    .footerinfo{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .site, .dropdownbutton, .dropdown{
+        width: 100%;
+    }
+    .dropdownbutton{
+        margin-bottom: 20px;
+    }
+    .linkunder1025{
+        display: flex;
+        position: absolute;
+        bottom:0;
+        left:10px;
+    }
+    .linkunder1025 > li{
+        width:60px;
+        height:60px;
+    }
+    .plusbutton{
+        border-style: unset;
+        font-size: 40px;
+        border-radius: 40px;
+        width:50px;
+        height:50px;
+        background-color: black;
+        color: white;
+        display: block;
+        position: absolute;
+        bottom:10px;
+        right: 10px;
+    }
+    .viewall{
+        display:none;
+    }
+    .viewallunder1025{
+        display:block;
+    }
+    .noticediv{
+        display:flex;
+        justify-content: space-between;
+        padding:0px 20px;
+    }
+}
+@media screen and (max-width:936px) {
+    .notices{
+        overflow-x: scroll;
+    }
+}
+@media screen and (max-width:715px) {
+    .disable4{
+        display:none;
+    }
+}
+@media screen and (max-width:612px) {
+    .disable3{
+        display:none;
+    }
+}
+@media screen and (max-width:538px) {
+    .disable2{
+        display:none;
+    }
+}
+@media screen and (max-width:410px) {
+    .disable1{
+        display:none;
+    }
+}
+@media screen and (min-width:841px) {
+    .commenthr:after{
+        color:gray;
+        width:100%;
+        float:left;
+    }
+}
+@media screen and (max-width:840px) {
+    .comment{
+        display:flex;
+        padding-left: 0px;
+        padding:10px;
+    }
+    .commentlist{
+        margin:10px;
+        padding:10px;
+        width:33%;
+        border:1px solid gray;
+        align-items:center;
+    }
+    .commentlist > img{
+        position: relative;
+        left:0px;
+    }
+    .commenthr:after{
+        color:gold;
+    }
+}
+@media screen and (max-width:620px){
+    .lectureinfo > button{
+        display: none;
+    }
+    .lectures, .lecturelist{
+        flex-direction: column;
+    }
+    .lectureinfo > p, .lectureinfo > h3{
+        color:black;
+    }
+    .lecture{
+        padding-top:30px;
+        background-color: lightgray;
+        background-image: unset;
+        height:auto;
+    }
+    .lecturelist > button, .instructor{
+        display:none;
+    }
+    .lectures{
+        overflow-x: hidden;
+    }
+    .lecturelist{
+        align-items: start;
+        text-align: left;
+        margin:5px;
+        padding:6px 15px;
+        width:100%;
+    }
+    .lecturelist > strong{
+        font-size:15px;
+        text-align: left;
+    }
+    .lecturelist > ol{
+        flex-direction: row;
+        font-size:14px;
+        padding:0px;
+    }
+    .lecturelist > ol > li{
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+    .time, .left{
+        padding-left:10px;
+    }
+    .lecturelist > ol > li:hover{
+        cursor:default;
+    }
+    .viewallbutton{
+        display:block;
+        width:100%;
+        padding:10px;
+        font-weight: bold;
+        border-style: none;
+        margin-top:5px;
+        margin-bottom:20px;
+    }
+}
+@media screen and (max-width:480px){
+    .commentlist{
+        margin:0;
+        padding:10px 0px;
+    }
+    .commentlist > strong{
+        font-size:16px;
+    }
+}
+.dropdownbutton{
+    position:relative;
+    background-color: black;
+    color:white;
+    padding: 10px;
+    font-size: 13.5px;
+    border-style: none;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+.dropdown{
+    background-color: black;
+    display:none;
+    flex-direction: column;
+    height:145px;
+    overflow-y: scroll;
+    position:absolute;
+    bottom:38px;
+}
+.dropdown > li{
+    width:100%;
+    padding: 10px;
+    text-align: start;
+    border-bottom: 1px solid lightgray;
+}
+.hiddensidebar{
+    position: fixed;
+    display: flex;
+    top:0;
+    width:250px;
+    height:100%;
+    background-color:white;
+}
+.moremenu{
+    color:lightgray;
+    border: 1px solid lightgray;
+    padding: 0 5px;
+}
+.hiddenlogin{
+    padding:15px;
+}
+.hiddenhome, .hiddenlogin{
+    width: 100%;
+    background-image: url('img/m_menu_pt.gif');
+    color:white;
+}
+.hiddenhome > li{
+    padding:10px 0px;
+    width: 33.33%;
+}
+.loginspan{
+    font-weight: bold;
+}
+.hiddenlogin > a:hover{
+    border-bottom: 1px solid white;
+}
+.hiddensidemenu{
+    width: 100%;
+    overflow-y: auto;
+}
+.hiddensidemenu > li{
+    display:flex;
+    flex-direction: column;
+}
+.hiddensidemenu > li > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 61px;
+    color:black;
+    border-bottom: 1px solid gray;
+}
+.clicklist > li > div{
+    display: flex;
+    justify-content: space-between;
+}
+.moremenu2{
+    color:black;
+}
+.hiddensidemenu > li > div > a{
+    font-weight: bold;
+}
+.hiddensidemenu > li > div:hover{
+    color:darkblue;
+    transition: 0.2s;
+}
+#bg{
+    left:250px;
+    height: 2015px;
+    background-color: black;
+    opacity: 0.4;
+}
+.mask{
+    height: 100%;
+}
+.mask, #bg{
+    width: 100%;
+    position:absolute;
+    top:0;
+}
+.clicklist{
+    width:100%;
+    background-color: lightgrey;
+}
+.clicklist > li{
+    padding:15px 20px;
+    font-size:13.5px;
+    border-bottom: 1px solid gray;
+}
+.clicklist2{
+    padding:8px 20px;
+    background-color: white;
+}
+.clicklist > li, .clicklist2{
+    border-bottom: 1px solid gray;
+}
+.clicklist > li, .clicklist2 > li, .clicklist2{
+    width:100%;
+}
+.clicklist > li, .clicklist2 > li{
+    text-align: start;
+}

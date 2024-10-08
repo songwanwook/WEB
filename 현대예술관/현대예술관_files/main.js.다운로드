@@ -1,0 +1,654 @@
+function mainViewCallBack(svc_id, ErrorCode, ErrorMsg, returnData) {
+    var arrayArt = returnData.artList;
+    createTicketInfo(arrayArt,"art","artList");
+
+    createMainTitleZone(arrayArt);
+
+    var arrayMovie = returnData.movieList;
+    createTicketInfo(arrayMovie,"movie", "movieList");
+
+    var arrayNotice = returnData.noticeList;
+    createNoticeInfo(arrayNotice);
+
+    var arrayEvent = returnData.eventList;
+    createEvent(arrayEvent);
+
+    var arrayLec = returnData.lecList;
+    createLec(arrayLec);
+
+
+    var slider = $('.img_area').bxSlider({
+        mode: "fade",
+        pager: true,
+        captions:true,
+        pagerCustom: '.ctrl_area', //.ctrl_area 컨트롤  ※컨트롤 버튼은 a 태그여야 js 작동됨.
+        prevSelector: '#slider-btn', // 화살표 prev
+        nextSelector: '#slider-btn', // 화살표 next
+        auto: true,
+        autoControls: true,
+        speed: 400,
+        stopAutoOnClick: true,
+        /*onSlideNext: function () {
+            var slide_count = slider.getSlideCount();
+            var slide_curr = slider.getCurrentSlide();
+            //insertCount(slide_curr, slide_count);
+        },
+        onSlidePrev: function () {
+            var slide_count = slider.getSlideCount();
+            var slide_curr = slider.getCurrentSlide();
+            //insertCount(slide_curr, slide_count);
+        },*/
+        onSlideAfter: function(){
+            insertCount((slider.getCurrentSlide()), slider.getSlideCount());
+
+            //$('#mainTitleNumber').text("<span>"+(slider.getCurrentSlide()+1)+"</span> / <em>"+slider.getSlideCount()+"</em>");
+            }
+
+
+
+    }
+
+    );
+
+
+
+  //공연전시,영화(상영영화 5개 이상일때)
+    $('.posterList ul').slick({
+        dots: true,
+        infinite: true,
+        //autoplay: true,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        pauseOnHover: true,
+
+        responsive: [{
+            breakpoint: 1500,
+            settings: {
+                dots: true,
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 1100,
+            settings: {
+                dots: true,
+                centerMode: false,
+                slidesToShow: 3
+            }
+
+        }, {
+            breakpoint: 1025,
+            settings: {
+                slide: false,
+            }
+        }]
+    });
+
+    //화살표 붙었을대
+    $(".slick-arrow").parent().parent().prev().addClass("st");
+
+    //메인 티켓오픈예정
+    $(".posterList ul li .label_area .poster_label.prepare").parent().parent().parent().addClass("prepare");
+
+    //메인 템플릿
+    $("#wrap.temp1").siblings().filter("#popup1").addClass("temp1");
+    $("#wrap.temp1").siblings().filter("#m_popup1").addClass("temp1");
+
+    $("#wrap.temp2").siblings().filter("#popup1").addClass("temp2");
+    $("#wrap.temp2").siblings().filter("#m_popup1").addClass("temp2");
+
+    $("#wrap.temp3").siblings().filter("#popup1").addClass("temp3");
+    $("#wrap.temp3").siblings().filter("#m_popup1").addClass("temp3");
+
+    //강좌
+    $('.lectureList ul').slick({
+        dots: true,
+        infinite: true,
+        autoplay: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        pauseOnHover: true,
+
+        responsive: [{
+            breakpoint: 1500,
+            settings: {
+                slidesToShow: 5
+            }
+        }, {
+            breakpoint: 1100,
+            settings: {
+                slide: false,
+            }
+         }, {
+            breakpoint: 1025,
+            settings: {
+                slide: false,
+            }
+        }]
+    });
+
+    $.fn.PopupZone = function(options) {
+        var pop_length = $(".popup .pop_img li").length;
+        if (pop_length > 1)
+        {
+            var settings = {
+                prevBtn : '',
+                nextBtn : '',
+                playBtn : '',
+                waitingTime : ''
+            };
+
+            $.extend(settings, options);
+            settings.areaDiv = this;
+            settings.prevBtn = $(settings.prevBtn);
+            settings.nextBtn = $(settings.nextBtn);
+            settings.playBtn = $(settings.playBtn);
+
+            settings.cnt = settings.areaDiv.find('li').length;
+            settings.waitingTime = parseInt(settings.waitingTime);
+            settings.nowNum = 0;
+            settings.moveFlag = true;
+            settings.moveType;
+            settings.setTimeOut;
+            var status=true;
+
+            function emptySetting() {
+                //settings.areaDiv.find('.count').html(settings.nowNum+1);
+                //settings.areaDiv.find('.count').html(settings.nowNum+1+"/"+settings.cnt);
+                //settings.areaDiv.find('.all').html(settings.cnt);
+                settings.areaDiv.find('li').hide();
+                $("#evtpopnum").html(settings.nowNum+1);
+            }
+            function setRolling(aniFlag) {
+                if(!settings.moveFlag){
+                    if(settings.moveType=="next" || settings.moveType == null){
+                        settings.nowNum++;
+                        if(settings.nowNum == settings.cnt) settings.nowNum = 0;
+                    } else if(settings.moveType=="prev") {
+                        settings.nowNum--;
+                        if(settings.nowNum < 0) settings.nowNum = (settings.cnt-1);
+                    }
+                }
+                emptySetting();
+
+                if(aniFlag) settings.areaDiv.find('li').eq(settings.nowNum).show();
+                else settings.areaDiv.find('li').eq(settings.nowNum).fadeIn('normal');
+                 // 기본 : aniFlag 설정 없으면 fade 효과 - 조정
+
+                aniFlag = false;
+                settings.moveFlag = false;
+                if(status){
+                    if(settings.cnt >1){
+                        settings.setTimeOut= setTimeout(setRolling , settings.waitingTime);
+                    }
+                }
+            }
+            function playRolling(){
+                //정지 재생버튼 배경으로 제어.
+                if(status){
+                    clearTimeout(settings.setTimeOut);
+                    settings.playBtn.attr('class',"popbtn play").html("팝업 롤링 재생");
+                    status = false;
+                }else{
+                    settings.playBtn.attr('class',"popbtn stop").html("팝업 롤링 정지");
+                    status = true;
+                    setRolling();
+                }
+                return false;
+            }
+            function prevRolling(){
+                clearTimeout(settings.setTimeOut);
+                settings.moveType = "prev";
+                setRolling();
+                return false;
+            }
+            function nextRolling() {
+                clearTimeout(settings.setTimeOut);
+                settings.moveType = "next";
+                setRolling();
+                return false;
+            }
+            setRolling();
+            settings.prevBtn.click(prevRolling);
+            settings.nextBtn.click(nextRolling);
+            settings.playBtn.click(playRolling);
+        }
+    };
+
+    $('.popup').PopupZone({
+        prevBtn : '.pop_ctrl .prev',
+        nextBtn : '.pop_ctrl .next',
+        playBtn : '.pop_ctrl .stop',
+        waitingTime : '4000'
+    });
+    $("#__progressMain").addClass("close"); //
+}
+
+function insertCount(slide_curr, slide_count) {
+    $('#mainTitleNumber').html("<span >"+ (slide_curr+1)+"</span> / <em>"+slide_count+"</em>");
+}
+
+function underConstruction() {
+    _c.alert("현장예매는 현대예술관 안내 데스크를 방문하여 주시기 바랍니다.");
+}
+
+function createMainTitleZone(arrayArt){
+    if(arrayArt == null ) return;
+    
+    var sizeArt = arrayArt.length;
+    var mainTitleInfo = "";
+    var slideIndexHtml ="";
+    var nSlideCnt = 0;
+    for (var i = 0; i < sizeArt; i++) {
+        var obj = arrayArt[i];
+        var unicodeSeqItemType = obj.unicode_seq_item_type;
+
+        var unicodeSeqItemType = obj.unicode_seq_item_type;
+        var atagHrefReservation ="";
+        var atagHrefReservationDetail = "";
+        var spanClass ="";
+
+        if(typeof obj.main_image_file_name == 'undefined' || obj.main_image_file_name == '') {
+            continue;
+        }
+        
+         
+        if(unicodeSeqItemType == "0000000609"){
+            artText = "전시";
+            //mid 0100
+            atagHrefReservationDetail = "javascript:goTicketDetail('"+obj.ticketing_item_seq+"', 'exhibition', '0100')";
+            atagHrefReservation = "javascript:underConstruction();";
+            spanClass = "exhibition";
+        }else if(unicodeSeqItemType == "0000000607") {
+            artText = "공연";
+            atagHrefReservationDetail = "javascript:goTicketDetail('"+obj.ticketing_item_seq+"', 'performance', '0000')";
+            //atagHrefReservation= "javascript:reservationTicket('"+obj.ticketing_item_seq+"','"+obj.ticketing_item_code+"', '"+obj.unicode_seq_item_type+"', 'art', '0000');"
+            atagHrefReservation = "javascript:underConstruction();";
+            spanClass = "performance";
+        }else if(unicodeSeqItemType == "0000000608") {
+            atagHrefReservationDetail = "javascript:goTicketDetail('"+obj.ticketing_item_seq+"' 'movie', '0200')";
+            //atagHrefReservation= "javascript:reservationTicket('"+obj.ticketing_item_seq+"',  '"+obj.unicode_seq_item_type+"', '0200');"
+            atagHrefReservation = "javascript:underConstruction();";
+            spanClass = "movie";
+        }
+
+        var imgUrl = "/common/popup/download.jsp?save_dir=ticketing&file_name="+obj.main_image_file_name+"&file_mask="+obj.main_image_file_mask;
+        var startDate = obj.start_date;
+        var endDate = obj.end_date;
+
+
+        var ArraySDate =startDate.split('.');
+        var ArrayEDate =endDate.split('.');
+        var sDate = new Date(ArraySDate[0], ArraySDate[1] - 1, ArraySDate[2]);
+        var eDate = new Date(ArrayEDate[0], ArrayEDate[1] - 1, ArrayEDate[2]);
+        startDate = sDate.format("yyyy.MM.dd(EE)");
+        endDate = eDate.format("MM.dd(EE)");
+
+        mainTitleInfo += "<li style=\"background:url('"+imgUrl+"') center 0 no-repeat;\">";
+        mainTitleInfo += " <div class=\"txt\">";
+        mainTitleInfo += "<a href=\""+atagHrefReservationDetail+"\" title=\""+obj.ticketing_item_name_ko+" 상세화면\"><span class=\""+spanClass+"\">"+artText+"</span>"+obj.ticketing_item_name_ko+"</a>";
+        mainTitleInfo += "<p>"+startDate+" - "+endDate+" "+obj.center_name+" "+obj.outlet_name+"</p>";
+        mainTitleInfo += "</div>";
+        mainTitleInfo += "</li>";
+        slideIndexHtml += "<a data-slide-index=\""+nSlideCnt+"\" class=\"bnbtn\"></a>";
+        nSlideCnt ++;
+    }
+    slideIndexHtml += "<p id=\"mainTitleNumber\"></p>";
+    $("#slideIndex").html(slideIndexHtml);
+    $("#mainTitleZone").html(mainTitleInfo);
+    $("#mainTitleNumber").html("<span >1</span> / <em>"+nSlideCnt+"</em>");
+
+
+}
+function createEvent(arrayEvent){
+    var sizeEvent = arrayEvent.length;
+    var eventInfo = "<ul>";
+    for (var i = 0; i < sizeEvent; i++) {
+        var obj = arrayEvent[i];
+        var eventtype = obj.unicode_seq_envent_gbn_code;
+        
+        if ("0000000000" == eventtype ){
+            var imgUrl = "/common/popup/download.jsp?save_dir=ticketing&file_name="+obj.file_name+"&file_mask="+obj.file_mask;
+
+            eventInfo+= "<ul class=\"pop_img\">";
+            eventInfo+= "<li>";
+            eventInfo+= "<a href=\"/board/detail.do?SVC_ID=reviewdetaillist&mid=0003&ticketing_item_seq="+obj.event_seq+"\" title=\""+obj.event_title+"\"><img src=\""+imgUrl+"\" alt=\""+obj.event_title+"\" /></a>";
+            eventInfo+= "<div><p>"+obj.event_title+"</p></div>";
+            eventInfo+= "</li>";
+            eventInfo+= "</ul>";
+            
+        }else {
+            var imgUrl = "/common/popup/download.jsp?save_dir=site&file_name="+obj.file_name+"&file_mask="+obj.file_mask;
+
+            eventInfo+= "<ul class=\"pop_img\">";
+            eventInfo+= "<li>";
+            eventInfo+= "<a href=\"/event/detail.do?mid=0604&SVC_ID=detail&eventSeq="+obj.event_seq+"\" title=\""+obj.event_title+"\"><img src=\""+imgUrl+"\" alt=\""+obj.event_title+"\" /></a>";
+            eventInfo+= "<div><p>"+obj.event_title+"</p></div>";
+            eventInfo+= "</li>";
+            eventInfo+= "</ul>";
+            
+        }
+    }
+
+    eventInfo += "</ul>";
+    
+    
+    $("#popupList").html(eventInfo);
+    $("#divEventNum").html("<span id='evtpopnum'>1</span> / <em>"+sizeEvent+"</em>");
+}
+function createNoticeInfo(arrayNotice){
+    var sizeNotice = arrayNotice.length;
+    var noticeInfo = "<ul>";
+    for (var i = 0; i < sizeNotice; i++) {
+        var obj = arrayNotice[i];
+
+        var create_date = obj.create_date;
+        var f_create_date = create_date.substring(0, create_date.length-2);
+        var l_create_date = create_date.substring(create_date.length-2, create_date.length);
+        var board_group_no = obj.board_group_no;
+
+        var boardCategory = "";
+        var boardCategoryStr = "";
+        if(board_group_no == "NA000" ){
+            boardCategory = "c_main";
+            boardCategoryStr = "메인";
+        }else if(board_group_no == "NA001"){
+            boardCategory = "c_per";
+            boardCategoryStr = "공연";
+        }else if(board_group_no == "NA002"){
+            boardCategory = "c_exh";
+            boardCategoryStr = "전시";
+        }else if(board_group_no == "NA003"){
+            boardCategory = "c_mov"
+                boardCategoryStr = "영화";
+        }else if(board_group_no == "NA006"){
+            boardCategory = "c_lec";
+            boardCategoryStr = "강좌";
+        }else if(board_group_no == "NA007"){
+            boardCategory = "c_lec";
+            boardCategoryStr = "강좌";
+        }else{
+            boardCategory = "c_etc";
+            boardCategoryStr = "기타";
+        }
+
+    //공연 전시 영화 강좌 메인
+        noticeInfo += "<li>";
+        noticeInfo += "<div>";
+        noticeInfo += "<span class=\"category "+boardCategory+"\">"+boardCategoryStr+"</span>";
+        noticeInfo += "<span class=\"date\">"+f_create_date+"<strong>"+l_create_date+"</strong></span>";
+        noticeInfo += "<a href=\"/board/detail.do?mid=0600&SVC_ID=detail&boardSeq="+obj.board_seq+"&boardNo="+obj.board_no+"\" class=\"title\">";
+        noticeInfo += "<strong>"+obj.board_title+"</strong>";
+        noticeInfo += "<em>MORE</em>";
+        noticeInfo += "</a>";
+        noticeInfo += "</div>";
+        noticeInfo += "</li>";
+    }
+    noticeInfo += "</ul>";
+    $("#noticeList").html(noticeInfo);
+}
+
+function createLec(arrayLec){
+    var sizeLec = arrayLec.length;
+    var lecInfo = "<ul>";
+    for (var i = 0; i < sizeLec; i++) {
+        var obj = arrayLec[i];
+        lecInfo+="<li>";
+        lecInfo+="<div>";
+        lecInfo+="<strong onclick=\"lecDetail('"+obj.lecture_master_seq+"','"+obj.lecture_detail_seq+"');\">"+obj.lecture_name_ko+"</strong>";
+        lecInfo+="<ol>";
+        lecInfo+="<li>강사 : "+obj.lecturer_name_ko+"</li>";
+        lecInfo+="<li>장소 : "+obj.center_name+"</li>";
+        lecInfo+="<li class=\"time\">"+obj.day_of_week+"<span>"+obj.lecture_time+"</span></li>";
+        lecInfo+="<li>수강료 : "+obj.unit_month+"개월/"+obj.lecture_price+"원</li>";
+        lecInfo+="</ol>";
+        lecInfo+="<a href=\"#\" onclick=\"lecDetail('"+obj.lecture_master_seq+"','"+obj.lecture_detail_seq+"'); return false;\" class=\"lecbtn\">자세히보기</a>";
+        lecInfo+="</div>";
+        lecInfo+="</li>";
+
+    }
+
+    lecInfo += "</ul>";
+    $("#lectureList").html(lecInfo);
+}
+function createTicketInfo(arrayArt, stype, divId){
+    
+    if (arrayArt == null) return;
+    
+    var sizeArt = arrayArt.length;
+    var ticketInfo = "<ul>";
+    if (sizeArt <=0) {
+        
+
+        ticketInfo +="<div style='height:240px'>&nbsp</div></ul>"
+        $("#"+divId).html(ticketInfo);
+        
+        
+        return;
+    }
+    $("#"+divId).removeClass();
+    //if(sizeArt > 4){
+    $("#"+divId).addClass("posterList");
+
+    for (var i = 0; i < sizeArt; i++) {
+        var obj = arrayArt[i];
+        var artText = "";
+        var unicodeSeqItemType = obj.unicode_seq_item_type;
+        var atagHrefReservation ="";
+        var spanClass="exhibition";
+        var atagHrefReservationDetail = "";
+        var title = "";
+        var literary_yn = obj.literary_yn == "" ? "N" : obj.literary_yn;
+
+        if(unicodeSeqItemType == "0000000609"){
+            artText = "전시";
+            spanClass = "exhibition";
+            //mid 0100
+            atagHrefReservationDetail = "javascript:goTicketDetail('"+obj.ticketing_item_seq+"', 'exhibition', '0100')";
+            //atagHrefReservation = "javascript:underConstruction();";
+            if (obj.discount_apply_type == 'Y') {
+                atagHrefReservation= "javascript:reservationExhibition('"+obj.ticketing_item_seq+"',  '0100');"
+                title = "예매하기";
+            } else {
+                atagHrefReservation= "javascript:underConstruction();";
+                title = "현장예매";
+            }
+
+
+        }else if(unicodeSeqItemType == "0000000607") {
+            artText = "공연";
+            spanClass = "performance";
+            atagHrefReservationDetail = "javascript:goTicketDetail('"+obj.ticketing_item_seq+"','performance', '0000')";
+            //atagHrefReservation= "javascript:reservationTicket('"+obj.ticketing_item_seq+"','"+obj.ticketing_item_code+"', '"+obj.unicode_seq_item_type+"', 'art', '0000');"
+
+            if (obj.discount_apply_type == 'Y') {
+                atagHrefReservation = "javascript:reservationTicket('"+obj.ticketing_item_seq+"',  '"+obj.unicode_seq_item_type+"', '0000');";
+                title = "예매하기";
+            } else {
+                atagHrefReservation = "javascript:underConstruction();";
+                title = "현장예매";
+
+            }
+        }else if(unicodeSeqItemType == "0000000608") {
+            atagHrefReservationDetail = "javascript:goTicketDetail('"+obj.ticketing_item_seq+"', 'movie', '0200')";
+            
+            if (obj.discount_apply_type == 'Y') {
+                atagHrefReservation = "javascript:reservationTicket('"+obj.ticketing_item_seq+"',  '"+obj.unicode_seq_item_type+"', '0200');";
+                title = "예매하기";
+            } else {
+                atagHrefReservation = "javascript:underConstruction();";
+                title = "현장예매";
+
+            }
+            
+//            atagHrefReservation= "javascript:reservationTicket('"+obj.ticketing_item_seq+"',  '"+obj.unicode_seq_item_type+"', '0200');"
+//            title = "예매하기";
+        }
+        ticketInfo += "<li>";
+        ticketInfo += "<div class=\"img\">";
+        if(stype == 'art'){
+            ticketInfo += "<span class=\""+spanClass+"\">"+artText+"</span>";
+        }else{
+            var watchingClassName= obj.watching_class_name;
+            var watchClass="";
+            var watchName="";
+            if(watchingClassName.indexOf("18세")>-1 || watchingClassName.indexOf("관람불가") > -1){
+                watchClass="noteenager";
+                watchName ="청불";
+            }else if(watchingClassName.indexOf("15세")>-1 ){
+                watchClass="age15";
+                watchName ="15";
+            }else if(watchingClassName.indexOf("12세")>-1 ){
+                watchClass="age12";
+                watchName ="12";
+            }else if(watchingClassName.indexOf("전체")>-1 ){
+                watchClass="all";
+                watchName ="전체";
+            }
+            ticketInfo += "<span class=\""+watchClass+"\">"+watchName+"</span>";
+        }
+
+        var imgUrl = "/common/popup/download.jsp?save_dir=ticketing&file_name="+obj.title_image_file_name+"&file_mask="+obj.title_image_file_mask;
+        ticketInfo += "<a href=\""+atagHrefReservationDetail+"\"><img src=\""+imgUrl+"\" alt=\""+obj.ticketing_item_name_ko+"\" /></a>";
+        ticketInfo += "<div class=\"mouseOver\">";
+        ticketInfo += "<div>";
+        ticketInfo += "<strong>"+obj.ticketing_item_name_ko+"</strong>";
+        ticketInfo += "<span>"+obj.watching_class_name+"</span>";
+        ticketInfo += "<em>"+obj.ticketing_price+"</em>";
+        ticketInfo += "<ol>";
+        
+        
+        
+        if(obj.schedule_cnt > 0  || unicodeSeqItemType  == "0000000609"  ) {
+        //if ("-0000002914-0000002856".indexOf(obj.schedule_cnt) <= 0) {
+            ticketInfo += "<li><a href=\""+atagHrefReservation+"\" class=\"overbtn reserv\">"+title+"</a></li>";    
+        }
+        
+        ticketInfo += "<li><a href=\""+atagHrefReservationDetail+"\" class=\"overbtn\">상세보기</a></li>";
+        ticketInfo += "</ol>";
+        ticketInfo += "</div>";
+        ticketInfo += "</div>";
+        ticketInfo += "</div>";
+        
+        ticketInfo += "<div class=\"txt\">";
+        ticketInfo += "<strong>"+obj.ticketing_item_name_ko+"</strong>";
+        ticketInfo += "<span>"+obj.start_date+" ~ "+obj.end_date+"</span>";
+        
+        if(obj.schedule_cnt > 0  || unicodeSeqItemType  == "0000000609"  ) {
+        //if ("-0000002914-0000002856".indexOf(obj.ticketing_item_seq) <= 0) {
+            ticketInfo += "<a href=\""+atagHrefReservation+"\">"+title+"</a>";
+        }
+        
+
+
+
+        if(stype == 'art'){ //공연전시
+            if ( obj.sale_gubun != 'X') {
+
+                //문예회원이면서 문예회원 예매가 아닌경우
+                //일반-> 일반
+
+               
+                    
+                if (literary_yn == "Y") {
+                    if ( obj.literary_ticketing_yn == "N" && obj.ticketing_yn == "N" ) {
+
+                        ticketInfo +=  '<div class="label_area"> <span class="poster_label prepare">티켓 <br>오픈 예정</span>';
+                        if ((obj.literary_package_yn == "Y")  || (  obj.package_yn == "Y") ) {
+                            ticketInfo +=  '<span class="poster_label pack">패키지 <br>상품</span>';
+                        }
+                        ticketInfo +=  '</div>';
+
+                    } else {
+                        if ((literary_yn == "Y" &&  obj.literary_package_yn == "Y")  || ( obj.package_yn == "Y") ) {
+                            ticketInfo +=  '<div class="label_area"> ';
+                            ticketInfo +=  '<span class="poster_label pack">패키지 <br>상품</span>';
+                            ticketInfo +=  '</div>';
+                        }
+                    }
+                } else {
+                    if ( obj.ticketing_yn == "N" ) {
+                        ticketInfo +=  '<div class="label_area"> <span class="poster_label prepare">티켓 <br>오픈 예정</span>';
+                        if (  obj.package_yn == "Y" ) {
+                            ticketInfo +=  '<span class="poster_label pack">패키지 <br>상품</span>';
+                        }
+                        ticketInfo +=  '</div>';
+                            
+                    }else {
+                        if ( obj.package_yn == "Y" ) {
+                            ticketInfo +=  '<div class="label_area"> ';
+                            ticketInfo +=  '<span class="poster_label pack">패키지 <br>상품</span>';
+                            ticketInfo +=  '</div>';
+                        }
+
+                    }
+
+                }
+               
+//                if (obj.ticketing_item_seq == '0000002914'){
+//                    ticketInfo +=  '';
+//                } else {
+//                    
+//                }
+
+            }
+        }
+        ticketInfo += "</div>";
+        ticketInfo += "</li>";
+    }
+    ticketInfo +="</ul>"
+    $("#"+divId).html(ticketInfo);
+
+}
+
+$(document).ready(function(){
+    _c.submit("mainview" , "/mainview.do" , "","", mainViewCallBack,false,false);
+});
+
+function reservationTicket(ticketingItemSeq, unicodeseqitemtype, mid){
+    $("#ticketingitemseq").val(ticketingItemSeq);
+    $("#unicodeseqitemtype").val(unicodeseqitemtype);
+    $("#mid").val(mid);
+    $("#SVC_ID").val("seat");
+    var searchForm = document.searchForm;
+    searchForm.action = "/ticket/seat.do";
+    searchForm.method = "post";
+    searchForm.submit();
+}
+
+function reservationExhibition(ticketingItemSeq, mid){
+    $("#ticketingitemseq").val(ticketingItemSeq);
+    $("#mid").val(mid);
+    $("#SVC_ID").val("reserve");
+    var searchForm = document.searchForm;
+    searchForm.action = "/exhibition/list.do";
+    searchForm.method = "post";
+    searchForm.submit();
+}
+
+function lecDetail(lectureMasterSeq, lectureDetailSeq){
+    $("#lectureMasterSeq").val(lectureMasterSeq);
+    $("#lectureDetailSeq").val(lectureDetailSeq);
+    $("#SVC_ID").val("detail");
+    var searchForm = document.searchForm;
+    searchForm.action = "/lecture/detail.do";
+    searchForm.method = "post";
+    searchForm.submit();
+}
+
+function goTicketDetail(ticketingItemSeq, type, mid){
+    $("#ticketingitemseq").val(ticketingItemSeq);
+    $("#SVC_ID").val("detail");
+    var searchForm = document.searchForm;
+    searchForm.action = "/"+type+"/detail.do";
+    searchForm.method = "post";
+    searchForm.submit();
+}
+
+//메인비주얼
+$(document).ready(function(){
+
+});
+
+
