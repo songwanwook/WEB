@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <button class = "fixed fixedbutton" onclick="showside()">
+        <img src = "img/fixed.png">
+    </button>
+    <div class = "fixed fixedright">
+        <ul class = "textcenter">
+            <li><a href = "#">HOME</a><br></li>
+            <li><a href = "#">ABOUT US</a><br></li>
+            <li><a href = "#">SERVICES</a><br></li>
+            <li><a href = "#">TRAVEL INFO</a><br></li>
+            <li><a href = "#">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class = "main width100">
+        <div id = "first"></div>
+        <div id = "second"></div>
+        <div id = "third"></div>
+        <div class = "TravelGo aligncenter flexcolumn absolute width100">
+            <div class = "header flex width100">
+                <div class = "logodiv center flexcolumn">
+                    <img src = "img/logo.png">
+                    <span class = "travelgo bold">TRAVELGO</span>
+                </div>
+                <ul class = "headerul flex padding20">
+                    <li><a href = "#">HOME</a></li>
+                    <li><a href = "#">ABOUT US</a></li>
+                    <li><a href = "#">SERVICES</a></li>
+                    <li><a href = "#">TRAVEL INFO</a></li>
+                    <li><a href = "#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class = "mountains flex relative padding20">
+                <div class = "flexcolumn">
+                    <span class = "travelgo bold padding0">CORDILLERA<br>MOUNTAINS</span>
+                    <p>TREKKING THE MOUNTAINS OF CONRDILLERA BLANCA</p>
+                </div>
+                <div class = "sns flex absolute">
+                    <button class = "instagram norepeat"></button>
+                    <button class = "twitter norepeat"></button>
+                    <button class = "facebook norepeat"></button>
+                </div>
+                <div class = "radiobutton column absolute padding20">
+                    <input type="radio" name = "bg" id = "bg1" checked onclick="bgchange()">
+                    <input type="radio" name = "bg" id = "bg2" onclick="bgchange()">
+                    <input type="radio" name = "bg" id = "bg3" onclick="bgchange()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "welcome backgroundwhite center width100 relative">
+        <h1>WELCOM</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicng elt, sed do eiusmod tempor<br>
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br>
+        exercitation ullamco labors nisiii ut aliqup ex ea commodo</p>
+        <div class = "buttondiv flex center">
+            <button>ABOUT US</button>
+            <button>REGISTRATION</button>
+        </div>
+    </div>
+    <div class = "info width100 center relative">
+        <div class = "infomation absolute width100">
+            <span class = "absolute infotravelgo bold">TRAVELGO</span>
+        </div>
+        <div class = "flex absolute center pageinfo">
+            <div class = "flexcolumn">
+                <div class = "flexcolumnimg">
+                    <img src = "img/people.png" class = "img1">
+                </div>
+                <span class = "number"></span>
+                <p class = "infop">Happy traveliers</p>
+            </div>
+            <div class = "flexcolumn">
+                <div class = "flexcolumnimg">
+                    <img src = "img/video.png"class = "img2">
+                </div>
+                <span class = "number"></span>
+                <p class = "infop">Videos</p>
+            </div>
+            <div class = "flexcolumn">
+                <div class = "flexcolumnimg">
+                    <img src = "img/picture.png"class = "img3">
+                </div>
+                <span class = "number"></span>
+                <p class = "infop">Photos</p>
+            </div>
+            <div class = "flexcolumn">
+                <div class = "flexcolumnimg">
+                    <img src = "img/flag.png" class = "img4">
+                </div>
+                <span class = "number"></span>
+                <p class = "infop">Treks and tours</p>
+            </div>
+        </div>
+    </div>
+    <div id = "Modal" class = "absolute width100">
+        
+        <div class = "modal center width100 relative">
+            <span class = "close absolute" onclick = "closeModal()">&times;</span>
+            <img src = "img/TESTIMONIALS1.jpg">
+        </div>
+        <div class = "modal center width100 relative">
+            <span class = "close absolute" onclick = "closeModal()">&times;</span>
+            <img src = "img/TESTIMONIALS2.jpg">
+        </div>
+        <div class = "modal center width100 relative">
+            <span class = "close absolute" onclick = "closeModal()">&times;</span>
+            <img src = "img/TESTIMONIALS3.jpg">
+        </div>
+        <div class = "modal center width100 relative">
+            <span class = "close absolute" onclick = "closeModal()">&times;</span>
+            <img src = "img/TESTIMONIALS4.jpg">
+        </div>
+    </div>
+    <div class = "backgroundwhite testimonials center width100">
+        <h2>TESTIOMIALS</h2>
+        <div class = "flex justifycenter justify1200">
+            <div class = "padding20 center flexcolumn imgdiv relative">
+                <div class = "relative">
+                <img src = "img/TESTIMONIALS1.jpg" class = "relative"><button class = "absolute big" onclick="ShowModal();Modal(0)"></button></img>
+                </div>
+                <p class = "lightgray center">Lorem ipsum dolor sit amet consectetur adipisicng elit, sed do eiusmodtempor incididunt</p>
+                <h3>Mary, Nepal</h4>
+            </div>
+            <div class = "padding20 center flexcolumn imgdiv relative">
+                <div class = "relative">
+                <img src = "img/TESTIMONIALS2.jpg" class = "relative"><button class = "absolute big" onclick="ShowModal();Modal(1)"></button></img>
+                </div>
+                <p class = "lightgray">Lorem ipsum dolor sit amet consectetur adipisicng elit, sed do eiusmodtempor incididunt</p>
+                <h3>Jane, Germany</h4>
+            </div>
+            <div class = "padding20 center flexcolumn imgdiv relative">
+                <div class = "relative">
+                <img src = "img/TESTIMONIALS3.jpg" class = "relative"><button class = "absolute big" onclick="ShowModal();Modal(2)"></button></img>
+                </div>
+                <p class = "lightgray">Lorem ipsum dolor sit amet consectetur adipisicng elit, sed do eiusmodtempor incididunt</p>
+                <h3>Robert, China</h4>
+            </div>
+            <div class = "padding20 center flexcolumn imgdiv relative">
+                <div class = "relative">
+                <img src = "img/TESTIMONIALS4.jpg" class = "relative"><button class = "absolute big" onclick="ShowModal();Modal(3)"></button></img>
+                </div>
+                <p class = "lightgray">Lorem ipsum dolor sit amet consectetur adipisicng elit, sed do eiusmodtempor incididunt</p>
+                <h3>Niger, Alps</h4>
+            </div>
+        </div>
+    </div>
+   
+    <div class = "newsletter width100 justifycenter flex">
+        <h2>NEW SLETTER</h2>
+        <div class = "inputdiv flex">
+            <input placeholder="Email">
+            <button class = "subscribe textcenter">SUBSCRIBE</button>
+        </div>
+    </div>
+    <div class = "footer width100">
+        <div class = "footerinput absolute width100 flex">
+            <div class = "address flexcolumn">
+                <div class = "flex padding20">
+                    <div class = "phone norepeat"></div>
+                    <p>
+                        +82 02 518 1234<br>
+                        +82 02 518 5678
+                    </p>
+                </div>
+                <div class = "flex padding20">
+                    <div class = "message norepeat"></div>
+                    <p>
+                        9870 St vincent Place,<br>
+                        Glasgow, DC 45 Fr 45.
+                    </p>
+                </div>
+                <div class = "flex padding20">
+                    <div class = "email norepeat"></div>
+                    <p>
+                        master@travelgo.com
+                    </p>
+                </div>
+            </div>
+            <div class = "flexcolumn inputarea">
+                <div class = "flex input50">
+                    <input placeholder="Name">
+                    <div class = "addressnone">
+                        <div class = "phone norepeat"></div>
+                        <p>
+                            +82 02 518 1234 or +82 02 518 5678
+                        </p>
+                    </div>
+                    <input placeholder="Phone">
+                </div>
+                <div class = "addressnone">
+                    <div class = "email norepeat"></div>
+                    <p>
+                        master@travelgo.com
+                    </p>
+                </div>
+                <input placeholder="Email">
+                <div class = "addressnone">
+                    <div class = "message norepeat"></div>
+                    <p>
+                        9870 St vincent Place, Glasgow, DC 45 Fr 45.
+                    </p>
+                </div>
+                <textarea placeholder="Message"></textarea>
+                <button class="textcenter">SEND</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    var bg1picture = document.getElementById("first");
+    var bg2picture = document.getElementById("second");
+    var bg3picture = document.getElementById("third");
+    function bgchange(){
+        //1번라디오버튼 : 배경1 0 배경2 100 배경3 200
+        if(bg1.checked){
+            bg1picture.style.left = "0";
+            bg2picture.style.left = "100%";
+            bg3picture.style.left = "200%";
+            bg1picture.style.transition = "0.3s";
+        }
+        //2번라디오버튼 : 배경1 -100 배경2 0 배경3 100
+        else if(bg2.checked){
+            bg1picture.style.left = "-100%";
+            bg2picture.style.left = "0";
+            bg3picture.style.left = "100%";
+            bg2picture.style.transition = "0.3s";
+        }
+        //3번라디오버튼 : 배경1 -200 배경2 -100 배경3 0
+        else if(bg3.checked){
+            bg1picture.style.left = "-200%";
+            bg2picture.style.left = "-100%";
+            bg3picture.style.left = "0";
+            bg3picture.style.transition = "0.3s";
+        }
+    }
+    var side = document.getElementsByClassName("fixedright");
+    var clicks = 0;
+    function showside(){
+        clicks++;
+        for(var i = 0; i < side.length; i++){
+            if(clicks%2==1){
+                side[i].style.right = "0";
+            }    
+            else{
+                side[i].style.right = "-240px";
+            }
+            side[i].style.transition = "0.3s";
+        }   
+    }
+    var showModal = document.getElementById("Modal");
+    function ShowModal(){
+        showModal.style.display = "block";
+    }
+    var modal = document.getElementsByClassName("modal");
+    function Modal(n){
+        for(var i = 0; i < modal.length; i++){
+            if(i == n){
+                modal[i].style.display = "block";
+            }
+            else{
+                modal[i].style.display = "none";
+            }
+        }
+    }
+    function closeModal(){
+        showModal.style.display = "none";
+    }
+    var number = document.getElementsByClassName("number");
+    var num = [1245,845,9543,145];
+    var delta = [2,2.8,0.5,10];
+    function getNumber(){
+        for(let i = 0; i < number.length; i++){
+        let j = 0;
+        let delay = 0;
+        let n = 0;
+            while(j <= num[i]){
+                j++;
+                delay+=delta[i];
+                setTimeout(async () => {number[i].innerHTML = n.toLocaleString();n++}, delay);
+            }
+        }
+    }
+    getNumber();
+</script>
+</html>

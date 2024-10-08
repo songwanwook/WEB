@@ -1,0 +1,514 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#Modal, .modal{
+    display: none;
+    height: 100%;
+    z-index: 1;
+}
+.modal{
+    width: 600px;
+    height: 450px;
+}
+#Modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 300px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal{
+    position: relative;
+}
+.modal > img{
+    width: 600px;
+    height: 450px;
+}
+.center, .aligncenter{
+    align-items: center;
+}
+.center, .justifycenter{
+    justify-content: center;
+}
+.marginauto{
+    margin:auto;
+}
+.center, .textcenter{
+    text-align:center;
+}
+.fixedright{
+    width: 240px;
+    right: -240px;
+    height: 100%;
+    background-color: rgba(255,69,0,0.8);
+    color: white;
+    z-index: 2;
+}
+.fixed > ul{
+    padding-top: 100px;
+}
+.fixed > ul > li{
+    font-size: 22px;
+    padding: 20px;
+}
+.padding20{
+    padding:20px;
+}
+.padding0{
+    padding:0;
+}
+.fixedbutton{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top:50px;
+    right: 0;
+    z-index: 3;
+    border: none; 
+}
+.fixed{
+    position: fixed;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button:hover, .close:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:unset;
+}
+.flex, .flexcolumn{
+    display:flex;
+}
+.travelgo{
+    font-size: 40px;
+    color:white;
+    font-style: italic;
+}
+.header{
+    justify-content: space-around;
+}
+.width100{
+    width:100%;
+}
+.headerul{
+    color:white;
+    font-size:18px;
+}
+.headerul > li{
+    padding:15px;
+}
+.flexcolumn{
+    flex-direction: column;
+}
+#first{
+    background-image: url('img/slide1.jpg');
+    width: 100%;
+    background-size: cover;
+}
+.norepeat{
+    background-repeat: no-repeat;
+}
+.instagram{
+    background-image: url(img/insta.png);
+}
+.facebook{
+    background-image: url(img/facebook.png);
+}
+.twitter{
+    background-image: url(img/twitter.png);
+}
+.instagram, .facebook, .twitter{
+    width: 28px;
+    height:28px;
+    background-color: unset;
+    border: 1px solid white;
+    border-radius: 14px;
+}
+.sns{
+    width:20%;
+    bottom:20px;
+    right:60px;
+    justify-content: space-evenly;
+}
+.absolute, #first,#second,#third{
+    position: absolute;
+}
+.bold{
+    font-weight: bold;
+}
+#first,#second,#third, .TravelGo, .main{
+    height: 700px; 
+}
+#second{
+    background-image: url('img/slide2.jpg');
+    left:100%;
+    right: 0;
+    background-size: cover;
+}
+#third{
+    background-image: url('img/slide3.jpg');
+    left:200%;
+    right: 0;
+    background-size: cover;
+}
+.TravelGo, #first,#second,#third{
+    top:0;
+}
+
+.relative{
+    position: relative;
+}
+.mountains{
+    justify-content: space-between;
+    margin-top: 150px;
+    color:white;
+    width:50%;
+    height:auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 5px orangered solid;
+}
+.radiobutton{
+    right:0;
+    vertical-align: middle;
+    height:100%;
+    width:20px;
+    padding-top: 50px;
+}
+.backgroundwhite{
+    background-color: white;
+}
+.welcome{
+    color:gray;
+    height: auto;
+    padding:50px 0px;
+    z-index: 1;
+}
+.welcome > h1{
+    color:darkgray;
+}
+.buttondiv{
+    width: 30%;
+    height:10%;
+    margin:auto;
+    justify-content: space-evenly;
+}
+.buttondiv > button{
+    width:150px;
+    border:2px solid gray;
+    font-size: 16px;
+    color:gray;
+    background-color: white;
+}
+.buttondiv > button:hover{
+    background-color: gray;
+    color:white;
+    transition: 0.3s;
+}
+.info{
+    background-image: url(img/pick13.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.infomation{
+    background-color: orangered;
+    opacity: 0.3;
+}
+.info, .infomation{
+    height:550px;
+    margin-top: -100px;
+    padding-top: 200px;
+    color:white;
+}
+.infotravelgo{
+    right:0;
+    bottom:100px;
+    font-size: 120px;
+    font:italic;
+    opacity: 0.5;
+}
+.pageinfo{
+    width:100%;
+    height:auto;
+    margin: auto;
+    padding-top: 100px;
+    justify-content: space-evenly;
+}
+.flexcolumnimg{
+    width: 150px;
+    height: 150px;
+    border:3px solid white;
+    border-radius: 100px;
+}
+.img1, .img3, .img4{
+    margin-top:30px;
+}
+.img2{
+    margin-top:40px;
+}
+.number{
+    font-size:60px;
+}
+.testimonials{
+    color:gray;
+    padding: 100px 0px;
+}
+.lightgray{
+    color:lightgray;
+}
+.imgdiv{
+    width:262px;
+}
+.big{
+    width: 30px;
+    height: 30px;
+    right: 0;
+    bottom:4px;
+    background-color: rgba(255,69,0,0.8);
+    background-image: url(img/bigger.png);
+    background-repeat: no-repeat;
+    border: unset;
+}
+.newsletter{
+    background-color: orangered;
+    color:white;
+    justify-content: space-evenly;
+}
+.inputdiv{
+    width:40%;
+    height:32px;
+    vertical-align: middle;
+    margin:19.8px;
+    
+}
+.inputdiv > input{
+    width:50%;
+    height: 32px;
+    font-size: 21px;
+    padding-left: 10px;
+    border: unset;
+}
+.subscribe{
+    margin-left: 40px;
+    height:38px;
+    width:240px;
+    font-size:20px;
+    color:white;
+    background-color: darkgray;
+    border:unset;
+}
+.footer{
+    color:white;
+    background-image: url(img/pick14.jpg);
+    background-size: cover;
+    height:700px;
+    position: relative;
+}
+.footerinput{
+    justify-content: space-evenly;
+    background-color: rgba(255,69,0,0.3);
+    height: 100%;
+}
+.message,.email, .phone{
+    width:30px;
+}
+.message, .email{
+    padding-left: 8px;
+}
+.phone{
+    margin-top: 23px;
+    margin-left: 8px;
+    background-image: url('img/IPhone.png');
+}
+.message{
+    background-image: url('img/Message.png');
+    margin-top: 25px;
+}
+.email{
+    background-image: url('img/email.png');
+    margin-top: 18px;
+}
+.inputarea{
+    width: 60%;
+}
+.address, .inputarea{
+    padding-top: 100px;
+}
+.inputarea > input, .input50 > input, .inputarea > textarea, .inputarea > button{
+    margin: 10px;
+    font-size: 25px;
+    border: none;
+}
+.inputarea > input, .input50 > input, .inputarea > textarea{
+    background-color: unset;
+    background-color: rgba(255 , 255, 255, 0.5);
+    padding: 10px 0 10px 15px;
+}
+.inputarea > button{
+    color:white;
+    background-color: darkgray;
+    padding: 10px 0px;
+}
+.inputarea > input::placeholder, .input50 > input::placeholder, .inputarea > textarea::placeholder{
+    color:white
+}
+.input50 > input{
+    width: 50%;
+}
+.inputarea > textarea{
+    height: 150px;
+}
+.close{
+    font-size: 50px;
+    font-weight: bold;
+    color:white;
+    top:0;
+    padding-left: 20px;
+}
+.infop{
+    font-size: 22px;
+}
+.addressnone{
+    display: none;
+}
+@media screen {
+    .buttondiv{
+        width: 490px;  
+    }
+    .inputdiv > input{
+        width: 360px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .justify1200{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+}
+@media screen and (max-width:1160px) {
+    .mountains > .flexcolumn > p{
+        display: none;
+    }
+    .radiobutton{
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width:840px) {
+    .headerul{
+        display: none;
+    }
+    .newsletter{
+        justify-content: center;
+    }
+    .infotravelgo{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width:768px) {
+    .mountains, #first,#second,#third{
+        display: none;
+    }
+    .main{
+        background-color: orangered;
+        transition: 0.3s;
+        height: 100px;
+    }
+    .pageinfo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+
+    }
+    .info, .infomation{
+        height: 700px;
+    }
+    .info{
+        padding: 50px 0px;
+    }
+    .newsletter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputdiv{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .input50{
+        flex-direction: column;
+    }
+    .input50 > input{
+        width: auto;
+    }
+    .address{
+        display: none;
+    }
+    .inputarea{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .addressnone{
+        display: flex;
+        justify-content: center;
+    }
+    .modal, .modal > img{
+        width: 90%;
+        height: auto;
+    }
+}
+@media screen and (max-width:600px) {
+    .justify1200{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputdiv > input{
+        width: 60%;
+    }
+    .inputdiv > button{
+        width: 30%;
+    }
+    .infotravelgo{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:450px) {
+    .inputdiv{
+        flex-direction: column;
+        align-items: center;
+        height: 130px;
+        margin: 0;
+    }
+    .inputdiv > input, .inputdiv > button{
+        margin: 15px;
+    }
+    .inputdiv > input{
+        width: 308px;
+    }
+    .inputdiv > button{
+        width: 320px;
+    }
+    .buttondiv{
+        width: 100%;
+        flex-direction: column;
+    }
+    .buttondiv > button{
+        font-size: 25px;
+        width: 80%;
+        margin: 15px;
+    }
+    .welcome > p{
+        display: none;
+    }
+}
