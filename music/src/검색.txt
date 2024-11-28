@@ -1,0 +1,64 @@
+
+			/*앨범,가수이름 검색(버튼클릭)*/
+			$('.input-group-btn > button').click(function(event){
+				//var value = $('.form-group > .form-control').val();
+				//event.preventDefault();
+				var value = "";
+				value =  $('.form-group > .form-control').val();
+				
+				data_search(value);
+			});
+			
+			/*앨범,가수이름 검색(enter)*/
+			$('.form-group > .form-control').keydown(function(key){
+				if(key.keyCode == 13)
+				{
+					var value = "";
+					value =  $('.form-group > .form-control').val();
+					
+					data_search(value);
+				}
+			});
+
+			//앨범,가수이름 검색위한 data_search 함수
+			function data_search(value){
+				//alert(value);
+
+				//검색일치여부변수
+				var c = 0;
+				//데이터초기화
+				$('.contents').empty();
+				//검색해서 value가 포함되어있다면,
+				$.each(data.data, function(i,f){
+					if(f.albumName.indexOf(value) != -1 || f.artist.indexOf(value) != -1){
+						var data_all = '<div class="col-md-2 col-sm-2 col-xs-2 product-grid">' + '<div class = "product-items">' + '<div class = "project-eff">' + '<img class = "img-responsive" src = "images/' + f.albumJaketImage + '">' + '</div>' + '<div class = "produ-cost">' + '<h5>' + f.albumName + '</h5>' + '<span><i class = "fa fa-microphone">아티스트</i>' + '<p>' + f.artist + '</p>' + '</span>' + '<span><i class = "fa fa-calendar">발매일</i>' + '<p>' + f.release + '</p>' + '</span>' + '<span><i class = "fa fa-money">가격</i>' + '<p>' + f.price + '</p>' + '</span>' + '<span class = "shopbtn"><button class = "btn btn-default btn-xs"><i class = "fa fa-shopping-cart"><i>쇼핑카트담기</button></span>'+ '</div>' + '</div>' + '</div>';  
+						
+                        $(data_all).appendTo('.contents');
+
+						c = c + 1;
+					}
+				}); 
+				
+				//일치하는 앨범,가수명이 없다면
+				if(c==0)
+				{
+					alert("검색된 앨범이 없습니다.");
+				}
+
+				//하이라이트(앨범)
+				//contains() : 문자열 포함
+				$(".produ-cost > h5:contains('"+value+"')").each(function(){
+					var regex = new RegExp(value,'gi'); //정규표현식 g(글로벌), i(대소문자구분)
+					$(this).html( $(this).text().replace(regex, "<span>" + value + "</span>") );
+					
+					//하이라이트
+					$('.produ-cost > h5 > span').css({'display':'inline', 'background-color':'yellow'});
+				});
+				//하이라이트(가수명)
+				$(".produ-cost > h5 + span > p:contains('"+value+"')").each(function(){
+					var regex = new RegExp(value,'gi');
+					$(this).html( $(this).text().replace(regex, "<span>" + value + "</span>") );
+					
+					$('.produ-cost > h5 + span > p > span').css({'display':'inline', 'background-color':'yellow'});
+				});
+			}//function end
