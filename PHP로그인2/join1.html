@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+    *{
+        margin:auto;
+    }
+    .wrapper{
+        padding-top: 200px;
+        width:600px;
+    }
+    p{
+        display:flex;
+    }
+    table{
+        width:100%;
+    }
+    p, input{
+        width:100%;
+        padding:5px;
+    }
+    .head{
+        width:140px;
+        background-color:bisque;
+    }
+    .join{
+        width:120px;
+        background-color: white;
+        color:red;
+        border:1px solid red;
+    }
+    .showzipcode{
+        background-color: white;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    a{
+        width:120px;
+        height:24px;
+        color:blue;
+        border:1px solid blue;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 3px;
+    }
+    .tel{
+        width:10%;
+    }
+    .zipcode, .showzipcode{
+        width:20%;
+    }
+    .essential{
+        color:red;
+        font-weight: bold;
+    }
+    .news{
+        width:20px;
+    }
+    </style>
+</head>
+<body>
+    <div class = "wrapper">
+        <h1>회원가입</h1>
+        <form action = "join1.php" method = "POST">
+        <table>
+            <tr>
+                <td class = "head"><label for = "id" class = "essential">아이디(필수)</label></td>
+                <td><input type = "text" name = "id" id = "id"></td>
+            </tr>
+            <tr>
+                <td class = "head"><label for = "id" class = "essential">비밀번호(필수)</label></td>
+                <td><input type = "password" name = "pw" id = "pw"></td>
+            </tr>
+            <tr>
+                <td class = "head"><label for = "id" class = "essential">비밀번호확인(필수)</label></td>
+                <td><input type = "password" name = "pwc" id = "pwc"></td>
+            </tr>
+            <tr>
+                <td class = "head"><label for = "id" class = "essential">이메일(필수)</label></td>
+                <td><input type = "text" name = "email" id = "email"></td>
+            </tr>
+            <tr>
+                <td class = "head"><label>전화번호(선택)</label></td>
+                <td><select name = "tel">
+                    <option value = "none">선택</option>
+                    <option value = "02">010</option>
+                    <option value = "031">011</option>
+                    <option value = "032">017</option>
+                </select> - <input class = "tel"> - <input class = "tel"><input type = "checkbox" name = "reception" class = "news">이벤트 SMS 수신 동의</td>
+            </tr>
+            <tr>
+                <td class = "head"><label>주소(선택)</label></td>
+                <td>
+                    <input class = "zipcode"><input type = "button" value = "우편번호조회" class = "showzipcode"><br>
+                    <input><br>
+                    <input>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type = "submit" value = "가입하기" class = "join">
+            <a href = "login1.html">로그인하기</a>
+            <a href = "main1.php">홈으로</a>
+        </p>
+        </form>
+    </div>
+</body>
+</html>

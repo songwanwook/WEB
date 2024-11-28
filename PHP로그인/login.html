@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        .getlogin, a{
+            color:white;
+        }
+        .getlogin, button{
+            background-color: darkgray;
+            border: none;
+            width:66px;
+        }
+        a{
+            text-decoration: none;
+            height:52px;
+        }
+        .logindiv{
+            flex-direction: column;
+        }
+        form{
+            background-color: bisque;
+        }
+        .logindiv, form{
+            display:flex;
+        }
+        input, button{
+            margin:5px;
+        }
+        .getlogin{
+            cursor: pointer;
+        }
+        .wrapper{
+            position:absolute;
+            left:35%;
+            top:40%;
+            width:400px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrapper">
+        <h2>로그인</h2>
+        <hr>
+        <form method = "POST" action = "login.php">
+            <div class = "logindiv">
+                <input name = "userid">
+                <input name = "pw" type = "password">
+            </div>
+            <input type = "submit" value = "로그인" class = "getlogin">
+            <button><a href = "join.html">회원가입</a></button>
+        </form>
+    </div>
+</body>
+</html>
