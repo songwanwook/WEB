@@ -288,7 +288,7 @@ $(document).ready(function(){
                 $.each(data,function(i,f){
                     if(f.product_name.indexOf(keyword)!=-1||f.brand.indexOf(keyword)!=-1){
                         var storelist = "<div class = 'storelist flex'><span class = 'fid'>"+f.id+
-                        "</fid><img src = 'src/"+f.photo+"' class = 'product' id = '"+f.id+"' name = '"+f.product_name+"' brand = '"+f.brand+"' price = '"+f.price+"'>"+
+                        "</span><img src = 'src/"+f.photo+"' class = 'product' id = '"+f.id+"' name = '"+f.product_name+"' brand = '"+f.brand+"' price = '"+f.price+"'>"+
                         "<div class = 'flex column'><p class = 'mbrand'>브랜드 <span>"+f.brand+"</span></p><p class = 'mname'>상품명 <span>"
                         +f.product_name+"</span></p><p class = 'mprice'>가격 <span>"+f.price+"원</span></p></div>"+
                         "<button class = 'mobileadd' img = 'src/"+f.photo+"' id = '"+f.id+"' name = '"+f.product_name+"' brand = '"+f.brand+"' price = '"+f.price+"'>담기</button></div>";
