@@ -1,0 +1,1622 @@
+body{
+    margin:0;
+    overflow-x: hidden;
+}
+header{
+    color:gray;
+    justify-content: space-around;
+}
+.reviewimage{
+    overflow:hidden;
+}
+.width100{
+    width:100%;
+}
+.textcenter{
+    text-align: center;
+}
+.flex{
+    display:flex;
+}
+.column{
+    flex-direction: column;
+}
+header > ul{
+    top:15px;
+}
+.buttondiv{
+    top:18px;
+}
+ul{
+    list-style:none;
+}
+.ul{
+    width:60%;
+    padding-top:10px;
+}
+.sideul{
+    color:white;
+    text-align: center;
+    margin:unset;
+    padding:unset;
+}
+.sideul > li{
+    margin:10px;
+}
+.sideul > li > a:hover{
+    cursor:pointer;
+    color:aquamarine;
+}
+.ul > li{
+    width:20%;
+    font-size:20px;
+    text-align:center;
+}
+.flex > .buttondiv{
+    padding-top:10px;
+}
+.buttondiv > button, .logout{
+    margin:5px;
+    font-size:15px;
+    border:2px solid black;
+    background-color: white;
+    color:black;
+}
+a:hover, button:hover, .prev:hover, .next:hover, .searchstore:hover, .storebox:hover, .getlogin:hover, .cancel:hover, .joinbutton:hover, .getjoin:hover, .IDCK:hover,
+ .PWCK:hover, .beforeimage:hover, .afterimage:hover, .submit:hover, #file-upload-button:hover, .scorebutton:hover, .rating:hover, .callquotation:hover, .send:hover, 
+ .findidpw:hover, .findidok:hover, .findpwok:hover, .LOGIN:hover, .OK:hover, .cancelpw:hover{
+    cursor:pointer;
+}
+.ul > li > a:hover{
+    color:red;
+}
+.buttondiv > button:hover, .logout:hover{
+    background-color: black;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:unset;
+}
+.logo{
+    width:150px;
+}
+.slideimg{
+    width:100%;
+    background-size: cover;
+    height:650px;
+}
+.visual{
+    align-items:center;
+}
+.prev, .next{
+    position: absolute;
+    top:40%;
+    font-size: 50px;
+    color:yellow;
+}
+.prev{
+    left:10px;
+}
+.next{
+    right:10px;
+}
+.Online, .professional, .reviewconst{
+    background-color: aliceblue;
+    padding:25px;
+}
+.main{
+    justify-content: space-around;
+}
+.professionaldiv, .review{
+    margin:20px;
+    font-size:17px;
+}
+.professionaldiv{
+    perspective: 1100px;
+}
+.reviewimage, .professionalimage{
+    width:300px;
+    height:300px;
+    position:relative;
+}
+.reviewdiv > span, .reviewdiv > .flex > .flex > span{
+    font-weight:bold;
+}
+.professionalimage{
+    position: relative;
+    transition: .4s;
+    transform-style: preserve-3d;
+}
+.professionalimage > .before, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+}
+.before, .after, .back{
+    width:100%;
+    height:100%;
+}
+.back{
+    transform: rotateY(180deg);
+    background-color:rgba(0,0,255,0.3);
+    color:white;
+}
+.professionaldiv:hover{
+    .professionalimage{
+        transform: rotateY(180deg);
+    }
+}
+.after{
+    position: absolute;
+    right:-300px;
+}
+.reviewimage:hover{
+    .after{
+        right:0px;
+        transition: 0.5s;
+    }
+}
+.star{
+    color:yellow;
+}
+.back{
+    padding-top:15px;
+    font-size:27px;
+    align-items: center;
+}
+.Online > .MORE, .professional > .MORE{
+    margin-left:85px;
+}
+.MORE{
+    font-size:20px;
+    width:110px;
+    height:27px;
+    top:30px;
+    position:relative;
+    background-color:aliceblue;
+    color:black;
+}
+.MORE:hover{
+    color:aliceblue;
+    background-color: black;
+}
+.detail{
+    width:180px;
+    font-size:20px;
+    padding:5px 15px;
+    background-color: unset;
+    color:white;
+    border:2px solid white;
+}
+.detail:hover{
+    background-color:white;
+    color:black;
+}
+.reviewdiv{
+    width:800px;
+    margin:auto;
+    font-size:22px;
+    margin-top:30px;
+}
+.reviewdiv > img, .professionalimg{
+    margin:auto;
+    width:600px;
+    height:600px;
+}
+.reviewdiv > p{
+    font-size:16px;
+}
+.gopro{
+    color:red;
+}
+.gopro:hover{
+    cursor:pointer;
+    color:blue;
+}
+.score{
+    font-size:19px;
+}
+.footer{
+    margin:20px;
+    padding:20px;
+}
+.detailreview{
+    width:180px;
+    padding:5px;
+    font-size:20px;
+    font-weight:bold;
+    border:2px solid red;
+    background-color: unset;
+    color:red;
+}
+.detailreview:hover{
+    background-color: red;
+    color:black;
+}
+.side{
+    font-size:20px;
+    left:-200px;
+    position: fixed;
+    width:200px;
+    height:100%;
+    background-color: rgba(0,0,255,0.7);
+    color:white;
+    padding-top:120px;
+}
+.side, .under680btn{
+    z-index:5;
+}
+/*store.php*/
+.bg{
+    background-color: aliceblue;
+}
+.search{
+    margin:auto;
+    justify-content: space-between;
+    padding-top:120px;
+}
+.keyword{
+    width:70%;
+    font-size:18px;
+    padding:5px 10px;
+}
+.searchstore, .showall{
+    background-color: greenyellow;
+    border:unset;
+    border-radius: 5px;
+}
+.searchstore:hover, .showall:hover{
+    background-color: green;
+    color:white;
+}
+.store{
+    flex-wrap:wrap;
+    padding:50px;
+}
+.storelist > img{
+    width: 250px;
+    height:250px;
+}
+.storelist{
+    align-items: center;
+    margin:10px;
+    width:18%;
+}
+.storelist > span{
+    color:red;
+    font-weight:bold;
+}
+.storebox{
+    border:1px solid black;
+    border-radius : 5px;
+    position:fixed;
+    top:120px;
+    right:20px;
+    background-color:goldenrod;
+}
+.storebox:hover{
+    border:1px solid red;
+    color:red;
+    background-color: yellow;
+}
+.boxmodal, .purchasemodal, .loginform, .joinform, .QuotationModal, .moreinfobox, .findidpwdiv{
+    display:none;
+    top:0;
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-color: rgba(0,0,0,0.5);
+}
+.boxmodal, .purchasemodal, .loginform, .joinform, .QuotationModal{
+    z-index:6;
+}
+.moreinfobox{
+    z-index:7;
+}
+.box{
+    position: relative;
+    height:80%;
+    top:10%;
+    background-color: white;
+    margin:auto;
+}
+.close, .pokclose, .viewclose{
+    border:unset;
+    font-size:40px;
+    position: absolute;
+    background-color: unset;
+    color:black;
+    top:0;
+    right: 0;
+}
+#productimg{
+    width: 120px;
+    height: 120px;
+} 
+.pokcancel{
+    margin-left: 20px;
+}
+.close:hover, .viewclose:hover{
+    color:white;
+    background-color: red;
+}
+.productlist{
+    width:100%;
+    max-height:100%;
+}
+.purchasetable{
+    max-height: 97%;
+    width:calc(100% - 215px);
+}
+.delete{
+    background-color: red;
+    border:unset;
+    border-radius: 5px;
+}
+.delete:hover{
+    color:white;
+}
+.pdata{
+    align-items: center;
+    text-align: center;
+}
+.purchase, .purchaseok, .pokcancel{
+    background-color: blue;
+    border:unset;
+    border-radius: 5px;
+    font-size:20px;
+    padding:5px;
+    color:white;
+}
+.purchase{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+}
+.purchaseok, .pokcancel{
+    width: 70px;
+}
+.purchase:hover{
+    background-color:red;
+}
+.productlist, .purchasetable{
+    display:block;
+    overflow-y: auto;
+}
+.purchaselist, .loginplease{
+    position:absolute;
+    top:150px;
+    left:50px;
+    padding:5px;
+    background-color:cornflowerblue;
+    border:unset;
+    border-radius: 5px;
+    font-size:20px;
+}
+.purchaselist:hover{
+    color:white;
+}
+.purchaseokmodal{
+    position:relative;
+    top:30%;
+    display: none;
+    margin:auto;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    font-size: 18px;
+    padding-left: 15px;
+    background-color: powderblue;
+}
+.purchaseimg{
+    width: 150px;
+    height: 150px;
+}
+.newpurchase{
+    position: relative;
+}
+.new{
+    position: absolute;
+    left:3px;
+    top:3px;
+    padding: 3px 6px;
+    color:yellow;
+    background-color: red;
+}
+.location{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 18px;
+    width: 88%;
+    height: 120px;
+}
+.sumdiv{
+    position:absolute;
+    bottom:10px;
+    right:5px;
+    width:210px;
+    color:black;
+    align-items:center;
+}
+.getsum{
+    color:red;
+    font-size:27px;
+    font-weight: bold;
+}
+.moreinfo, .moreinfobox{
+    display:none; 
+}
+.moreinfobutton{
+    margin-top:49px;
+    background-color: red;
+    color: white;
+    padding:20px 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 50%;
+    border: unset;
+}
+.purchasetime{
+    min-width:66px;
+}
+.getpurchasecount{
+    min-width:33px;
+}
+.pinfomoreview{
+    background-color:cornflowerblue;
+    border-radius: 10px;
+    margin:auto;
+    margin-top:20%;
+    max-width:400px;
+    position:relative;
+}
+.moreclose{
+    border:1px solid lightblue;
+    border-radius: 50%;
+    width:32px;
+    height:32px;
+    padding-left:6px;
+    background-color: red;
+    font-size:20px;
+    top:5px;
+    right:10px;
+    position:absolute;
+    color:white;
+    font-weight:bold;
+}
+.pinfomoreview > span{
+    padding:3px;
+}
+.moreinfospan{
+    margin:5px;
+    background:linear-gradient(90deg, deepskyblue, lightblue, white);
+    border-radius: 3px;
+    justify-content: space-between;
+}
+.moreinfolocation{
+    height:50px;
+    background-color: white;
+    border-radius: 3px;
+    margin: 5px;
+    margin-bottom:15px;
+}
+.detailimg{
+    width:200px;
+    height:200px;
+    margin:auto;
+}
+.purchaseokmodal > table > tbody > tr > td{
+    min-width: 90px;
+}
+/*login, join*/
+.logindiv, .findidpwdiv{
+    padding:20px;
+    position:relative;
+    margin:auto;
+    top:20%;
+    width:500px;
+    height:50%;
+    background-color: deepskyblue;
+    font-size:27px;
+    border-radius:20px;
+}
+.logindiv > p > input, .joinp > input, .captcha, .inputname, .inputID, .findidok, .findpwok, .LOGIN, .nowPW, .newPW, .newPWCH{
+    font-size:20px;
+    padding:5px 10px;
+    border-radius:5px;
+}
+.findidok, .findpwok{
+    margin-left:7px;
+}
+.LOGIN{
+    margin-top:15px;
+    width:90px;
+}
+.logindiv > p > input, .joinp > input, .captcha{
+    margin-left:10px;
+}
+.joinp > .ID, .joinp > .PW, .inputname, .inputID, .nowPW, .newPW, .newPWCH{
+    width:80%;
+}
+.ID, .PW, .PWCH, .capttext, .name, .captcha, .inputname, .inputID, .nowPW, .newPW, .newPWCH{
+    border:unset;
+}
+.loginp > span{
+    width:70px;
+}
+.getlogin, .findidpw, .joinbutton, .cancel, .getjoin, .IDCK, .PWCK, .findidok, .findpwok, .LOGIN, .cancelpw, .OK{
+    color:white;
+    border: 1px solid darkturquoise;
+    background-color: darkturquoise;
+}
+.cancelpw{
+    margin-left:10px;
+}
+.cancelpw, .OK{
+    font-size:20px;
+    border-radius: 5px;
+}
+.getlogin:hover, .cancel:hover, .joinbutton:hover, .findidpw:hover, .getjoin:hover, .IDCK:hover, .PWCK:hover, .findidok:hover, .findpwok:hover, .LOGIN:hover, .cancelpw:hover, .OK:hover{
+    border:1px solid red;
+    color:red;
+}
+.captcha{
+    width: 10%;
+    background-color: blue;
+    color:darkblue;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;/*드래그불가능*/
+}
+.joinp{
+    font-size:25px;
+}
+.label{
+    width:180px;
+}
+.joinform > .box{
+    border-radius:20px;
+    background-color: antiquewhite;
+    padding:40px;
+}
+.joinp > .ID, .joinp > .PW, .PWCH, .capttext, .name{
+    width:30%;
+    min-width:330px;
+}
+.captcha, .IDCK{
+    margin-left:25px;
+}
+.captcha{
+    min-width:70px;
+}
+.IDCK{
+    font-size:20px;
+    border-radius:5px;
+}
+.distinct, .pwok{
+    padding-left:10px;
+    background-color:unset;
+    border:unset;
+    width:40%;
+}
+#profile{
+    margin-left:20px;
+    width:200px;
+    height:200px;
+}
+.under680profile{
+    display:none;
+}
+.findidpwdiv > p{
+    margin:15px 0;
+    font-weight:bold;
+}
+.findidpwdiv > span{
+    font-size:20px;
+}
+/*online*/
+.beforeonline > img, .afteronline > img{
+    width: 700px;
+    height: 700px;
+}
+.subtitle{
+    width:96%;
+    justify-content: space-between;
+    margin:auto;
+}
+.beforeonline, .afteronline{
+    margin:auto;
+}
+.viewheader{
+    width:70%;
+    justify-content: space-between;
+}
+.view{
+    align-items: center;
+}
+.score{
+    font-size:30px;
+    font-weight: bold;
+}
+.positive{
+    color:yellow;
+}
+.negative{
+    color:lightgray;
+}
+.searchonline{
+    margin:auto;
+    justify-content: space-between;
+    width:60%;
+}
+.list, .write, .submit, .cancelwrite{
+    background-color:gray;
+    border:unset;
+    padding:10px 20px;
+    font-size:18px;
+    border-radius: 5px;
+}
+.list:hover, .write:hover, .submit:hover, .cancelwrite:hover, .submit:hover, .pokclose:hover{
+    color:white;
+    background-color: red;
+}
+.writing{
+    margin:auto;
+    width:1000px;
+}
+.writing > input, .writing > textarea{
+    padding:5px 15px;
+    font-size:17px;
+    border:unset;
+    border-radius: 5px;
+}
+.writing > textarea{
+    margin-top:20px;
+    height:500px;
+}
+.reviewimg{
+    width:300px;
+    height:300px;
+}
+.profileimg{
+    width:150px;
+    height:150px;
+}
+.cancelwrite{
+    margin-left:20px;
+}
+.rating{
+    font-size:17px;
+    background-color: yellow;
+    color:blue;
+    border:unset;
+    border-radius:5px;
+    padding:5px 15px;
+    margin:auto;
+}
+.rating:hover{
+    background-color:sandybrown;
+    color:darkblue;
+}
+.searchonline{
+    padding:20px;
+}
+.onlinenum, .onlineview, .onlinescore{
+    min-width:52px;
+}
+.onlinedate{
+    min-width:104px;
+}
+.mobileadd:active{
+    color:red;
+}
+.firstlast, .prevnext{
+    color:red;
+    background-color: yellow;
+}
+.paging{
+    margin-bottom:10px;
+    width:30%;
+    min-width: 300px;
+    margin:auto;
+    justify-content: space-evenly;
+}
+.paging > a, .paging > .flex > a{
+    margin:0px 5px;
+}
+.nowpage{
+    color:red;
+    font-weight: bold;
+}
+/*professional*/
+.professionallist{
+    padding:30px;
+    overflow-x: auto;
+}
+.professionaldetail{
+    width:300px;
+    height:300px;
+}
+.professionalwrite{
+    border:2px solid aqua;
+    background-color: aqua;
+    color:blue;
+    border-radius: 6px;
+    padding:5px 12px;
+    font-size:22px;
+    font-weight: bold;
+    width:139.77px;
+}
+.professionalwrite:hover{
+    background-color: blue;
+    color:aqua;
+}
+.professionalimageview{
+    width:180px;
+    height:180px;
+}
+.professionalcontents{
+    width:100%;
+    height:100px;
+    font-size:20px;
+}
+.professionalview, .professionalwritebg, .quotation{
+    padding: 50px;
+}
+.professionalbutton{
+    height: 45px;
+}
+.professionalID{
+    font-size:22px;
+    font-weight: bold;
+}
+.costinput{
+    font-size:18px;
+    padding:5px 10px;
+    width:200px;
+}
+.proreviewdiv{
+    overflow-x: auto;
+}
+/*quotation*/
+.call{
+    background-color: aquamarine;
+    border:unset;
+    color:blue;
+    height:33px;
+    font-size:20px;
+    border-radius: 5px;
+    margin-top:27px;
+}
+.call:hover{
+    background-color: blue;
+    color:aquamarine;
+}
+.quotationlist{
+    width:90%;
+    margin:auto;
+}
+.quobutton{
+   border:unset; 
+   background-color: white;
+}
+.quobutton, .sentquo{
+    font-size: 18px;
+    padding:5px 10px;
+    margin:3px;
+}
+.sentquo{
+    background-color: lightgray;
+    color:white;
+}
+.quobutton:hover, .quotationdetail:hover, .sentquotationdetail:hover{
+    background-color:red;
+    color:white;
+}
+.requestquotation, .sendquotation, .quotationview{
+    display:none;
+    background-color: white;
+    position: absolute;
+    padding:20px;
+}
+.requestquotation{
+    width:50%;
+    height:50%;
+    top:25%;
+    left:25%;
+}
+.quotationview, .sendquotation{
+    height:40%;
+    top:30%;
+    width:750px;
+    margin:0 auto;left:0;right:0;
+}
+.date{
+    font-size:20px;
+}
+.quotationcontents, .sendquotationcontents{
+    width:100%;
+    height:50%;
+    font-size:20px;
+}
+.requestquotation > span, .sendquotation > span{
+    margin-bottom:5px;
+}
+.sendquotation > textarea{
+    margin-bottom: 15px;
+}
+.requestquotation > .flex{
+    margin-top: 15px;
+}
+.callquotation, .cancelquotation, .send{
+    background-color:blue;
+    color:white;
+    border:unset;
+    border-radius:5px;
+    font-size:17px;
+    padding:4px 8px;
+}
+.cancelquotation{
+    margin-left:10px;
+}
+.callquotation:hover, .cancelquotation:hover, .send:hover{
+    background-color:red;
+    color:blue;
+}
+.selectquo{
+    background-color:red;
+    padding:5px;
+    color: white;
+    border-radius: 10px;
+    border:unset;
+}
+.selectquo:hover{
+    background-color: blue;
+}
+.sentquotation{
+    width:80%;
+    margin:auto;
+}
+.finished{
+    padding:5px;
+    border-radius: 10px;
+    font-size:13.3333px;
+    background-color:lightgray;
+    color:white;
+}
+.under680, .quotationdetailview, .under600{
+    display:none;
+}
+.quotationdetailview{
+    width:100%;
+    margin-top:20%;
+    background-color:white;
+    position:relative;
+}
+.quotationdetailview > div{
+    padding:5px;
+}
+.quotationdetail, .sentquotationdetail{
+    border:none;
+    padding:3px 6px;
+    background-color:snow;
+    margin:2px;
+}
+/*마이페이지*/
+.mypageinfo{
+    width:1000px;
+    margin:auto;
+    padding-bottom: 50px;
+}
+.mypagetable > tbody > tr > td{
+    padding:3px;
+}
+.mypagetable > tbody > tr > td > img{
+    width:150px;
+    height:150px;
+}
+.altpw{
+    border:unset;
+    background-color:lightskyblue;
+    padding:3px 6px;
+    border-radius: 3px;
+    margin-left:30px;
+}
+.altpw:hover{
+    color:white;
+}
+/*반응형*/
+@media screen and (max-width:1440px){
+
+}
+@media screen and (max-width:1440px){
+    .reviewimage, .professionalimage{
+        width:270px;
+        height:270px;
+    }
+    .back{
+        font-size:24px;
+    }
+    .detail{
+        font-size:18px;
+    }
+}
+@media screen and (max-width:1300px){
+    .reviewimage, .professionalimage{
+        width:220px;
+        height:220px;
+    }
+    .back{
+        font-size:18px;
+    }
+    .detail{
+        font-size:14px;
+    }
+    .storelist > img{
+        width: 200px;
+        height:200px;
+    }
+    .store{
+        padding: 40px;
+    }
+    .storelist{
+        width:17%;
+    }
+    .label{
+        font-size:18px;
+        max-width:115px;
+    }
+    .joinp > .ID, .joinp > .PW, .PWCH, .capttext, .name {
+        min-width: 258px;
+    }
+    .logindiv > p > input, .joinp > input, .captcha{
+        margin-left:5px;
+        padding:3px 6px
+    }
+    .pwok, .distinct{
+        font-size:13px;  
+    }
+    .joinp > input {
+        font-size: 13px;
+    }
+    .joinform > .box {
+        padding:15px;
+    }
+    .joinform > .box > h1{
+        font-size:25px;
+    }
+    .joinp {
+        margin:13px 0px;
+    }
+}
+@media screen and (max-width:1190px){
+    .storelist > .flex > p{
+        font-size:13px;
+    }
+}
+@media screen and (max-width:1160px){
+    .professionaldetail{
+        width:200px;
+        height:200px;
+    }
+}
+@media screen and (max-width:1140px){
+    .locateth, .purchasetime{
+        display:none;
+    }
+    .moreinfo{
+        display:block;
+    }
+    .quotation{
+        padding:50px 10px;
+    }
+}
+@media screen and (max-width:1085px){
+    .keyword{
+        width:65%;
+    }
+}
+@media screen and (max-width:1079px){
+    .ul > li{
+        font-size:15px;
+    }
+    .reviewimage, .professionalimage{
+        width:300px;
+        height:300px;
+    }
+    .back{
+        font-size:27px;
+    }
+    .detail{
+        font-size:20px;
+    }
+    .main{
+        display:grid;
+        grid-template-columns: 2fr 2fr;
+    }
+}
+@media screen and (max-width:1040px){
+    .view{
+        padding:30px;
+    }
+    .store{
+        padding: 40px;
+    }
+    .storelist{
+        width:20%;
+    }
+    .flextd, .sumprice, .price{
+        font-size:12px;
+    }
+    .delete{
+        font-size:15px;
+        padding:15px;
+    }
+    .writing{
+        width:800px;
+    }
+}
+@media screen and (min-width:1041px){
+    .view{
+        padding:70px;
+    }
+    .productinfo{
+        min-width:364px;
+    }
+    .price, .sumprice{
+        min-width:85px;
+    }
+    .delete{
+        font-size:20px;
+        padding:20px;
+    }
+}
+@media screen and (max-width:1020px){
+    .purchasetable{
+        font-size:12px;
+    }
+    .getpurchasecount{
+        width:25px;
+    }
+    .purchaseimg{
+        width:120px;
+        height:120px;
+    }
+    .moreinfobutton{
+        margin-top:41px;
+        padding:15px 4px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:940px){
+    .quobutton, .sentquo {
+        font-size: 13px;
+        padding: 3px 6px;
+        margin: 2px;
+    }
+    .quotationview{
+        margin:auto;
+    }
+}
+@media screen and (max-width:920px){
+    .storelist > img{
+        width: 170px;
+        height:170px;
+    }
+    .store{
+        padding: 40px;
+    }
+    .storelist{
+        width:20%;
+    }
+    .storelist > .flex > p{
+        font-size:11px;
+    }
+    .professionalview{
+        padding:10px;
+    }
+}
+@media screen and (max-width:860px){
+    #productimg {
+        width: 100px;
+        height: 100px;
+    }
+    .flextd, .sumprice, .price{
+        font-size:11px;
+    }
+    .delete{
+        font-size:12px;
+        padding:12px;
+        width:48px;
+    }
+    .purchasetable{
+        max-height: calc(100% - 110px);
+        width:100%;
+    }
+    .sumdiv{
+        left: 5px;
+    }
+}
+@media screen and (max-width:840px){
+    .search{
+        width:80%;
+    }
+    .writing{
+        width:600px;
+    }
+    .joinp > .ID, .joinp > .PW, .PWCH, .capttext, .name {
+        min-width: 200px;
+    }
+    .reviewdiv, .professionalID{
+        font-size:14px;
+    }
+    .reviewdiv > .score{
+        margin:5px 20px;
+    }
+    .score{
+        font-size:18px;
+        margin:20px;
+    }
+    .professionalwritebg{
+        padding:10px;
+    }
+    .professionalwritebg > h1{
+        padding-left:20px;
+    }
+    .professionalcontents{
+        font-size:14px;
+        width:600px;
+    }
+    .costinput {
+        font-size: 14px;
+        padding: 3px 6px;
+        width: 140px;
+    }
+}
+@media screen and (min-width:841px){
+    .search{
+        width:60%;
+    }
+}
+@media screen and (max-width:810px){
+    header > ul{
+        width:50%;
+    }
+    .ul > li, .buttondiv > button{
+        font-size:12px;
+    }
+    .beforeonline > img, .afteronline > img{
+        width: 500px;
+        height: 500px;
+    }
+    .professionallist{
+        flex-direction: column;
+        overflow-x:hidden;
+    }
+    .professionaldetail{
+        width:300px;
+        height:300px;
+    }
+}
+@media screen and (max-width:768px){
+    .reviewimage, .professionalimage{
+        width:250px;
+        height:250px;
+    }
+    .back{
+        font-size:20px;
+    }
+    .detail{
+        font-size:15px;
+    }
+    .reviewdiv > img{
+        margin-left:40px;
+        width:500px;
+        height:500px;
+    }
+    .storelist > img{
+        width: 220px;
+        height:220px;
+    }
+    .store{
+        padding:15px;
+    }
+    .storelist{
+        width:30%;
+    }
+    .storelist > .flex > p{
+        font-size:14px;
+    }
+}
+.under680btn{
+    border:unset;
+    font-size:40px;
+    display:none;
+    background-color: indigo;
+    color:white;
+    position:fixed;
+    left:0;
+    top:180px;
+}
+@media screen and (max-width:800px){
+    .reviewdiv{
+        width:100%;
+    }
+    .quotationview, .sendquotation{
+        width:90%;
+    }
+}
+@media screen and (min-width:1001px){
+    .searchonline{
+        min-width:960px;
+    }
+    .onlinetable{
+        padding:60px;
+    }
+}
+@media screen and (max-width:1000px){
+    .searchonline{
+        min-width:96%;
+    }
+    .keyword{
+        max-width:60%;
+    }
+    .onlinetable{
+        padding:10px;
+    }
+}
+@media screen and (max-width:760px){
+    .quotationview > table > .tbody > tr > td {
+        padding:10px 0;
+    }
+}
+@media screen and (max-width:740px){
+    .searchonline > .keyword{
+        max-width:50%;
+    }
+    h1{
+        font-size:25px;
+    }
+}
+@media screen and (min-width:681px){
+    .side{
+        display:none;
+    }
+    .storelist{
+        flex-direction: column;
+    }
+    .mobileadd{
+        display:none;
+    }
+    .storebox{
+        width:150px;
+        height:120px;
+    }
+    .priceunder680{
+        display:none;
+    }
+    .tbody > tr > td{
+        padding:10px;
+    }
+}
+@media screen and (max-width:680px){
+    ul, .ul,.slideshow,.label,.priceover680,.onlinenum, .onlineview, .over680detail{
+        display:none;
+    }
+    .under680btn, .side, .under680{
+        display:block;
+    }
+    .buttondiv > button{
+        font-size:15px;
+    }
+    
+    .searchonline{
+        padding:10px 0px;
+    }
+    .storelist > img{
+        width: 90px;
+        height:90px;
+    }
+    .storelist{
+        width:100%;
+        height:90px;
+        flex-direction: row;
+    }
+    .store{
+        padding:0;
+    }
+    .storebox{
+        width: 75px;
+        height:60px;
+        font-size:10px;
+    }
+    .storelist > .flex{
+        width: 150px;
+        text-align: center;
+    }
+    .storelist > .flex > p{
+        font-size:11px;
+        padding:7.5px 0px;
+        margin:0;
+        font-weight: bolder;
+    }
+    .mbrand{
+        background-color: red;
+        color:yellow;
+    }
+    .mprice{
+        background-color: green;
+        color:violet;
+    }
+    .mname{
+        background-color: beige;
+    }
+    .mobileadd{
+        background-color:blue;
+        color:white;
+        padding:15px;
+        font-size:20px;
+        font-weight:bolder;
+        border-radius: 12px;
+        margin-left:15px;
+        border:unset;
+    }
+    
+    .flextd > .flex > p{
+        margin:2.5px 0px;
+    }
+    .tbody > tr > td{
+        padding:3px;
+    }
+    .fid{
+        color:red;
+        border:1px solid red;
+        border-radius: 50%;
+        text-align:center;
+        width:20px;
+        height:20px;
+        margin-right:5px;
+    }
+    
+    .profileimg{
+        width: 100px;
+        height: 100px;
+    }
+    .profileunder680{
+        flex-direction: column;
+    }
+    .okunder680{
+        display:grid;
+        grid-template-columns: 9fr 1fr;
+    }
+    .joinp > .PW, .name{
+        width:80%;
+    }
+    .joinp > .ID,.joinID, .PWCH, .distinct, .pwok{
+        width:90%;
+    }
+    .under680profile{
+        display:block;
+        font-size:12px;
+        padding-left:6px;
+    }
+    .quotationview > table > .tbody > tr > td {
+        font-size:12px;
+    }
+}
+@media screen and (max-width:600px){
+    .main{
+        display:unset;
+    }
+    .review, .professionaldiv{
+        align-items: center;
+    }
+    .reviewimage, .professionalimage{
+        width:300px;
+        height:300px;
+    }
+    .professionalimage > .after{
+        right:-300px;
+        font-size:27px;
+    }
+    .detail{
+        font-size:20px;
+    }
+    .detailreview{
+        display:block;
+    }
+    .reviewpreviewimg, .mainpreview > .cost, .mainpreview > .score, .mainpreview > p,.onlinedate, .onlinescore{
+        display:none;
+    }
+    h1{
+        font-size:20px;
+    }
+    .Online, .professional, .reviewconst {
+        padding:5px;
+    }
+    .onlinetable{
+        margin-left:0;
+        width:100%;
+    }
+    .onlinename{
+        min-width:52px;
+    }
+    .userid{
+        display:none;
+    }
+    .searchonline{
+        display:grid;
+        grid-template-columns: 3fr 10fr 2fr;
+    }
+    .searchonline > .keyword{
+        min-width:90%;
+        margin-left:5px;
+    }
+    .searchonline > .searchstore, .searchonline > .showall{
+        padding:unset;
+        font-size:13px;
+    }
+    .search > .keyword{
+        font-size:13px;
+        width:70%;
+    }
+    .searchonline > .showall{
+        height:35px;
+        margin:10px 0px;
+    }
+    #productimg {
+        width: 60px;
+        height: 60px;
+    }
+    .box{
+        width:480px;
+    }
+    .count{
+        padding:2px;
+        width:30px;
+        font-size:10px;
+    }
+    .beforeonline > img, .afteronline > img{
+        width: 300px;
+        height: 300px;
+    }
+    .score{
+        margin:20px;
+    }
+    .list, .write{
+        font-size:13px;
+        padding:6px 12px;
+    }
+    .writing{
+        width:99%;
+    }
+    .reviewimg, .beforeimage, .afterimage{
+        width:200px;
+        
+    }
+    .reviewimg{
+        height:200px;
+    }
+    .logindiv, .joinform > .box, .findidpwdiv{
+        width:88%;
+        padding:6px;
+    }
+    .logindiv > p{
+        margin:15px 0px;
+    }
+    .loginp > span{
+        width:40px;
+    }
+    .professionaldetail{
+        width:150px;
+        height:150px;
+    }
+    .professionallist{
+        padding:5px;
+    }
+    .professionalimageview{
+        width:120px;
+        height:120px;
+    }
+    .proreviewdiv > .flexcolumn > p, .proreviewdiv > .flexcolumn > p, .professionallist > p{
+        font-size:10px;
+    }
+    .professionalwrite {
+        font-size: 14px;
+        width: 89px;
+    }
+    .reviewdiv > img{
+        width:300px;
+        height:300px;
+    }
+    .professionalview{
+        padding:10px 0;
+    }
+    .professionalbutton {
+        height: 27px;
+    }
+    .professionalview > h1{
+        padding-left:10px;
+    }
+    .professionalcontents {
+        width:97%;
+    }
+    .requestquotation {
+        width:90%;
+        margin:auto;
+        left:3%;
+        padding:10px;
+    }
+    .over600detail{
+        display:none;
+    }
+    .under600, .sentquotationdetail{
+        display:block;
+    }
+}
+@media screen and (min-width:601px){
+    .searchonline{
+        width:60%;
+    }
+    .detailreview{
+        display:none;
+    }
+    .onlinetable{
+        margin-left:50px;
+        width:90%;
+    }
+    .onlinename{
+        min-width:130px;
+    }
+    .searchstore, .showall{
+        font-size:18px;
+        padding:5px 15px;
+    }
+    .box{
+        width:80%;
+    }
+    .count{
+        padding:3px;
+        width:40px;
+    }
+    .score{
+        margin:50px;
+    }
+    
+}
+@media screen and (max-width:515px){
+.purchaseokmodal{
+    width:100%;
+}
+}
+@media screen and (max-width:480px){
+    
+    .searchonline > .keyword{
+        min-width:88%;
+        margin-left:5px;
+    }
+    .box{
+        width:100%;
+    }
+    .search{
+        width:96%;
+    }
+    .view{
+        padding:0;
+    }
+    .reviewimg, .beforeimage, .afterimage{
+        width:150px;
+        
+    }
+    .reviewimg{
+        height:150px;
+    }
+    .logindiv > p > input{
+        font-size:16px
+    }
+}
+
