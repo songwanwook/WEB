@@ -178,6 +178,7 @@ $(document).ready(function(){
         });
         function showpurchase(){
             $(".purchasemodal").css("display","block");
+            $(".purchasemodal > .box").css("display","block");
         }
         function purchase(){
             $(".new").text("");
