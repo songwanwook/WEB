@@ -228,6 +228,7 @@ $(document).ready(function(){
             }
             else{
                 $(".boxmodal").css("display","block");
+                $(".boxmodal > .box").css("display","block");
             }
         });
     }
