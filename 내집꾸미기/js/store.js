@@ -300,15 +300,15 @@ $(document).ready(function(){
                     alert("일치하는 상품이 없습니다.");
                     showall(); 
                 }
-                $(".brand:contains('"+keyword+"')").each(function(){
+                $(".mbrand:contains('"+keyword+"')").each(function(){
                     var regex = new RegExp(keyword,'gi');
                     $(this).html($(this).text().replace(regex,"<span>"+keyword+"</span>"));
-                    $('.brand > span').css({'display':'inline','color':'red','font-weight':'bold'});
+                    $('.mrand > span').css({'display':'inline','color':'red','font-weight':'bold'});
                 });
-                $(".pname:contains('"+keyword+"')").each(function(){
+                $(".mname:contains('"+keyword+"')").each(function(){
                     var regex = new RegExp(keyword,'gi');
                     $(this).html($(this).text().replace(regex,"<span>" + keyword + "</span>"));
-                    $('.pname > span').css({'display':'inline','color':'red','font-weight':'bold'});
+                    $('.mname > span').css({'display':'inline','color':'red','font-weight':'bold'});
                 });
             }
         });
