@@ -30,12 +30,12 @@
         <h1 class = "width100">시공 후기작성</h1>
         <form class = "reviewdiv flex column" onsubmit="allowFormSubmission()" enctype = "multipart/form-data" method = "POST" action = "proreviewwrite.php">
             <span>전문가 : <?php if(isset($_GET['pid'])){ $row = mysqli_fetch_array($result);
-            echo $row['professionalNAME'].'('.$row['professionalID'].')<input type = "hidden" class = "proname" name = "proname" value = '.$row['professionalNAME'].'/>
-            <input type = "hidden" class = "professionalID" name = "professionalID" value = '.$row['professionalID'].'/>';}
+            echo $row['professionalNAME'].'('.$row['professionalID'].')<input type = "hidden" class = "proname" name = "proname" value = '.$row['professionalNAME'].'></input>
+            <input type = "hidden" class = "professionalID" name = "professionalID" value = '.$row['professionalID'].'></input>';}
             else{ echo '<select name = "professionalID" class = "professionalID"><option value = "none">선택</option>';
                 while($row = mysqli_fetch_array($result)){
                 echo '<option value = "'.$row['professionalID'].'" pname = "'.$row['professionalNAME'].'">'.$row['professionalNAME'].'('.$row['professionalID'].')</option>';}
-                echo '</select><input type = "hidden" class = "proname" name = "proname"/>';
+                echo '</select><input type = "hidden" class = "proname" name = "proname"></input>';
             } ?></span>
             <span>리뷰 내용</span>
             <textarea name = "contents" class = "professionalcontents" placeholder = "시공 후기를 간단하게 작성하세요." required></textarea>
