@@ -8,8 +8,9 @@
     $contents = $_POST['contents'];
     $cost = $_POST['cost'];
     $score = $_POST['proscore'];
-    $sql = "update professional set professionalCOUNT = professionalCOUNT + 1, professionalSUM = professionalSUM + $score, professionalAVG = professionalSUM/professionalCOUNT";
-    mysqli_query($sql, $connect);
+    $sql = "update professional set professionalCOUNT = professionalCOUNT + 1, professionalSUM = professionalSUM + $score,
+     professionalAVG = professionalSUM/professionalCOUNT where professionalID = '$professionalID'";
+    mysqli_query($connect, $sql);
     $img = $_FILES['afterimage']['name'];
     $uploads_dir = "professionalreview/";
     $upload_file = "";
