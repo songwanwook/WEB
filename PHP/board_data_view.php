@@ -25,15 +25,15 @@
     <div class = "boardcontents">
         <?php echo $row['content'].'<br>'; 
             if($row['filename_0']!=""){
-                echo "▷ 첨부 파일 : ".$row['filename_0']." (".filesize('C://xampp//htdocs//손관욱//AJAX//PHP//download//'.$row['filename_0'])." Byte)  
+                echo "▷ 첨부 파일 : ".$row['filename_0']." (".filesize('download/'.$row['filename_0'])." Byte)  
                 <a href = 'download.php?filename=".$row['filename_0']."'>[저장]</a><br>";
             }
             if($row['filename_1']!=""){
-                echo "▷ 첨부 파일 : ".$row['filename_1']." (".filesize('C://xampp//htdocs//손관욱//AJAX//PHP//download//'.$row['filename_1'])." Byte)  
+                echo "▷ 첨부 파일 : ".$row['filename_1']." (".filesize('download/'.$row['filename_1'])." Byte)  
                 <a href = 'download.php?filename=".$row['filename_1']."'>[저장]</a><br>";
             }
             if($row['filename_2']!=""){
-                echo "▷ 첨부 파일 : ".$row['filename_2']." (".filesize('C://xampp//htdocs//손관욱//AJAX//PHP//download//'.$row['filename_2'])." Byte)  
+                echo "▷ 첨부 파일 : ".$row['filename_2']." (".filesize('download/'.$row['filename_2'])." Byte)  
                 <a href = 'download.php?filename=".$row['filename_2']."'>[저장]</a><br>";
             }
         ?>
