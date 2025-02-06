@@ -142,7 +142,7 @@ $(document).ready(function(){//수정된 js가 없뎃 안되면 Ctrl F5
                         $(this).attr('value',1);
                     }
                     $('.table-bordered > tbody').append(addmusic);
-                    $(".fa-trash-o").parents('.btn').click(function(){//삭제(테이블 안에 있는 삭제 버튼은 전역으로 빼도 작동이 안한다...)
+                    $(".fa-trash-o").parents('.btn').off('click').click(function(){//삭제(테이블 안에 있는 삭제 버튼은 전역으로 빼도 작동이 안한다...)
                         const del = confirm("삭제하시겠습니까?");
                         if(del == true){
                             var imgres = document.getElementsByClassName("img-responsive");
@@ -157,7 +157,7 @@ $(document).ready(function(){//수정된 js가 없뎃 안되면 Ctrl F5
                             $(this).closest('tr').remove();
                             getsum();
                         }
-                    });//그리고 1번만 떠야 될 삭제 알림창이 테이블 form-control의 합계만큼 작동한다.
+                    });//그리고 1번만 떠야 될 삭제 알림창이 테이블 form-control의 합계만큼 작동한다. - .off('click')로 해결
                     $(".form-control").click(function(){//수량변경, form control 값만큼 추가하기 수량 증가해야됨.
                         var control = document.getElementsByClassName("form-control");
                         var imgres = document.getElementsByClassName("img-responsive");
@@ -184,7 +184,7 @@ $(document).ready(function(){//수정된 js가 없뎃 안되면 Ctrl F5
             }
         }); 
     }
-    $(".fa-trash-o").parents('.btn').click(function(){//삭제
+    $(".fa-trash-o").parents('.btn').off('click').click(function(){//삭제
         const del = confirm("삭제하시겠습니까?");
         if(del == true){
             var imgres = document.getElementsByClassName("img-responsive");
@@ -338,7 +338,7 @@ $(document).ready(function(){//수정된 js가 없뎃 안되면 Ctrl F5
                         $(this).attr('value',1);
                     }
                     $('.table-bordered > tbody').append(addmusic);
-                    $(".fa-trash-o").parents('.btn').click(function(){//삭제
+                    $(".fa-trash-o").parents('.btn').off('click').click(function(){//삭제
                         const del = confirm("삭제하시겠습니까?");
                         if(del == true){//러블리즈 노래를 검색하면 Undefined로 뜬다.
                             var imgres = document.getElementsByClassName("img-responsive");
